@@ -1,0 +1,19 @@
+name: tests
+
+on: [push, pull_request]
+
+jobs:
+  cpu-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.11"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      # The CPU tests need neither TabPFN nor torch: install the package without its heavy dependencies.
+      - run: pip install numpy scipy scikit-learn threadpoolctl pandas pytest
+      - run: pip install --no-deps -e .
+      - run: pytest -q tests/test_core.py tests/test_estimator.py

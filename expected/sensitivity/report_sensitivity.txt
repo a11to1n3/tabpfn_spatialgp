@@ -1,0 +1,125 @@
+=== Exploratory sensitivity analyses and checks of TabPFN-GP's assumptions (stored outputs; kappa = 1.10 unless stated) ===
+
+-- priors: Matern-3/2 fits recomputed for 630 of the 630 development cases, largest difference 1.8e-15; the derived prior equals the chosen one: True --
+  M12  Matern-1/2                             mu_r -3.02, s_r 1.67, mu_s -0.19, s_s 1.88 (630 fits)
+  M52  Matern-5/2                             mu_r -2.06, s_r 2.21, mu_s -0.39, s_s 1.79 (630 fits)
+  X3   prior without SP.231, SL.125, UL.120   mu_r -2.29, s_r 1.75, mu_s -0.18, s_s 1.83 (480 fits)
+  EB   offset prior: psi = mean(delta^2) - mean(1/A) = 0.0056 - 0.0292 = -0.0236 (mean delta -0.0062; 630 cases); used: 0.0000 (known offset, no offset term)
+  offset moments on every development split, by n: mean delta^2 against mean 1/A (GLS), and mean (rbar / s_r)^2 against mean 1/n
+    n in (3, 7]      (median   6.0, 180 cases): 0.0330 vs 0.2773; 0.0187 vs 0.1829
+    n in (7, 12]     (median  11.0, 165 cases): 0.0285 vs 0.1567; 0.0116 vs 0.0956
+    n in (12, 17]    (median  14.0,  60 cases): 0.0159 vs 0.1092; 0.0090 vs 0.0702
+    n in (17, 25]    (median  22.0, 180 cases): 0.0151 vs 0.0856; 0.0060 vs 0.0458
+    n in (25, 40]    (median  34.0, 165 cases): 0.0131 vs 0.0605; 0.0059 vs 0.0309
+    n in (40, 62]    (median  50.0, 225 cases): 0.0134 vs 0.0415; 0.0043 vs 0.0199
+    n in (62, 87]    (median  73.0, 195 cases): 0.0070 vs 0.0271; 0.0029 vs 0.0138
+    n in (87, 1000]  (median 114.0, 300 cases): 0.0040 vs 0.0294; 0.0025 vs 0.0083
+  check, first set: J1p against the stored rows: 32772 of 32772 blocks matched, largest relative difference 2.5e-16
+  check, final set: J1p against the stored rows: 29758 of 29758 blocks matched, largest relative difference 3.1e-16
+
+-- 1. Factor by the factor rule on the first set (all its rows, as for kappa) --
+  J1p 1.10; M12 1.10; M52 1.10; X3 1.10; EB 1.50; GC 1.10; TQ 1.10
+  the rule's criterion, the mean of pooled field and zone coverage on the first set, at factors 1.00, 1.05, 1.10 and 1.15:
+    J1p  0.7650, 0.7849, 0.8015, 0.8190
+    M12  0.7636, 0.7823, 0.8009, 0.8177
+    M52  0.7654, 0.7850, 0.8020, 0.8191
+    X3   0.7657, 0.7853, 0.8021, 0.8195
+    EB   0.6437, 0.6627, 0.6820, 0.7008
+    GC   0.7648, 0.7838, 0.8011, 0.8177
+    TQ   0.7810, 0.7997, 0.8178, 0.8336
+  check: 5-fold residuals recomputed by folds.py for 18 cases, largest absolute difference from the stored ones 0.0e+00
+
+-- 2. Final splits, 20 fields, blocks where every variant is scored (3990 field, 15453 zone blocks), kappa = 1.10: coverage (field | zone) and CRPS ratio variant / chosen model [95 % interval] --
+  J1p  chosen model                       n <= 20: 0.829 | 0.794  ||  n >= 30: 0.803 | 0.773
+  M12  Matern-1/2                         n <= 20: 0.830 | 0.788; CRPS 1.000 [1.000, 1.001] | 0.999 [0.998, 1.000]  ||  n >= 30: 0.802 | 0.771; CRPS 1.001 [0.999, 1.003] | 0.999 [0.997, 1.002]
+  M52  Matern-5/2                         n <= 20: 0.829 | 0.795; CRPS 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000]  ||  n >= 30: 0.804 | 0.772; CRPS 1.000 [0.999, 1.001] | 1.000 [1.000, 1.001]
+  EB   normal prior on the offset         n <= 20: 0.597 | 0.696; CRPS 1.022 [1.011, 1.035] | 1.021 [1.009, 1.034]  ||  n >= 30: 0.703 | 0.730; CRPS 0.993 [0.975, 1.012] | 0.999 [0.993, 1.005]
+  GC   share grid centred on the mode     n <= 20: 0.830 | 0.794; CRPS 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000]  ||  n >= 30: 0.804 | 0.770; CRPS 1.000 [0.999, 1.000] | 1.001 [1.000, 1.001]
+  TQ   t quantile for the GP part         n <= 20: 0.854 | 0.820; CRPS 1.015 [1.013, 1.018] | 1.011 [1.008, 1.014]  ||  n >= 30: 0.808 | 0.777; CRPS 1.001 [1.000, 1.001] | 1.000 [1.000, 1.000]
+  J10  10 folds                           n <= 20: 0.822 | 0.792; CRPS 1.000 [0.999, 1.001] | 1.000 [1.000, 1.001]  ||  n >= 30: 0.803 | 0.772; CRPS 0.987 [0.977, 0.997] | 0.994 [0.991, 0.998]
+  LOO  leave-one-out residuals            n <= 20: 0.823 | 0.790; CRPS 1.000 [0.999, 1.002] | 1.000 [1.000, 1.001]  ||  n >= 30: 0.801 | 0.770; CRPS 0.978 [0.960, 0.995] | 0.991 [0.985, 0.997]
+  without SP.231, NSW.52, SL.125 and UL.120 (16 fields):
+  J1p  chosen model                       n <= 20: 0.829 | 0.789  ||  n >= 30: 0.796 | 0.769
+  X3   prior without SP.231, SL.125, UL.120 n <= 20: 0.829 | 0.790; CRPS 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000]  ||  n >= 30: 0.796 | 0.770; CRPS 1.000 [0.999, 1.000] | 1.000 [0.999, 1.000]
+  primary CRPS contrasts on these fields, X3 / comparator and the chosen model / comparator (field | zone; comparators on the common set, the sample mean on all blocks where both are scored):
+    TAB           X3 0.968 [0.956, 0.981] | 0.953 [0.941, 0.965]   chosen 0.968 [0.956, 0.981] | 0.953 [0.941, 0.965]
+    KpR4          X3 0.766 [0.747, 0.785] | 0.774 [0.751, 0.800]   chosen 0.766 [0.747, 0.785] | 0.774 [0.751, 0.799]
+    RK_ins_fix_v  X3 0.995 [0.982, 1.009] | 0.987 [0.978, 0.996]   chosen 0.995 [0.982, 1.008] | 0.987 [0.978, 0.996]
+    WH_fix        X3 0.987 [0.974, 0.999] | 0.981 [0.975, 0.987]   chosen 0.987 [0.974, 0.999] | 0.981 [0.975, 0.987]
+    DB            X3 0.860 [0.819, 0.903] | 0.742 [0.700, 0.783]   chosen 0.860 [0.819, 0.903] | 0.742 [0.700, 0.783]
+
+-- 3. The same blocks, each variant with its own factor from 1.: pooled coverage, largest distance from 0.80 over n, and CRPS ratio variant / chosen model (field | zone) --
+  J1p  factor 1.10: coverage 0.819 | 0.786, largest distance 0.043 | 0.035
+  M12  factor 1.10: coverage 0.819 | 0.781, largest distance 0.045 | 0.041; CRPS 1.000 [1.000, 1.001] | 0.999 [0.998, 1.000]
+  M52  factor 1.10: coverage 0.819 | 0.786, largest distance 0.043 | 0.035; CRPS 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000]
+  X3   factor 1.10: coverage 0.819 | 0.786, largest distance 0.043 | 0.035; CRPS 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000]
+  EB   factor 1.50: coverage 0.778 | 0.835, largest distance 0.118 | 0.085; CRPS 1.000 [0.992, 1.008] | 1.021 [1.009, 1.032]
+  GC   factor 1.10: coverage 0.820 | 0.784, largest distance 0.045 | 0.039; CRPS 1.000 [1.000, 1.000] | 1.000 [1.000, 1.001]
+  TQ   factor 1.10: coverage 0.836 | 0.803, largest distance 0.060 | 0.046; CRPS 1.011 [1.009, 1.013] | 1.008 [1.006, 1.010]
+  coverage by n with the own factor (field | zone):
+    n              J1p            M12            M52             X3             EB             GC             TQ
+      5  0.803 | 0.796  0.803 | 0.790  0.803 | 0.796  0.803 | 0.796  0.682 | 0.776  0.805 | 0.797  0.848 | 0.846
+     10  0.832 | 0.815  0.837 | 0.807  0.832 | 0.816  0.833 | 0.815  0.737 | 0.829  0.833 | 0.814  0.853 | 0.835
+     15  0.837 | 0.780  0.835 | 0.773  0.837 | 0.781  0.837 | 0.780  0.763 | 0.821  0.837 | 0.779  0.855 | 0.797
+     20  0.843 | 0.785  0.845 | 0.780  0.843 | 0.786  0.843 | 0.786  0.805 | 0.844  0.845 | 0.784  0.860 | 0.799
+     30  0.802 | 0.765  0.796 | 0.759  0.802 | 0.765  0.802 | 0.765  0.796 | 0.843  0.802 | 0.761  0.811 | 0.772
+     50  0.814 | 0.769  0.817 | 0.768  0.817 | 0.768  0.814 | 0.770  0.829 | 0.862  0.814 | 0.764  0.817 | 0.772
+     75  0.786 | 0.782  0.783 | 0.784  0.789 | 0.783  0.786 | 0.783  0.839 | 0.873  0.786 | 0.783  0.789 | 0.785
+    100  0.811 | 0.782  0.815 | 0.783  0.807 | 0.781  0.807 | 0.783  0.863 | 0.885  0.815 | 0.779  0.811 | 0.784
+
+-- 4. Other zones, final splits (zone means only): TabPFN-GP (1.10), the offset-only model (1.20, CRPS version without it) and the sample mean (1.05 for coverage, CRPS without) --
+  k4 (20 fields)    15453 zones  
+                  n <= 20: coverage GP 0.794, O1 0.779, DB 0.799; no samples (921 zones) GP 0.786, O1 0.712; CRPS GP/O1 1.002 [0.996, 1.007], GP/DB 0.725 [0.681, 0.770]
+                  n >= 30: coverage GP 0.773, O1 0.760, DB 0.824; no samples (66 zones) GP 0.667, O1 0.530; CRPS GP/O1 0.968 [0.946, 0.991], GP/DB 0.726 [0.676, 0.771]
+  k2 (20 fields)     7974 zones  
+                  n <= 20: coverage GP 0.814, O1 0.825, DB 0.808; no samples (51 zones) GP 0.745, O1 0.725; CRPS GP/O1 1.004 [1.001, 1.008], GP/DB 0.769 [0.735, 0.805]
+                  n >= 30: coverage GP 0.778, O1 0.789, DB 0.803; no samples (0 zones) GP nan, O1 nan; CRPS GP/O1 0.983 [0.968, 0.999], GP/DB 0.739 [0.679, 0.801]
+  k8 (20 fields)    28281 zones  
+                  n <= 20: coverage GP 0.789, O1 0.757, DB 0.818; no samples (4710 zones) GP 0.766, O1 0.706; CRPS GP/O1 0.997 [0.988, 1.006], GP/DB 0.744 [0.687, 0.807]
+                  n >= 30: coverage GP 0.780, O1 0.748, DB 0.813; no samples (168 zones) GP 0.589, O1 0.500; CRPS GP/O1 0.964 [0.941, 0.987], GP/DB 0.728 [0.666, 0.791]
+  k4 (14 fields)    10272 zones  
+                  n <= 20: coverage GP 0.780, O1 0.770, DB 0.804; no samples (552 zones) GP 0.763, O1 0.705; CRPS GP/O1 0.998 [0.992, 1.003], GP/DB 0.746 [0.705, 0.791]
+                  n >= 30: coverage GP 0.761, O1 0.748, DB 0.824; no samples (0 zones) GP nan, O1 nan; CRPS GP/O1 0.964 [0.935, 0.995], GP/DB 0.762 [0.730, 0.796]
+  c4 (14 fields)     9597 zones  
+                  n <= 20: coverage GP 0.731, O1 0.750, DB 0.807; no samples (594 zones) GP 0.613, O1 0.611; CRPS GP/O1 0.991 [0.989, 0.994], GP/DB 0.814 [0.776, 0.854]
+                  n >= 30: coverage GP 0.755, O1 0.760, DB 0.816; no samples (9 zones) GP 0.333, O1 0.333; CRPS GP/O1 0.972 [0.952, 0.990], GP/DB 0.808 [0.761, 0.855]
+  ca (14 fields)     9024 zones  
+                  n <= 20: coverage GP 0.746, O1 0.761, DB 0.809; no samples (678 zones) GP 0.652, O1 0.636; CRPS GP/O1 0.993 [0.990, 0.996], GP/DB 0.836 [0.787, 0.885]
+                  n >= 30: coverage GP 0.755, O1 0.763, DB 0.822; no samples (27 zones) GP 0.778, O1 0.778; CRPS GP/O1 0.974 [0.954, 0.993], GP/DB 0.830 [0.760, 0.904]
+
+-- 5. Checks of the assumptions (final splits, 20 fields) --
+  folds (A1): between-fold mean square / residual variance (expectation 1 without shared fold errors), by n: mean [95 % interval over fields], median
+    n =  10: 1.154 [1.115, 1.190], median 1.131 (600 cases)
+    n =  15: 1.209 [1.155, 1.258], median 1.158 (600 cases)
+    n =  20: 1.374 [1.308, 1.439], median 1.365 (600 cases)
+    n =  30: 1.399 [1.334, 1.465], median 1.299 (540 cases)
+    n =  50: 1.457 [1.372, 1.544], median 1.289 (420 cases)
+    n =  75: 1.479 [1.407, 1.551], median 1.333 (360 cases)
+    n = 100: 1.563 [1.445, 1.672], median 1.349 (270 cases)
+  truncation of max(0, v_T - v_bar): share of unrevealed locations truncated (field blocks), share of zone blocks with any truncation, by n
+    n =   5: locations 0.173; zone blocks 0.486
+    n =  10: locations 0.086; zone blocks 0.259
+    n =  15: locations 0.098; zone blocks 0.289
+    n =  20: locations 0.112; zone blocks 0.293
+    n =  30: locations 0.122; zone blocks 0.327
+    n =  50: locations 0.150; zone blocks 0.375
+    n =  75: locations 0.171; zone blocks 0.411
+    n = 100: locations 0.232; zone blocks 0.494
+    n >= 30, zone coverage with none truncated : 0.764 (3723 zone blocks)
+    n >= 30, zone coverage with up to half     : 0.758 (1560 zone blocks)
+    n >= 30, zone coverage with more than half : 0.844 (777 zone blocks)
+  share grid (chosen): highest weight on the share 0.1 in 0.002 of the cases with n <= 20; posterior-mode share below 0.1 in 0.000
+  share grid (chosen): highest weight on the share 0.1 in 0.058 of the cases with n >= 30; posterior-mode share below 0.1 in 0.009
+  posterior-mode spatial share and range across cases, by n: median and interquartile range of logit(share) and of log(range / L); the prior's interquartile ranges are 2.46 and 2.89
+    n =   5: logit(share) -0.31 (IQR 0.41); log(range / L) -1.80 (IQR 0.50)
+    n =  10: logit(share) -0.32 (IQR 0.54); log(range / L) -2.22 (IQR 0.53)
+    n =  15: logit(share) -0.36 (IQR 0.69); log(range / L) -2.44 (IQR 0.70)
+    n =  20: logit(share) -0.40 (IQR 0.69); log(range / L) -2.51 (IQR 0.67)
+    n =  30: logit(share) -0.40 (IQR 0.82); log(range / L) -2.66 (IQR 0.75)
+    n =  50: logit(share) -0.44 (IQR 0.97); log(range / L) -2.77 (IQR 0.78)
+    n =  75: logit(share) -0.35 (IQR 1.09); log(range / L) -2.95 (IQR 0.77)
+    n = 100: logit(share) -0.39 (IQR 1.22); log(range / L) -3.04 (IQR 0.80)
+  pooled fits (A3), first set, 14 development fields; prior (n >= 50): log(range / L) mean -2.25, sd 2.14; logit(share) mean -0.32, sd 1.82
+    n20: 42 field-properties, log(range / L) mean -2.33, sd 1.02; logit(share) mean -1.02, sd 1.58
+    n50: 42 field-properties, log(range / L) mean -2.98, sd 0.90; logit(share) mean -0.44, sd 1.63
+    same field and property at n = 20 and 50 (42): median |difference| of log(range / L) 0.47, of logit(share) 1.10

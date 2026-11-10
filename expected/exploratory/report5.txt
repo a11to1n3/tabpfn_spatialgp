@@ -1,0 +1,161 @@
+=== E9-E11 (docs/exploratory/plan_E9-E13.md; specified after the study's results had been seen; exploratory) ===
+
+-- E10: factors by one rule (each external task once) and CRPS version --
+  TabPFN-GP                                     J1p           factor 1.15 (coverage 0.817); CRPS version uncalibrated (1.006)
+  TabPFN                                        TAB           factor 2.45 (coverage 0.805); CRPS version calibrated (0.958)
+  TabPFN-KpR                                    KpR4          factor 4.35 (coverage 0.801); CRPS version uncalibrated (1.031)
+  Block RK                                      RK_ins_fix_v  factor 1.60 (coverage 0.805); CRPS version calibrated (0.991)
+  WH                                            WH_fix        factor 1.60 (coverage 0.806); CRPS version calibrated (0.989)
+  Sample mean                                   DB            factor 1.05 (coverage 0.815); CRPS version uncalibrated (1.003)
+  Shared-error-only                             O1            factor 1.20 (coverage 0.809); CRPS version uncalibrated (1.006)
+  Difference estimator                          DE            factor 1.05 (coverage 0.818); CRPS version uncalibrated (1.004)
+  Difference estimator, zones                   DEz           factor 1.05 (coverage 0.814); CRPS version uncalibrated (1.005)
+  Block RK, held-out errors                     RK_oof_fix_v  factor 1.00 (coverage 0.802); CRPS version uncalibrated (1.000)
+  WH, local correlogram                         WH_loc        factor 1.70 (coverage 0.808); CRPS version uncalibrated (1.032)
+  TabPFN-KpR, published settings                KpR           factor 4.40 (coverage 0.800); CRPS version uncalibrated (1.028)
+  Zone-effect model                             Z             factor 1.20 (coverage 0.806); CRPS version uncalibrated (1.006)
+  TabPFN-GP, prior without dummy coordinates    GPx           factor 1.15 (coverage 0.817); CRPS version uncalibrated (1.006)
+  TabPFN-GP, no prior                           GPnp          factor 1.10 (coverage 0.807); CRPS version uncalibrated (1.005)
+  TabPFN-GP, no averaging                       GPna          factor 1.15 (coverage 0.812); CRPS version uncalibrated (1.006)
+  TabPFN-GP, neither                            GPnn          factor 1.15 (coverage 0.804); CRPS version uncalibrated (1.005)
+
+-- E10: the study's report with these factors (TabPFN-GP kappa = 1.15) --> report_once/report.txt --
+
+-- E10b: the same, with TabPFN-GP's CRPS also by the version rule (without its factor) --> report_once_gp1/report.txt --
+
+  zone CRPS ratio TabPFN-GP / shared-error-only (kappa 1.15 for both): 0.998 [0.993, 1.002]
+  zone CRPS ratio TabPFN-GP / shared-error-only with its own factor 1.20: 0.997 [0.993, 1.001]
+  shared-error-only coverage with its own factor, field: 0.846 [0.836, 0.856]
+  shared-error-only coverage with its own factor, zone: 0.766 [0.751, 0.780]
+
+-- E11: further models on the 43 fields, each with its own factor (rule above); CRPS of both by the version rule --
+  Difference estimator (DE, factor 1.05)
+      field: coverage 0.822 [0.812, 0.832], D -0.010 [-0.034, +0.015], CRPS ratio TabPFN-GP / model 0.964 [0.955, 0.973] (40/43 fields lower)
+  Difference estimator, zones (DEz, factor 1.05)
+      zone: coverage 0.821 [0.814, 0.829], D +0.000 [-0.012, +0.013], CRPS ratio TabPFN-GP / model 0.798 [0.780, 0.816] (43/43 fields lower)
+  Block RK, held-out errors (RK_oof_fix_v, factor 1.00)
+      field: coverage 0.800 [0.788, 0.812], D +0.055 [+0.026, +0.083], CRPS ratio TabPFN-GP / model 0.959 [0.949, 0.970] (39/43 fields lower)
+      zone: coverage 0.804 [0.794, 0.814], D +0.077 [+0.059, +0.094], CRPS ratio TabPFN-GP / model 0.967 [0.955, 0.979] (33/43 fields lower)
+  WH, local correlogram (WH_loc, factor 1.70)
+      field: coverage 0.757 [0.746, 0.768], D +0.391 [+0.364, +0.418], CRPS ratio TabPFN-GP / model 0.898 [0.889, 0.908] (43/43 fields lower)
+      zone: coverage 0.817 [0.805, 0.828], D +0.273 [+0.248, +0.298], CRPS ratio TabPFN-GP / model 0.947 [0.939, 0.955] (42/43 fields lower)
+  Zone-effect model (Z, factor 1.20)
+      field: coverage 0.834 [0.824, 0.844], D +0.032 [+0.007, +0.058], CRPS ratio TabPFN-GP / model 0.992 [0.989, 0.994] (37/43 fields lower)
+      zone: coverage 0.781 [0.770, 0.792], D +0.012 [-0.008, +0.032], CRPS ratio TabPFN-GP / model 0.987 [0.983, 0.990] (40/43 fields lower)
+  TabPFN-GP, prior without dummy coordinates (GPx, factor 1.15)
+      field: coverage 0.830 [0.820, 0.839], D +0.012 [-0.011, +0.035], CRPS ratio TabPFN-GP / model 1.000 [1.000, 1.000] (28/43 fields lower)
+      zone: coverage 0.795 [0.785, 0.805], D +0.008 [-0.009, +0.024], CRPS ratio TabPFN-GP / model 1.000 [1.000, 1.000] (28/43 fields lower)
+  TabPFN-GP, no prior (GPnp, factor 1.10)
+      field: coverage 0.820 [0.810, 0.830], D -0.012 [-0.033, +0.011], CRPS ratio TabPFN-GP / model 0.994 [0.992, 0.996] (33/43 fields lower)
+      zone: coverage 0.785 [0.776, 0.795], D -0.018 [-0.035, -0.001], CRPS ratio TabPFN-GP / model 0.996 [0.994, 0.997] (34/43 fields lower)
+  TabPFN-GP, no averaging (GPna, factor 1.15)
+      field: coverage 0.828 [0.817, 0.838], D +0.004 [-0.018, +0.027], CRPS ratio TabPFN-GP / model 0.998 [0.998, 0.999] (31/43 fields lower)
+      zone: coverage 0.791 [0.781, 0.800], D +0.005 [-0.012, +0.022], CRPS ratio TabPFN-GP / model 0.996 [0.995, 0.997] (41/43 fields lower)
+  TabPFN-GP, neither (GPnn, factor 1.15)
+      field: coverage 0.821 [0.811, 0.830], D +0.025 [-0.000, +0.051], CRPS ratio TabPFN-GP / model 0.996 [0.994, 0.998] (34/43 fields lower)
+      zone: coverage 0.783 [0.773, 0.792], D +0.025 [+0.008, +0.042], CRPS ratio TabPFN-GP / model 0.990 [0.988, 0.992] (42/43 fields lower)
+
+-- E9.1: the five tests with bootstrap over the 17 source datasets --
+  datasets: 17
+  test 1 TabPFN       D +0.325 [+0.296, +0.365]
+  test 1 TabPFN-KpR   D +0.578 [+0.514, +0.628]
+  test 1 Block RK     D +0.261 [+0.230, +0.279]
+  test 1 WH           D +0.310 [+0.287, +0.330]
+  test 2 TabPFN-GP field D +0.014, 90 % [-0.001, +0.027]
+  test 2 TabPFN-GP zone D +0.011, 90 % [-0.005, +0.023]
+  test 3 TabPFN-GP field coverage 0.829 [0.814, 0.838]
+  test 3 TabPFN-GP zone coverage 0.794 [0.783, 0.803]
+  test 4a shared-error-only field coverage 0.833 [0.819, 0.842]
+  test 4b zone coverage difference +0.046 [+0.040, +0.057]
+  test 4a CRPS ratio shared-error-only / TabPFN-GP 1.005 [1.003, 1.007] (17 datasets)
+  test 5 field TabPFN               ratio 0.960 [0.945, 0.974], lower in 16/17 datasets, Wilcoxon p 1.53e-05, Holm 0.000107
+  test 5 field TabPFN-KpR           ratio 0.790 [0.775, 0.804], lower in 17/17 datasets, Wilcoxon p 7.63e-06, Holm 7.63e-05
+  test 5 field Block RK             ratio 0.991 [0.977, 1.009], lower in 12/17 datasets, Wilcoxon p 0.0253, Holm 0.0505
+  test 5 field WH                   ratio 0.985 [0.978, 0.993], lower in 15/17 datasets, Wilcoxon p 0.00105, Holm 0.00418
+  test 5 field Sample mean          ratio 0.972 [0.951, 0.989], lower in 14/17 datasets, Wilcoxon p 0.00333, Holm 0.00998
+  test 5 zone TabPFN                ratio 0.952 [0.940, 0.963], lower in 16/17 datasets, Wilcoxon p 1.53e-05, Holm 0.000107
+  test 5 zone TabPFN-KpR            ratio 0.794 [0.766, 0.821], lower in 17/17 datasets, Wilcoxon p 7.63e-06, Holm 7.63e-05
+  test 5 zone Block RK              ratio 0.984 [0.967, 1.003], lower in 12/17 datasets, Wilcoxon p 0.0492, Holm 0.0505
+  test 5 zone WH                    ratio 0.979 [0.971, 0.986], lower in 16/17 datasets, Wilcoxon p 2.29e-05, Holm 0.000114
+  test 5 zone Sample mean           ratio 0.819 [0.786, 0.854], lower in 17/17 datasets, Wilcoxon p 7.63e-06, Holm 7.63e-05
+
+-- E9.2: leave-one-group-out (each criterion: number of the five omissions in which it is met; estimate range) --
+  t1 TabPFN                    met in 5/5; estimate +0.299 to +0.339
+  t1 TabPFN-KpR                met in 5/5; estimate +0.555 to +0.592
+  t1 Block RK                  met in 5/5; estimate +0.247 to +0.268
+  t1 WH                        met in 5/5; estimate +0.305 to +0.318
+  t2 field                     met in 5/5; estimate +0.013 to +0.017
+  t3 field                     met in 5/5; estimate +0.826 to +0.833
+  t2 zone                      met in 5/5; estimate +0.003 to +0.016
+  t3 zone                      met in 5/5; estimate +0.791 to +0.798
+  t4a                          met in 5/5; estimate +0.831 to +0.835
+  t4b                          met in 5/5; estimate +0.043 to +0.050
+  t5 field TabPFN              met in 5/5; estimate +0.963 to +0.970
+  t5 field TabPFN-KpR          met in 5/5; estimate +0.793 to +0.798
+  t5 field Block RK            met in 5/5; estimate +0.984 to +0.994
+  t5 field WH                  met in 5/5; estimate +0.985 to +0.988
+  t5 field Sample mean         met in 5/5; estimate +0.935 to +0.982
+  t5 zone TabPFN               met in 5/5; estimate +0.952 to +0.959
+  t5 zone TabPFN-KpR           met in 5/5; estimate +0.780 to +0.805
+  t5 zone Block RK             met in 5/5; estimate +0.973 to +0.989
+  t5 zone WH                   met in 5/5; estimate +0.978 to +0.985
+  t5 zone Sample mean          met in 5/5; estimate +0.789 to +0.804
+
+-- E9.3: per-group test quantities --
+  Uniformity trials (2 fields): t2 field -0.001 [-0.016, +0.007]; t2 zone -0.013 [-0.030, +0.015]; t3 field 0.809 [0.791, 0.837]; t3 zone 0.751 [0.716, 0.774]; t4a 0.806 [0.787, 0.834]
+  SensRes (11 fields): t2 field +0.021 [-0.013, +0.058]; t2 zone +0.031 [+0.010, +0.055]; t3 field 0.837 [0.818, 0.854]; t3 zone 0.793 [0.776, 0.809]; t4a 0.836 [0.816, 0.854]
+  Midwest (8 fields): t2 field +0.006 [-0.044, +0.057]; t2 zone -0.020 [-0.052, +0.014]; t3 field 0.843 [0.820, 0.864]; t3 zone 0.800 [0.786, 0.816]; t4a 0.844 [0.822, 0.864]
+  New fields (11 fields): t2 field +0.019 [-0.027, +0.079]; t2 zone +0.003 [-0.032, +0.039]; t3 field 0.830 [0.811, 0.850]; t3 zone 0.798 [0.775, 0.819]; t4a 0.836 [0.816, 0.856]
+  Further fields (11 fields): t2 field +0.018 [-0.018, +0.046]; t2 zone +0.024 [+0.012, +0.035]; t3 field 0.820 [0.801, 0.835]; t3 zone 0.802 [0.786, 0.819]; t4a 0.829 [0.812, 0.843]
+
+-- E9.4: field-balanced rise D (fields with n = 5, 10, 30 and 50; equal weight per field) --
+  TabPFN-GP    field: D +0.016 [-0.010, +0.043] (34 fields)
+  TabPFN-GP    zone: D +0.009 [-0.008, +0.027] (34 fields)
+  TabPFN       field: D +0.319 [+0.289, +0.347] (34 fields)
+  TabPFN       zone: D +0.225 [+0.207, +0.245] (34 fields)
+  TabPFN-KpR   field: D +0.561 [+0.519, +0.601] (34 fields)
+  TabPFN-KpR   zone: D +0.502 [+0.460, +0.541] (34 fields)
+  Block RK     field: D +0.248 [+0.220, +0.274] (34 fields)
+  Block RK     zone: D +0.240 [+0.222, +0.260] (34 fields)
+  WH           field: D +0.294 [+0.269, +0.319] (34 fields)
+  WH           zone: D +0.200 [+0.182, +0.218] (34 fields)
+  Sample mean  field: D +0.010 [-0.017, +0.035] (34 fields)
+  Sample mean  zone: D +0.019 [+0.002, +0.036] (34 fields)
+
+-- E9.5: TabPFN-GP coverage by size --
+  field, by N tertile: N <= 79: 0.836 [0.820, 0.852] (17 fields); 79 < N <= 112: 0.835 [0.822, 0.847] (12 fields); N > 112: 0.818 [0.799, 0.837] (14 fields)
+     Spearman correlation of per-field coverage with N: -0.39 (p = 0.00885)
+     by area: < 1 ha: 0.835 [0.812, 0.865] (7); 1-10 ha: 0.833 [0.820, 0.845] (13); 10-100 ha: 0.823 [0.804, 0.843] (14); > 100 ha: 0.835 [0.809, 0.856] (7)
+  zone, by N tertile: N <= 79: 0.807 [0.789, 0.825] (17 fields); 79 < N <= 112: 0.798 [0.787, 0.810] (12 fields); N > 112: 0.777 [0.758, 0.793] (14 fields)
+     Spearman correlation of per-field coverage with N: -0.46 (p = 0.00177)
+     by area: < 1 ha: 0.809 [0.782, 0.837] (7); 1-10 ha: 0.794 [0.783, 0.806] (13); 10-100 ha: 0.792 [0.773, 0.812] (14); > 100 ha: 0.804 [0.780, 0.826] (7)
+  zones by m_B: 3-9: 0.820 [0.798, 0.839]; 10-29: 0.791 [0.778, 0.804]; >= 30: 0.770 [0.749, 0.796]
+
+-- E9.6: by covariate source (released covariates vs public only) --
+  released (17 fields): field: coverage 0.825 [0.810, 0.839], CRPS ratio to sample mean 0.878 [0.822, 0.931], to TabPFN 0.963 [0.948, 0.977]; zone: coverage 0.783 [0.766, 0.799], CRPS ratio to sample mean 0.776 [0.731, 0.820], to TabPFN 0.962 [0.950, 0.976]
+  public (26 fields): field: coverage 0.833 [0.820, 0.845], CRPS ratio to sample mean 0.999 [0.968, 1.026], to TabPFN 0.969 [0.961, 0.977]; zone: coverage 0.804 [0.793, 0.815], CRPS ratio to sample mean 0.811 [0.785, 0.838], to TabPFN 0.951 [0.940, 0.961]
+
+-- E9.7: TabPFN-GP at n = 5 on all blocks (not only where TabPFN-KpR predicted) --
+  field: all blocks 0.814 [0.790, 0.837] (1600 means); common set 0.808 [0.784, 0.831]
+  zone: all blocks 0.799 [0.782, 0.815] (6392 means); common set 0.792 [0.774, 0.809]
+
+-- E9.8: share of TabPFN-GP's summed CRPS by n (common set; per task, as in the ratio) --
+  field: n=5: 0.257; n=10: 0.196; n=15: 0.161; n=20: 0.144; n=30: 0.105; n=50: 0.081; n=75: 0.035; n=100: 0.021
+  zone: n=5: 0.223; n=10: 0.194; n=15: 0.169; n=20: 0.155; n=30: 0.113; n=50: 0.085; n=75: 0.039; n=100: 0.021
+
+-- E13: comparators with a factor for each n, set by the rule on the factor-setting data (each external task once) --
+  TabPFN       factors: n=5: 4.75; n=10: 3.10; n=15: 2.55; n=20: 2.35; n=30: 1.95; n=50: 1.80; n=75: 1.55; n=100: 1.35
+  TabPFN-KpR   factors: n=5: 5.00; n=10: 5.00; n=15: 3.65; n=20: 2.90; n=30: 2.15; n=50: 1.95; n=75: 1.60; n=100: 1.40
+  Block RK     factors: n=5: 3.10; n=10: 1.95; n=15: 1.65; n=20: 1.55; n=30: 1.30; n=50: 1.25; n=75: 1.15; n=100: 1.05
+  WH           factors: n=5: 2.95; n=10: 2.00; n=15: 1.70; n=20: 1.55; n=30: 1.35; n=50: 1.20; n=75: 1.05; n=100: 1.00
+  Sample mean  factors: n=5: 1.10; n=10: 1.05; n=15: 1.00; n=20: 1.00; n=30: 0.95; n=50: 1.10; n=75: 1.00; n=100: 1.00
+  TabPFN: field: D +0.046 [+0.013, +0.080], coverage by n 0.75 0.74 0.76 0.78 0.76 0.82 0.76 0.73, CRPS ratio TabPFN-GP / it 0.988 [0.978, 0.997]
+      zone: D -0.033 [-0.055, -0.010], coverage by n 0.87 0.85 0.85 0.85 0.82 0.85 0.80 0.74, CRPS ratio TabPFN-GP / it 0.947 [0.930, 0.963]
+  TabPFN-KpR: field: D +0.349 [+0.291, +0.406], coverage by n 0.34 0.48 0.73 0.77 0.74 0.81 0.76 0.72, CRPS ratio TabPFN-GP / it 0.796 [0.784, 0.808]
+      zone: D +0.305 [+0.254, +0.358], coverage by n 0.45 0.51 0.78 0.82 0.78 0.82 0.76 0.74, CRPS ratio TabPFN-GP / it 0.795 [0.775, 0.814]
+  Block RK: field: D +0.020 [-0.004, +0.045], coverage by n 0.79 0.80 0.81 0.83 0.80 0.83 0.80 0.80, CRPS ratio TabPFN-GP / it 0.991 [0.983, 1.000]
+      zone: D +0.004 [-0.013, +0.020], coverage by n 0.84 0.83 0.84 0.86 0.82 0.85 0.83 0.81, CRPS ratio TabPFN-GP / it 0.973 [0.959, 0.988]
+  WH: field: D +0.048 [+0.024, +0.072], coverage by n 0.74 0.75 0.76 0.79 0.78 0.80 0.78 0.80, CRPS ratio TabPFN-GP / it 1.007 [1.002, 1.012]
+      zone: D -0.030 [-0.045, -0.015], coverage by n 0.86 0.84 0.84 0.85 0.82 0.83 0.80 0.79, CRPS ratio TabPFN-GP / it 0.979 [0.971, 0.987]
+  Sample mean: field: D -0.007 [-0.028, +0.013], coverage by n 0.82 0.80 0.79 0.80 0.77 0.83 0.81 0.80, CRPS ratio TabPFN-GP / it 0.949 [0.915, 0.982]
+      zone: D +0.004 [-0.009, +0.017], coverage by n 0.82 0.80 0.79 0.80 0.78 0.84 0.80 0.82, CRPS ratio TabPFN-GP / it 0.797 [0.772, 0.821]

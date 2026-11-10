@@ -1,0 +1,63 @@
+=== TabPFN-GP's development choices on the 14 development fields (plan_development.md) ===
+fields: BB.250, BB.72, G.150, MG.112, B.204, G.104, MGS.101, SP.231, SL.125, UL.120, H.138, SC.93, LYD.112, RUM.70
+
+-- choices 1 and 2: TabPFN's pipeline and weights (cells 1470; models complete: FT-mix-s0 1470, FT-mix-s1 1470, FT-mix-s2 1470, FT-real-s0 1470, FT-real-s1 1470, FT-real-s2 1470, FT-syn-s0 1470, FT-syn-s1 1470, FT-syn-s2 1470, O-xy-def 1470, O-xy-n4 1470, O-xy-noT 1470, O-xy4 1470) --
+  A pipeline | small band
+    A1 four members instead of eight: SSE 1.002 [0.997, 1.006], 4/14 fields, p = 0.358, Holm 0.358
+    A2 no target transform: SSE 0.946 [0.920, 0.972], 13/14 fields, p = 0.000366, Holm 0.0011
+    A3 both (xy4 against TabPFN's default): SSE 0.949 [0.923, 0.973], 11/14 fields, p = 0.00171, Holm 0.00342
+  A pipeline | large band
+    A1 four members instead of eight: SSE 1.004 [0.998, 1.011], 5/14 fields, p = 0.463, Holm 1
+    A2 no target transform: SSE 0.995 [0.988, 1.002], 6/14 fields, p = 0.67, Holm 1
+    A3 both (xy4 against TabPFN's default): SSE 0.998 [0.990, 1.006], 7/14 fields, p = 0.952, Holm 1
+  C fine-tuning against the released weights (seed-averaged) | small band
+    C1 synthetic GP data: SSE 0.994 [0.978, 1.011], 8/14 fields, p = 0.326, Holm 0.652; seeds 0.985 to 1.000
+    C2 real data: SSE 0.991 [0.966, 1.021], 8/14 fields, p = 0.463, Holm 0.652; seeds 0.982 to 1.000
+    C3 real and synthetic data: SSE 0.982 [0.965, 0.998], 9/14 fields, p = 0.0785, Holm 0.235; seeds 0.972 to 0.993
+  C fine-tuning against the released weights (seed-averaged) | large band
+    C1 synthetic GP data: SSE 1.026 [1.007, 1.046], 5/14 fields, p = 0.0419, Holm 0.0419; seeds 1.016 to 1.042
+    C2 real data: SSE 1.041 [1.017, 1.066], 3/14 fields, p = 0.0107, Holm 0.0322; seeds 1.030 to 1.061
+    C3 real and synthetic data: SSE 1.028 [1.011, 1.048], 4/14 fields, p = 0.0134, Holm 0.0322; seeds 1.012 to 1.036
+  -> choice 1, pipeline: confirmed (no target transform); four members: confirmed
+  -> choice 2, released weights: confirmed
+
+-- choice 3: TabPFN 3.5 against 2.0.9, both with four members and no target transform, without the GP (cells 1470) --
+  random 5-90 %: SSE 0.994 [0.976, 1.012], 9/14 fields, p = 0.326
+  small band: SSE 1.003 [0.984, 1.022], 6/14 fields, p = 0.583
+  large band: SSE 0.981 [0.954, 1.008], 11/14 fields, p = 0.119
+  -> choice 3, version 2.0.9: confirmed
+
+-- choice 4: GP variants of the screen on the chosen backbone, point prior (cells 840; fit failures G0 0, Ghet 0, Gdrift 0, Gtwo 0, Gall 0, Gbma 0, Ghetbma 0, Gbma0 0, Gbmashr 0, Gbma0shr 0, G0shr 0) --
+  mean over tasks of log(SSE variant / SSE TabPFN), SSE summed over replicates; shown as ratios
+  random10: G0 1.009; Ghet 1.005; Gdrift 1.198; Gtwo 1.019; Gall 1.215; Gbma 0.996; Ghetbma 0.995; Gbma0 0.996; Gbmashr 1.005; Gbma0shr 1.005; G0shr 1.010 -> best Ghetbma
+  random30: G0 0.994; Ghet 0.986; Gdrift 1.041; Gtwo 1.002; Gall 1.031; Gbma 0.974; Ghetbma 0.976; Gbma0 0.976; Gbmashr 0.983; Gbma0shr 0.983; G0shr 0.991 -> best Gbma
+  random50: G0 0.974; Ghet 0.978; Gdrift 0.998; Gtwo 0.978; Gall 1.003; Gbma 0.967; Ghetbma 0.974; Gbma0 0.968; Gbmashr 0.977; Gbma0shr 0.977; G0shr 0.979 -> best Gbma
+  random70: G0 0.966; Ghet 0.975; Gdrift 0.973; Gtwo 0.971; Gall 0.982; Gbma 0.963; Ghetbma 0.972; Gbma0 0.966; Gbmashr 0.969; Gbma0shr 0.970; G0shr 0.971 -> best Gbma
+  -> choice 4, averaging: confirmed (best at 3 of 4 designs; beaten by more than 1 % at any: False)
+
+-- choice 5: block model on the development splits (blocks per variant 6954; failures 0) --
+  kappa = 1.00: coverage (field | zone) and CRPS ratio variant / base (field | zone)
+    base model: coverage 0.791 | 0.764
+    without the offset term: coverage 0.637 | 0.698; CRPS 1.021 [1.009, 1.032] | 1.008 [1.003, 1.012]
+    without the split of TabPFN's variance: coverage 0.819 | 0.804; CRPS 1.002 [1.001, 1.004] | 1.001 [1.000, 1.003]
+    without averaging: coverage 0.788 | 0.761; CRPS 1.003 [1.001, 1.004] | 1.003 [1.001, 1.004]
+    without the mean correction: coverage 0.788 | 0.756; CRPS 1.004 [0.993, 1.016] | 1.009 [1.002, 1.015]
+    mean correction at every n: coverage 0.767 | 0.761; CRPS 1.048 [1.025, 1.074] | 1.021 [1.005, 1.038]
+  kappa = 1.10: coverage (field | zone) and CRPS ratio variant / base (field | zone)
+    base model: coverage 0.833 | 0.807
+    without the offset term: coverage 0.680 | 0.737; CRPS 1.005 [0.994, 1.017] | 1.001 [0.996, 1.005]
+    without the split of TabPFN's variance: coverage 0.857 | 0.836; CRPS 1.005 [1.003, 1.007] | 1.005 [1.004, 1.007]
+    without averaging: coverage 0.829 | 0.802; CRPS 1.002 [1.001, 1.004] | 1.003 [1.001, 1.004]
+    without the mean correction: coverage 0.833 | 0.799; CRPS 1.004 [0.994, 1.015] | 1.008 [1.002, 1.015]
+    mean correction at every n: coverage 0.814 | 0.803; CRPS 1.045 [1.023, 1.070] | 1.020 [1.005, 1.036]
+  -> choice 5, block model: confirmed
+  exploratory (not in the plan): the mean correction from n = 25 against the base model (from n = 50), kappa = 1
+    all n: CRPS 1.003 [0.993, 1.013] | 1.001 [0.992, 1.010]; coverage 0.791 -> 0.780 | 0.764 -> 0.765
+    25 <= n < 50: CRPS 1.030 [0.974, 1.092] | 1.005 [0.967, 1.045]; coverage 0.789 -> 0.730 | 0.755 -> 0.758
+
+-- choice 5: cutoff of the mean correction, point GP against TabPFN, SSE by n bin (10, 30, 50, 70 and 90 % designs) --
+  n in [0, 25): 225 cells, 13 fields; SSE 0.999 [0.984, 1.016], 7/13 fields, p = 0.735; pooled over cells 0.992
+  n in [25, 50): 210 cells, 12 fields; SSE 0.969 [0.944, 0.996], 11/12 fields, p = 0.0269; pooled over cells 0.983
+  n in [50, 100): 375 cells, 14 fields; SSE 0.965 [0.948, 0.983], 11/14 fields, p = 0.00403; pooled over cells 0.963
+  n in [100, inf): 240 cells, 9 fields; SSE 0.942 [0.892, 0.984], 7/9 fields, p = 0.0273; pooled over cells 0.982
+  -> choice 5, cutoff: smallest edge with every bin above it below 0.98: 25; cutoff of 50 CHANGES

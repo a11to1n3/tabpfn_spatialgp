@@ -1,0 +1,66 @@
+cff-version: 1.2.0
+title: "tabpfn_spatialgp: TabPFN with a spatial Gaussian process on its cross-fitted errors, for field and zone means of soil properties"
+message: "If you use this software, please cite it, and cite Hollmann et al. (2025) for TabPFN."
+type: software
+authors:
+  - family-names: Pham
+    given-names: Anh-Duy
+version: 0.0.1
+license: MIT
+repository-code: "https://github.com/a11to1n3/tabpfn_spatialgp"
+references:
+  - type: article
+    title: "Accurate predictions on small data with a tabular foundation model"
+    authors:
+      - family-names: Hollmann
+        given-names: Noah
+      - family-names: Müller
+        given-names: Samuel
+      - family-names: Purucker
+        given-names: Lennart
+      - family-names: Krishnakumar
+        given-names: Arjun
+      - family-names: Körfer
+        given-names: Max
+      - family-names: Hoo
+        given-names: Shi Bin
+      - family-names: Schirrmeister
+        given-names: Robin Tibor
+      - family-names: Hutter
+        given-names: Frank
+    year: 2025
+    journal: Nature
+    volume: "637"
+    start: "319"
+    end: "326"
+    doi: 10.1038/s41586-024-08328-6
+  - type: article
+    title: "Kriging prior regression: A case for kriging-based spatial features with TabPFN in soil mapping"
+    authors:
+      - family-names: Schmidinger
+        given-names: Jonas
+      - family-names: Barkov
+        given-names: Viacheslav
+      - family-names: Vogel
+        given-names: Sebastian
+      - family-names: Atzmueller
+        given-names: Martin
+      - family-names: Heuvelink
+        given-names: Gerard B. M.
+    year: 2026
+    journal: Computers and Electronics in Agriculture
+    volume: "243"
+    doi: 10.1016/j.compag.2025.111352
+  - type: article
+    title: "Uncertainty of spatial averages and totals of natural resource maps"
+    authors:
+      - family-names: Wadoux
+        given-names: Alexandre M. J.-C.
+      - family-names: Heuvelink
+        given-names: Gerard B. M.
+    year: 2023
+    journal: Methods in Ecology and Evolution
+    volume: "14"
+    start: "1320"
+    end: "1332"
+    doi: 10.1111/2041-210X.14106

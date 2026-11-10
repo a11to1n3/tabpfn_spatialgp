@@ -1,0 +1,111 @@
+=== E20 (docs/exploratory/plan_E20.md; specified after the study's results had been seen; exploratory): what is subtracted from TabPFN's variance ===
+14 development fields, 6954 blocks per version; base = TabPFN-GP as it is; CRPS ratio = version / base
+own factors: base 1.10, marginal 1.10, loo_unknown 1.10, local 1.10
+
+-- kappa = 1.00 (field | zone) --
+  all: coverage base 0.780 | 0.765
+    marginal     coverage 0.772 | 0.758; CRPS 1.000 [1.000, 1.001] (6/14 fields lower) | 1.000 [1.000, 1.001] (5/14 fields lower)
+    loo_unknown  coverage 0.778 | 0.762; CRPS 1.000 [1.000, 1.000] (9/14 fields lower) | 1.000 [1.000, 1.000] (4/14 fields lower)
+    local        coverage 0.778 | 0.762; CRPS 1.000 [1.000, 1.000] (9/14 fields lower) | 1.000 [1.000, 1.001] (3/14 fields lower)
+  n 5-10: coverage base 0.791 | 0.764
+    marginal     coverage 0.791 | 0.762; CRPS 1.000 [1.000, 1.000] (9/12 fields lower) | 1.000 [1.000, 1.000] (9/12 fields lower)
+    loo_unknown  coverage 0.791 | 0.759; CRPS 1.000 [0.999, 1.000] (9/12 fields lower) | 1.000 [0.999, 1.000] (8/12 fields lower)
+    local        coverage 0.791 | 0.760; CRPS 1.000 [1.000, 1.000] (8/12 fields lower) | 1.000 [1.000, 1.000] (6/12 fields lower)
+  n 15-20: coverage base 0.867 | 0.787
+    marginal     coverage 0.867 | 0.783; CRPS 1.000 [1.000, 1.000] (3/4 fields lower) | 1.000 [1.000, 1.001] (3/4 fields lower)
+    loo_unknown  coverage 0.867 | 0.783; CRPS 1.000 [0.999, 1.000] (4/4 fields lower) | 1.000 [1.000, 1.000] (2/4 fields lower)
+    local        coverage 0.867 | 0.787; CRPS 1.000 [1.000, 1.000] (3/4 fields lower) | 1.000 [1.000, 1.000] (2/4 fields lower)
+  n 30-max: coverage base 0.768 | 0.774
+    marginal     coverage 0.757 | 0.764; CRPS 1.000 [1.000, 1.001] (8/14 fields lower) | 1.000 [1.000, 1.001] (7/14 fields lower)
+    loo_unknown  coverage 0.766 | 0.771; CRPS 1.000 [1.000, 1.000] (6/14 fields lower) | 1.000 [1.000, 1.000] (3/14 fields lower)
+    local        coverage 0.765 | 0.771; CRPS 1.000 [1.000, 1.000] (5/14 fields lower) | 1.000 [1.000, 1.001] (1/14 fields lower)
+  zones m_B 3-9 (field column = all field means): coverage base 0.780 | 0.783
+    marginal     coverage 0.772 | 0.769; CRPS 1.000 [1.000, 1.001] (6/14 fields lower) | 1.000 [0.999, 1.001] (7/14 fields lower)
+    loo_unknown  coverage 0.778 | 0.780; CRPS 1.000 [1.000, 1.000] (9/14 fields lower) | 1.000 [1.000, 1.000] (7/14 fields lower)
+    local        coverage 0.778 | 0.777; CRPS 1.000 [1.000, 1.000] (9/14 fields lower) | 1.000 [1.000, 1.001] (3/14 fields lower)
+  zones m_B 10-29 (field column = all field means): coverage base 0.780 | 0.764
+    marginal     coverage 0.772 | 0.757; CRPS 1.000 [1.000, 1.001] (6/14 fields lower) | 1.000 [1.000, 1.001] (4/14 fields lower)
+    loo_unknown  coverage 0.778 | 0.760; CRPS 1.000 [1.000, 1.000] (9/14 fields lower) | 1.000 [1.000, 1.000] (5/14 fields lower)
+    local        coverage 0.778 | 0.762; CRPS 1.000 [1.000, 1.000] (9/14 fields lower) | 1.000 [1.000, 1.000] (3/14 fields lower)
+  zones m_B 30-max (field column = all field means): coverage base 0.780 | 0.748
+    marginal     coverage 0.772 | 0.747; CRPS 1.000 [1.000, 1.001] (6/14 fields lower) | 1.000 [1.000, 1.000] (2/11 fields lower)
+    loo_unknown  coverage 0.778 | 0.748; CRPS 1.000 [1.000, 1.000] (9/14 fields lower) | 1.000 [1.000, 1.001] (4/11 fields lower)
+    local        coverage 0.778 | 0.748; CRPS 1.000 [1.000, 1.000] (9/14 fields lower) | 1.000 [1.000, 1.001] (5/11 fields lower)
+
+-- kappa = 1.10 (field | zone) --
+  all: coverage base 0.827 | 0.807
+    marginal     coverage 0.818 | 0.802; CRPS 1.000 [0.999, 1.000] (9/14 fields lower) | 1.000 [0.999, 1.000] (10/14 fields lower)
+    loo_unknown  coverage 0.826 | 0.806; CRPS 1.000 [1.000, 1.000] (12/14 fields lower) | 1.000 [1.000, 1.000] (12/14 fields lower)
+    local        coverage 0.826 | 0.805; CRPS 1.000 [1.000, 1.000] (11/14 fields lower) | 1.000 [1.000, 1.000] (7/14 fields lower)
+  n 5-10: coverage base 0.813 | 0.808
+    marginal     coverage 0.813 | 0.808; CRPS 1.000 [1.000, 1.000] (10/12 fields lower) | 1.000 [0.999, 1.000] (11/12 fields lower)
+    loo_unknown  coverage 0.809 | 0.808; CRPS 0.999 [0.999, 1.000] (11/12 fields lower) | 0.999 [0.999, 1.000] (10/12 fields lower)
+    local        coverage 0.809 | 0.808; CRPS 1.000 [0.999, 1.000] (11/12 fields lower) | 1.000 [0.999, 1.000] (7/12 fields lower)
+  n 15-20: coverage base 0.933 | 0.821
+    marginal     coverage 0.933 | 0.821; CRPS 1.000 [0.999, 1.000] (4/4 fields lower) | 1.000 [0.999, 1.000] (3/4 fields lower)
+    loo_unknown  coverage 0.933 | 0.817; CRPS 0.999 [0.999, 1.000] (4/4 fields lower) | 1.000 [0.999, 1.000] (3/4 fields lower)
+    local        coverage 0.933 | 0.817; CRPS 1.000 [0.999, 1.000] (4/4 fields lower) | 1.000 [0.999, 1.000] (2/4 fields lower)
+  n 30-max: coverage base 0.820 | 0.819
+    marginal     coverage 0.806 | 0.811; CRPS 1.000 [0.999, 1.000] (10/14 fields lower) | 0.999 [0.999, 1.000] (9/14 fields lower)
+    loo_unknown  coverage 0.819 | 0.818; CRPS 1.000 [1.000, 1.000] (11/14 fields lower) | 1.000 [1.000, 1.000] (10/14 fields lower)
+    local        coverage 0.819 | 0.817; CRPS 1.000 [1.000, 1.000] (9/14 fields lower) | 1.000 [1.000, 1.001] (5/14 fields lower)
+  zones m_B 3-9 (field column = all field means): coverage base 0.827 | 0.826
+    marginal     coverage 0.818 | 0.816; CRPS 1.000 [0.999, 1.000] (9/14 fields lower) | 0.999 [0.997, 1.000] (10/14 fields lower)
+    loo_unknown  coverage 0.826 | 0.825; CRPS 1.000 [1.000, 1.000] (12/14 fields lower) | 1.000 [1.000, 1.000] (12/14 fields lower)
+    local        coverage 0.826 | 0.823; CRPS 1.000 [1.000, 1.000] (11/14 fields lower) | 1.000 [1.000, 1.000] (7/14 fields lower)
+  zones m_B 10-29 (field column = all field means): coverage base 0.827 | 0.806
+    marginal     coverage 0.818 | 0.801; CRPS 1.000 [0.999, 1.000] (9/14 fields lower) | 1.000 [0.999, 1.000] (9/14 fields lower)
+    loo_unknown  coverage 0.826 | 0.804; CRPS 1.000 [1.000, 1.000] (12/14 fields lower) | 1.000 [1.000, 1.000] (12/14 fields lower)
+    local        coverage 0.826 | 0.805; CRPS 1.000 [1.000, 1.000] (11/14 fields lower) | 1.000 [1.000, 1.000] (8/14 fields lower)
+  zones m_B 30-max (field column = all field means): coverage base 0.827 | 0.790
+    marginal     coverage 0.818 | 0.787; CRPS 1.000 [0.999, 1.000] (9/14 fields lower) | 1.000 [1.000, 1.000] (6/11 fields lower)
+    loo_unknown  coverage 0.826 | 0.789; CRPS 1.000 [1.000, 1.000] (12/14 fields lower) | 1.000 [0.999, 1.000] (7/11 fields lower)
+    local        coverage 0.826 | 0.788; CRPS 1.000 [1.000, 1.000] (11/14 fields lower) | 1.000 [0.999, 1.000] (6/11 fields lower)
+
+-- own factor (field | zone) --
+  all: coverage base 0.827 | 0.807
+    marginal     coverage 0.818 | 0.802; CRPS 1.000 [0.999, 1.000] (9/14 fields lower) | 1.000 [0.999, 1.000] (10/14 fields lower)
+    loo_unknown  coverage 0.826 | 0.806; CRPS 1.000 [1.000, 1.000] (12/14 fields lower) | 1.000 [1.000, 1.000] (12/14 fields lower)
+    local        coverage 0.826 | 0.805; CRPS 1.000 [1.000, 1.000] (11/14 fields lower) | 1.000 [1.000, 1.000] (7/14 fields lower)
+  n 5-10: coverage base 0.813 | 0.808
+    marginal     coverage 0.813 | 0.808; CRPS 1.000 [1.000, 1.000] (10/12 fields lower) | 1.000 [0.999, 1.000] (11/12 fields lower)
+    loo_unknown  coverage 0.809 | 0.808; CRPS 0.999 [0.999, 1.000] (11/12 fields lower) | 0.999 [0.999, 1.000] (10/12 fields lower)
+    local        coverage 0.809 | 0.808; CRPS 1.000 [0.999, 1.000] (11/12 fields lower) | 1.000 [0.999, 1.000] (7/12 fields lower)
+  n 15-20: coverage base 0.933 | 0.821
+    marginal     coverage 0.933 | 0.821; CRPS 1.000 [0.999, 1.000] (4/4 fields lower) | 1.000 [0.999, 1.000] (3/4 fields lower)
+    loo_unknown  coverage 0.933 | 0.817; CRPS 0.999 [0.999, 1.000] (4/4 fields lower) | 1.000 [0.999, 1.000] (3/4 fields lower)
+    local        coverage 0.933 | 0.817; CRPS 1.000 [0.999, 1.000] (4/4 fields lower) | 1.000 [0.999, 1.000] (2/4 fields lower)
+  n 30-max: coverage base 0.820 | 0.819
+    marginal     coverage 0.806 | 0.811; CRPS 1.000 [0.999, 1.000] (10/14 fields lower) | 0.999 [0.999, 1.000] (9/14 fields lower)
+    loo_unknown  coverage 0.819 | 0.818; CRPS 1.000 [1.000, 1.000] (11/14 fields lower) | 1.000 [1.000, 1.000] (10/14 fields lower)
+    local        coverage 0.819 | 0.817; CRPS 1.000 [1.000, 1.000] (9/14 fields lower) | 1.000 [1.000, 1.001] (5/14 fields lower)
+  zones m_B 3-9 (field column = all field means): coverage base 0.827 | 0.826
+    marginal     coverage 0.818 | 0.816; CRPS 1.000 [0.999, 1.000] (9/14 fields lower) | 0.999 [0.997, 1.000] (10/14 fields lower)
+    loo_unknown  coverage 0.826 | 0.825; CRPS 1.000 [1.000, 1.000] (12/14 fields lower) | 1.000 [1.000, 1.000] (12/14 fields lower)
+    local        coverage 0.826 | 0.823; CRPS 1.000 [1.000, 1.000] (11/14 fields lower) | 1.000 [1.000, 1.000] (7/14 fields lower)
+  zones m_B 10-29 (field column = all field means): coverage base 0.827 | 0.806
+    marginal     coverage 0.818 | 0.801; CRPS 1.000 [0.999, 1.000] (9/14 fields lower) | 1.000 [0.999, 1.000] (9/14 fields lower)
+    loo_unknown  coverage 0.826 | 0.804; CRPS 1.000 [1.000, 1.000] (12/14 fields lower) | 1.000 [1.000, 1.000] (12/14 fields lower)
+    local        coverage 0.826 | 0.805; CRPS 1.000 [1.000, 1.000] (11/14 fields lower) | 1.000 [1.000, 1.000] (8/14 fields lower)
+  zones m_B 30-max (field column = all field means): coverage base 0.827 | 0.790
+    marginal     coverage 0.818 | 0.787; CRPS 1.000 [0.999, 1.000] (9/14 fields lower) | 1.000 [1.000, 1.000] (6/11 fields lower)
+    loo_unknown  coverage 0.826 | 0.789; CRPS 1.000 [1.000, 1.000] (12/14 fields lower) | 1.000 [0.999, 1.000] (7/11 fields lower)
+    local        coverage 0.826 | 0.788; CRPS 1.000 [1.000, 1.000] (11/14 fields lower) | 1.000 [0.999, 1.000] (6/11 fields lower)
+
+-- amount subtracted, as a ratio to v_bar: median [quartiles] over 1470 cases (v_bar = 0 in 0) --
+  all: marginal 1.10 [1.06, 1.22]; loo_unknown 1.06 [1.03, 1.16]; local 1.06 [1.02, 1.12]
+  n 5-10: marginal 1.13 [1.10, 1.19]; loo_unknown 1.35 [1.26, 1.42]; local 1.23 [1.13, 1.32]
+  n 15-20: marginal 1.10 [1.07, 1.18]; loo_unknown 1.12 [1.11, 1.13]; local 1.10 [1.07, 1.13]
+  n 30-max: marginal 1.08 [1.05, 1.22]; loo_unknown 1.03 [1.02, 1.05]; local 1.03 [1.02, 1.05]
+
+-- reading (fixed before running, docs/exploratory/plan_E20.md), own factor --
+  marginal     field: no clear difference (1.000 [0.999, 1.000] (9/14 fields lower))
+  marginal     zone : no clear difference (1.000 [0.999, 1.000] (10/14 fields lower))
+  loo_unknown  field: no clear difference (1.000 [1.000, 1.000] (12/14 fields lower))
+  loo_unknown  zone : no clear difference (1.000 [1.000, 1.000] (12/14 fields lower))
+  local        field: no clear difference (1.000 [1.000, 1.000] (11/14 fields lower))
+  local        zone : no clear difference (1.000 [1.000, 1.000] (7/14 fields lower))
+  coverage of field means, n 30 or more minus n 5 to 10: base +0.007, marginal -0.007, loo_unknown +0.010, local +0.010
+  marginal     differs from base by -0.014: within 0.05
+  loo_unknown  differs from base by +0.003: within 0.05
+  local        differs from base by +0.003: within 0.05

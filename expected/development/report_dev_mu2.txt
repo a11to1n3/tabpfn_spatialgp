@@ -1,0 +1,15 @@
+blocks per variant 6954; failures 0; fields 14
+
+kappa = 1.00 (field | zone)
+  all: coverage base 0.780 | 0.765; add_mu2 0.788 | 0.778; CRPS add_mu2 / base 1.004 [1.001, 1.008] (2/14 fields lower) | 1.002 [1.000, 1.003] (3/14 fields lower)
+  n < 25: coverage base 0.798 | 0.755; add_mu2 0.820 | 0.786; CRPS add_mu2 / base 1.011 [1.002, 1.025] (2/14 fields lower) | 1.005 [1.000, 1.010] (3/14 fields lower)
+  n 5-10: coverage base 0.791 | 0.764; add_mu2 0.809 | 0.798; CRPS add_mu2 / base 1.007 [0.997, 1.015] (3/12 fields lower) | 1.003 [0.996, 1.009] (4/12 fields lower)
+  n 15-20: coverage base 0.867 | 0.787; add_mu2 0.883 | 0.812; CRPS add_mu2 / base 1.005 [1.003, 1.008] (0/4 fields lower) | 1.003 [0.999, 1.006] (1/4 fields lower)
+  n 25-max: coverage base 0.768 | 0.772; add_mu2 0.768 | 0.772; CRPS add_mu2 / base 1.000 [1.000, 1.000] (0/14 fields lower) | 1.000 [1.000, 1.000] (0/14 fields lower)
+
+kappa = 1.10 (field | zone)
+  all: coverage base 0.827 | 0.807; add_mu2 0.835 | 0.815; CRPS add_mu2 / base 1.006 [1.003, 1.010] (1/14 fields lower) | 1.003 [1.002, 1.005] (1/14 fields lower)
+  n < 25: coverage base 0.838 | 0.792; add_mu2 0.859 | 0.812; CRPS add_mu2 / base 1.015 [1.005, 1.030] (1/14 fields lower) | 1.008 [1.003, 1.015] (1/14 fields lower)
+  n 5-10: coverage base 0.813 | 0.808; add_mu2 0.840 | 0.824; CRPS add_mu2 / base 1.010 [1.001, 1.018] (2/12 fields lower) | 1.006 [0.999, 1.012] (3/12 fields lower)
+  n 15-20: coverage base 0.933 | 0.821; add_mu2 0.933 | 0.842; CRPS add_mu2 / base 1.009 [1.006, 1.013] (0/4 fields lower) | 1.006 [1.003, 1.009] (0/4 fields lower)
+  n 25-max: coverage base 0.821 | 0.817; add_mu2 0.821 | 0.817; CRPS add_mu2 / base 1.000 [1.000, 1.000] (0/14 fields lower) | 1.000 [1.000, 1.000] (0/14 fields lower)

@@ -1,0 +1,49 @@
+{
+ "check": {
+  "J1p_factor": 1.1,
+  "J1p_coverage_at_1.05": 0.7848873942359818,
+  "J1p_coverage_at_1.10": 0.8016958388034947
+ },
+ "comparators": {
+  "TabPFN": {
+   "variant": "TAB",
+   "factor": 2.4,
+   "coverage_at_factor": 0.8004174657160944,
+   "coverage_at_1": 0.4742784484806971,
+   "crps_ratio_calibrated_to_uncalibrated": 0.9561028704277573,
+   "crps_version": "calibrated"
+  },
+  "TabPFN-KpR": {
+   "variant": "KpR4",
+   "factor": 4.2,
+   "coverage_at_factor": 0.8007649324179638,
+   "coverage_at_1": 0.39279774157056924,
+   "crps_ratio_calibrated_to_uncalibrated": 1.02208091967653,
+   "crps_version": "uncalibrated"
+  },
+  "Block RK": {
+   "variant": "RK_ins_fix_v",
+   "factor": 1.55,
+   "coverage_at_factor": 0.808187681967496,
+   "coverage_at_1": 0.6492681584089917,
+   "crps_ratio_calibrated_to_uncalibrated": 0.9886710286543943,
+   "crps_version": "calibrated"
+  },
+  "WH": {
+   "variant": "WH_fix",
+   "factor": 1.6,
+   "coverage_at_factor": 0.8099552699469126,
+   "coverage_at_1": 0.6341998677083049,
+   "crps_ratio_calibrated_to_uncalibrated": 0.9892008934341565,
+   "crps_version": "calibrated"
+  },
+  "Sample mean": {
+   "variant": "DB",
+   "factor": 1.05,
+   "coverage_at_factor": 0.8166708378136738,
+   "coverage_at_1": 0.7984020711930422,
+   "crps_ratio_calibrated_to_uncalibrated": 1.0032730792879623,
+   "crps_version": "uncalibrated"
+  }
+ }
+}

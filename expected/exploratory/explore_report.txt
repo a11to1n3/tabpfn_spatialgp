@@ -1,0 +1,127 @@
+=== Exploratory analyses E1 and E2 (docs/exploratory/plan_E1-E2.md; specified after the study's results had been seen) ===
+
+-- check: aggregated over all n, the ratios must equal report.txt --
+  field TabPFN       CRPS 0.967 [0.959, 0.974]  width 1.228 [1.139, 1.337]
+  field TabPFN-KpR   CRPS 0.796 [0.784, 0.808]  width 0.919 [0.865, 0.988]
+  field Block RK     CRPS 0.988 [0.980, 0.997]  width 1.149 [1.091, 1.211]
+  field WH           CRPS 0.987 [0.981, 0.992]  width 1.251 [1.211, 1.294]
+  field Sample mean  CRPS 0.949 [0.915, 0.982]  width 0.996 [0.962, 1.029]
+  zone  TabPFN       CRPS 0.955 [0.947, 0.964]  width 0.871 [0.816, 0.937]
+  zone  TabPFN-KpR   CRPS 0.795 [0.775, 0.814]  width 0.666 [0.632, 0.708]
+  zone  Block RK     CRPS 0.980 [0.969, 0.991]  width 0.955 [0.912, 1.003]
+  zone  WH           CRPS 0.983 [0.978, 0.988]  width 0.932 [0.904, 0.962]
+  zone  Sample mean  CRPS 0.797 [0.772, 0.821]  width 0.628 [0.613, 0.644]
+
+-- E1: ratio TabPFN-GP / comparator by n, the study's factors [95 % interval over fields; fields lower / fields] --
+  field TabPFN       CRPS  5: 0.970 [0.954, 0.985] 27/43; 10: 0.986 [0.973, 0.999] 27/43; 15: 0.995 [0.983, 1.006] 20/43; 20: 0.979 [0.962, 0.994] 21/43; 30: 0.958 [0.937, 0.979] 31/40; 50: 0.937 [0.913, 0.961] 29/34; 75: 0.936 [0.902, 0.968] 18/21; 100: 0.910 [0.859, 0.966] 11/15
+  field TabPFN       width 5: 2.464 [2.237, 2.727]; 10: 1.616 [1.467, 1.792]; 15: 1.324 [1.201, 1.470]; 20: 1.138 [1.029, 1.267]; 30: 0.952 [0.862, 1.059]; 50: 0.788 [0.718, 0.877]; 75: 0.732 [0.650, 0.835]; 100: 0.705 [0.614, 0.827]
+  field TabPFN-KpR   CRPS  5: 0.779 [0.753, 0.804] 43/43; 10: 0.710 [0.689, 0.732] 43/43; 15: 0.793 [0.767, 0.819] 42/43; 20: 0.827 [0.797, 0.856] 42/43; 30: 0.850 [0.819, 0.882] 36/40; 50: 0.916 [0.881, 0.948] 25/34; 75: 0.937 [0.880, 0.997] 13/21; 100: 0.923 [0.874, 0.974] 12/15
+  field TabPFN-KpR   width 5: 4.093 [3.652, 4.583]; 10: 1.999 [1.795, 2.214]; 15: 0.924 [0.845, 1.015]; 20: 0.732 [0.665, 0.812]; 30: 0.585 [0.531, 0.651]; 50: 0.488 [0.441, 0.545]; 75: 0.454 [0.401, 0.520]; 100: 0.420 [0.366, 0.491]
+  field Block RK     CRPS  5: 0.987 [0.972, 1.002] 24/43; 10: 1.003 [0.992, 1.015] 18/43; 15: 1.009 [0.995, 1.022] 18/43; 20: 0.996 [0.979, 1.012] 25/43; 30: 0.986 [0.967, 1.006] 26/40; 50: 0.973 [0.950, 0.997] 26/34; 75: 0.979 [0.945, 1.021] 15/21; 100: 0.978 [0.933, 1.024] 7/15
+  field Block RK     width 5: 2.021 [1.892, 2.168]; 10: 1.306 [1.235, 1.390]; 15: 1.124 [1.060, 1.196]; 20: 1.021 [0.961, 1.088]; 30: 0.914 [0.861, 0.973]; 50: 0.820 [0.775, 0.872]; 75: 0.792 [0.732, 0.870]; 100: 0.789 [0.723, 0.876]
+  field WH           CRPS  5: 0.981 [0.966, 0.995] 29/43; 10: 0.999 [0.990, 1.008] 18/43; 15: 1.011 [1.004, 1.019] 10/43; 20: 1.004 [0.997, 1.013] 20/43; 30: 0.980 [0.963, 0.997] 26/40; 50: 0.967 [0.947, 0.987] 25/34; 75: 0.964 [0.935, 0.993] 14/21; 100: 0.906 [0.860, 0.956] 11/15
+  field WH           width 5: 2.312 [2.205, 2.422]; 10: 1.540 [1.475, 1.609]; 15: 1.282 [1.231, 1.338]; 20: 1.121 [1.074, 1.174]; 30: 0.945 [0.908, 0.985]; 50: 0.797 [0.773, 0.823]; 75: 0.718 [0.696, 0.741]; 100: 0.670 [0.647, 0.694]
+  field Sample mean  CRPS  5: 1.022 [0.989, 1.055] 14/43; 10: 0.993 [0.958, 1.028] 17/43; 15: 0.946 [0.909, 0.978] 27/43; 20: 0.934 [0.883, 0.982] 24/43; 30: 0.898 [0.846, 0.948] 28/40; 50: 0.846 [0.784, 0.909] 26/34; 75: 0.893 [0.819, 0.965] 13/21; 100: 0.786 [0.691, 0.881] 13/15
+  field Sample mean  width 5: 1.067 [1.043, 1.091]; 10: 1.042 [1.012, 1.070]; 15: 1.014 [0.977, 1.050]; 20: 0.990 [0.950, 1.028]; 30: 0.943 [0.893, 0.989]; 50: 0.883 [0.830, 0.933]; 75: 0.862 [0.796, 0.924]; 100: 0.819 [0.733, 0.900]
+  zone  TabPFN       CRPS  5: 0.996 [0.987, 1.005] 24/43; 10: 0.980 [0.969, 0.990] 29/43; 15: 0.969 [0.955, 0.982] 34/43; 20: 0.957 [0.940, 0.972] 35/43; 30: 0.935 [0.912, 0.959] 33/40; 50: 0.912 [0.891, 0.934] 29/34; 75: 0.897 [0.868, 0.926] 19/21; 100: 0.886 [0.848, 0.926] 13/15
+  zone  TabPFN       width 5: 1.492 [1.359, 1.647]; 10: 1.056 [0.967, 1.159]; 15: 0.907 [0.833, 0.996]; 20: 0.818 [0.752, 0.896]; 30: 0.726 [0.672, 0.791]; 50: 0.641 [0.599, 0.695]; 75: 0.611 [0.563, 0.672]; 100: 0.601 [0.548, 0.671]
+  zone  TabPFN-KpR   CRPS  5: 0.787 [0.756, 0.816] 42/43; 10: 0.699 [0.671, 0.729] 42/43; 15: 0.786 [0.766, 0.808] 43/43; 20: 0.831 [0.807, 0.857] 41/43; 30: 0.853 [0.826, 0.880] 39/40; 50: 0.886 [0.851, 0.919] 30/34; 75: 0.902 [0.856, 0.948] 16/21; 100: 0.915 [0.881, 0.952] 14/15
+  zone  TabPFN-KpR   width 5: 2.517 [2.253, 2.812]; 10: 1.328 [1.199, 1.466]; 15: 0.635 [0.588, 0.690]; 20: 0.528 [0.486, 0.576]; 30: 0.447 [0.414, 0.487]; 50: 0.396 [0.366, 0.433]; 75: 0.378 [0.343, 0.421]; 100: 0.359 [0.327, 0.400]
+  zone  Block RK     CRPS  5: 0.991 [0.981, 1.001] 26/43; 10: 0.991 [0.980, 1.001] 24/43; 15: 0.990 [0.976, 1.004] 25/43; 20: 0.988 [0.970, 1.008] 23/43; 30: 0.977 [0.956, 0.997] 26/40; 50: 0.961 [0.940, 0.983] 28/34; 75: 0.948 [0.917, 0.980] 14/21; 100: 0.943 [0.906, 0.980] 12/15
+  zone  Block RK     width 5: 1.647 [1.537, 1.775]; 10: 1.101 [1.040, 1.175]; 15: 0.946 [0.891, 1.008]; 20: 0.864 [0.815, 0.919]; 30: 0.779 [0.740, 0.824]; 50: 0.710 [0.679, 0.743]; 75: 0.688 [0.650, 0.735]; 100: 0.690 [0.651, 0.737]
+  zone  WH           CRPS  5: 1.006 [0.997, 1.014] 16/43; 10: 0.998 [0.992, 1.003] 22/43; 15: 0.994 [0.987, 1.000] 26/43; 20: 0.987 [0.978, 0.997] 32/43; 30: 0.966 [0.951, 0.982] 33/40; 50: 0.946 [0.932, 0.961] 30/34; 75: 0.932 [0.912, 0.949] 21/21; 100: 0.905 [0.878, 0.932] 14/15
+  zone  WH           width 5: 1.486 [1.418, 1.556]; 10: 1.067 [1.025, 1.111]; 15: 0.931 [0.898, 0.968]; 20: 0.853 [0.821, 0.889]; 30: 0.762 [0.736, 0.792]; 50: 0.684 [0.663, 0.708]; 75: 0.636 [0.606, 0.664]; 100: 0.608 [0.565, 0.649]
+  zone  Sample mean  CRPS  5: 0.837 [0.795, 0.877] 39/43; 10: 0.779 [0.757, 0.803] 43/43; 15: 0.770 [0.744, 0.797] 43/43; 20: 0.781 [0.749, 0.815] 41/43; 30: 0.800 [0.768, 0.833] 38/40; 50: 0.813 [0.772, 0.854] 33/34; 75: 0.813 [0.755, 0.872] 19/21; 100: 0.789 [0.717, 0.860] 15/15
+  zone  Sample mean  width 5: 0.550 [0.530, 0.572]; 10: 0.529 [0.513, 0.546]; 15: 0.587 [0.569, 0.605]; 20: 0.647 [0.624, 0.671]; 30: 0.708 [0.679, 0.738]; 50: 0.756 [0.718, 0.795]; 75: 0.761 [0.708, 0.817]; 100: 0.747 [0.685, 0.816]
+
+-- E2: comparators with a factor tuned on these results for each n and kind (TabPFN-GP: kappa = 1.15) --
+  field TabPFN       n=  5: CRPS factor  4.10 ratio 1.009 [0.998, 1.021] lower 18/43; coverage factor  5.60 (coverage 0.802; TabPFN-GP 0.808) width ratio 1.056 [0.959, 1.169]
+  field TabPFN       n= 10: CRPS factor  2.90 ratio 0.993 [0.982, 1.003] lower 21/43; coverage factor  3.55 (coverage 0.800; TabPFN-GP 0.824) width ratio 1.093 [0.991, 1.211]
+  field TabPFN       n= 15: CRPS factor  2.30 ratio 0.995 [0.983, 1.006] lower 20/43; coverage factor  2.85 (coverage 0.804; TabPFN-GP 0.834) width ratio 1.115 [1.011, 1.238]
+  field TabPFN       n= 20: CRPS factor  2.10 ratio 0.983 [0.967, 0.997] lower 25/43; coverage factor  2.50 (coverage 0.801; TabPFN-GP 0.850) width ratio 1.093 [0.988, 1.217]
+  field TabPFN       n= 30: CRPS factor  1.80 ratio 0.976 [0.958, 0.994] lower 25/40; coverage factor  2.20 (coverage 0.808; TabPFN-GP 0.825) width ratio 1.038 [0.940, 1.155]
+  field TabPFN       n= 50: CRPS factor  1.50 ratio 0.987 [0.963, 1.010] lower 17/34; coverage factor  1.70 (coverage 0.806; TabPFN-GP 0.841) width ratio 1.113 [1.014, 1.238]
+  field TabPFN       n= 75: CRPS factor  1.45 ratio 1.000 [0.960, 1.041] lower 9/21; coverage factor  1.75 (coverage 0.814; TabPFN-GP 0.802) width ratio 1.004 [0.892, 1.145]
+  field TabPFN       n=100: CRPS factor  1.40 ratio 0.979 [0.927, 1.030] lower 7/15; coverage factor  1.60 (coverage 0.802; TabPFN-GP 0.845) width ratio 1.058 [0.922, 1.240]
+  field TabPFN       all n: CRPS ratio 0.991 [0.981, 1.000] lower 26/43; width ratio 1.037 [0.946, 1.145] lower 21/43
+  field TabPFN-KpR   n=  5 (grid edge): CRPS factor 10.55 ratio 0.941 [0.912, 0.971] lower 33/43; coverage factor 20.00 (coverage 0.748; TabPFN-GP 0.808) width ratio 0.860 [0.767, 0.962]
+  field TabPFN-KpR   n= 10 (grid edge): CRPS factor  4.90 ratio 0.792 [0.768, 0.816] lower 43/43; coverage factor 20.00 (coverage 0.739; TabPFN-GP 0.824) width ratio 0.420 [0.377, 0.465]
+  field TabPFN-KpR   n= 15: CRPS factor  2.85 ratio 0.871 [0.846, 0.898] lower 39/43; coverage factor  5.05 (coverage 0.804; TabPFN-GP 0.834) width ratio 0.769 [0.703, 0.844]
+  field TabPFN-KpR   n= 20: CRPS factor  2.30 ratio 0.893 [0.863, 0.924] lower 36/43; coverage factor  3.20 (coverage 0.803; TabPFN-GP 0.850) width ratio 0.961 [0.873, 1.066]
+  field TabPFN-KpR   n= 30: CRPS factor  1.95 ratio 0.900 [0.873, 0.927] lower 36/40; coverage factor  2.55 (coverage 0.800; TabPFN-GP 0.825) width ratio 0.964 [0.874, 1.073]
+  field TabPFN-KpR   n= 50: CRPS factor  1.60 ratio 0.949 [0.916, 0.980] lower 24/34; coverage factor  1.90 (coverage 0.806; TabPFN-GP 0.841) width ratio 1.078 [0.975, 1.204]
+  field TabPFN-KpR   n= 75: CRPS factor  1.50 ratio 0.963 [0.910, 1.016] lower 14/21; coverage factor  1.85 (coverage 0.803; TabPFN-GP 0.802) width ratio 1.030 [0.911, 1.181]
+  field TabPFN-KpR   n=100: CRPS factor  1.50 ratio 0.947 [0.903, 0.993] lower 9/15; coverage factor  1.75 (coverage 0.802; TabPFN-GP 0.845) width ratio 1.007 [0.880, 1.178]
+  field TabPFN-KpR   all n: CRPS ratio 0.884 [0.870, 0.897] lower 43/43; width ratio 0.704 [0.643, 0.768] lower 40/43
+  field Block RK     n=  5: CRPS factor  2.20 ratio 1.004 [0.992, 1.016] lower 20/43; coverage factor  3.25 (coverage 0.805; TabPFN-GP 0.808) width ratio 0.964 [0.902, 1.034]
+  field Block RK     n= 10: CRPS factor  1.55 ratio 1.003 [0.992, 1.015] lower 18/43; coverage factor  1.95 (coverage 0.802; TabPFN-GP 0.824) width ratio 1.038 [0.982, 1.105]
+  field Block RK     n= 15: CRPS factor  1.30 ratio 1.015 [1.000, 1.029] lower 16/43; coverage factor  1.65 (coverage 0.808; TabPFN-GP 0.834) width ratio 1.056 [0.996, 1.123]
+  field Block RK     n= 20: CRPS factor  1.25 ratio 1.007 [0.990, 1.023] lower 18/43; coverage factor  1.45 (coverage 0.806; TabPFN-GP 0.850) width ratio 1.092 [1.027, 1.163]
+  field Block RK     n= 30: CRPS factor  1.15 ratio 1.007 [0.989, 1.026] lower 19/40; coverage factor  1.30 (coverage 0.801; TabPFN-GP 0.825) width ratio 1.090 [1.026, 1.160]
+  field Block RK     n= 50: CRPS factor  1.10 ratio 1.006 [0.986, 1.029] lower 16/34; coverage factor  1.15 (coverage 0.803; TabPFN-GP 0.841) width ratio 1.106 [1.045, 1.176]
+  field Block RK     n= 75: CRPS factor  1.05 ratio 1.020 [0.984, 1.065] lower 9/21; coverage factor  1.15 (coverage 0.800; TabPFN-GP 0.802) width ratio 1.068 [0.987, 1.172]
+  field Block RK     n=100: CRPS factor  1.00 ratio 1.025 [0.974, 1.077] lower 4/15; coverage factor  1.10 (coverage 0.827; TabPFN-GP 0.845) width ratio 1.111 [1.019, 1.234]
+  field Block RK     all n: CRPS ratio 1.003 [0.996, 1.012] lower 18/43; width ratio 1.021 [0.966, 1.084] lower 21/43
+  field WH           n=  5: CRPS factor  2.70 ratio 1.021 [1.010, 1.032] lower 10/43; coverage factor  3.55 (coverage 0.805; TabPFN-GP 0.808) width ratio 1.042 [0.994, 1.091]
+  field WH           n= 10: CRPS factor  2.00 ratio 1.008 [1.002, 1.014] lower 14/43; coverage factor  2.30 (coverage 0.804; TabPFN-GP 0.824) width ratio 1.072 [1.026, 1.119]
+  field WH           n= 15: CRPS factor  1.60 ratio 1.011 [1.004, 1.019] lower 10/43; coverage factor  1.90 (coverage 0.804; TabPFN-GP 0.834) width ratio 1.080 [1.037, 1.126]
+  field WH           n= 20: CRPS factor  1.50 ratio 1.005 [0.998, 1.014] lower 17/43; coverage factor  1.60 (coverage 0.801; TabPFN-GP 0.850) width ratio 1.121 [1.074, 1.174]
+  field WH           n= 30: CRPS factor  1.30 ratio 0.992 [0.977, 1.007] lower 23/40; coverage factor  1.45 (coverage 0.801; TabPFN-GP 0.825) width ratio 1.043 [1.002, 1.087]
+  field WH           n= 50: CRPS factor  1.10 ratio 1.006 [0.987, 1.025] lower 18/34; coverage factor  1.20 (coverage 0.802; TabPFN-GP 0.841) width ratio 1.063 [1.031, 1.098]
+  field WH           n= 75: CRPS factor  1.05 ratio 1.021 [0.987, 1.055] lower 7/21; coverage factor  1.10 (coverage 0.806; TabPFN-GP 0.802) width ratio 1.045 [1.013, 1.077]
+  field WH           n=100: CRPS factor  0.95 ratio 0.981 [0.931, 1.031] lower 6/15; coverage factor  1.00 (coverage 0.800; TabPFN-GP 0.845) width ratio 1.072 [1.034, 1.111]
+  field WH           all n: CRPS ratio 1.007 [1.003, 1.012] lower 11/43; width ratio 1.058 [1.018, 1.100] lower 15/43
+  field Sample mean  n=  5: CRPS factor  0.85 ratio 1.026 [0.992, 1.059] lower 17/43; coverage factor  1.10 (coverage 0.813; TabPFN-GP 0.808) width ratio 1.019 [0.995, 1.041]
+  field Sample mean  n= 10: CRPS factor  0.95 ratio 0.994 [0.958, 1.029] lower 16/43; coverage factor  1.05 (coverage 0.802; TabPFN-GP 0.824) width ratio 1.042 [1.012, 1.070]
+  field Sample mean  n= 15: CRPS factor  0.90 ratio 0.948 [0.910, 0.980] lower 27/43; coverage factor  1.05 (coverage 0.810; TabPFN-GP 0.834) width ratio 1.014 [0.977, 1.050]
+  field Sample mean  n= 20: CRPS factor  0.95 ratio 0.934 [0.884, 0.983] lower 24/43; coverage factor  1.05 (coverage 0.816; TabPFN-GP 0.850) width ratio 0.990 [0.950, 1.028]
+  field Sample mean  n= 30: CRPS factor  0.95 ratio 0.898 [0.846, 0.948] lower 27/40; coverage factor  1.05 (coverage 0.818; TabPFN-GP 0.825) width ratio 0.943 [0.893, 0.989]
+  field Sample mean  n= 50: CRPS factor  0.95 ratio 0.847 [0.784, 0.910] lower 26/34; coverage factor  1.05 (coverage 0.812; TabPFN-GP 0.841) width ratio 0.883 [0.830, 0.933]
+  field Sample mean  n= 75: CRPS factor  0.95 ratio 0.894 [0.820, 0.967] lower 13/21; coverage factor  1.00 (coverage 0.812; TabPFN-GP 0.802) width ratio 0.905 [0.836, 0.970]
+  field Sample mean  n=100: CRPS factor  1.00 ratio 0.786 [0.691, 0.881] lower 13/15; coverage factor  1.05 (coverage 0.820; TabPFN-GP 0.845) width ratio 0.819 [0.733, 0.900]
+  field Sample mean  all n: CRPS ratio 0.950 [0.916, 0.983] lower 27/43; width ratio 0.987 [0.954, 1.020] lower 20/43
+  zone  TabPFN       n=  5: CRPS factor  2.60 ratio 0.997 [0.989, 1.006] lower 24/43; coverage factor  3.60 (coverage 0.802; TabPFN-GP 0.792) width ratio 0.995 [0.906, 1.098]
+  zone  TabPFN       n= 10: CRPS factor  2.10 ratio 0.983 [0.973, 0.992] lower 33/43; coverage factor  2.65 (coverage 0.803; TabPFN-GP 0.786) width ratio 0.956 [0.876, 1.050]
+  zone  TabPFN       n= 15: CRPS factor  1.85 ratio 0.984 [0.973, 0.992] lower 29/43; coverage factor  2.25 (coverage 0.801; TabPFN-GP 0.787) width ratio 0.967 [0.888, 1.062]
+  zone  TabPFN       n= 20: CRPS factor  1.70 ratio 0.985 [0.974, 0.993] lower 30/43; coverage factor  2.00 (coverage 0.801; TabPFN-GP 0.794) width ratio 0.981 [0.902, 1.075]
+  zone  TabPFN       n= 30: CRPS factor  1.60 ratio 0.975 [0.956, 0.995] lower 23/40; coverage factor  1.90 (coverage 0.807; TabPFN-GP 0.794) width ratio 0.917 [0.849, 0.999]
+  zone  TabPFN       n= 50: CRPS factor  1.40 ratio 0.981 [0.964, 0.998] lower 23/34; coverage factor  1.55 (coverage 0.803; TabPFN-GP 0.811) width ratio 0.993 [0.928, 1.076]
+  zone  TabPFN       n= 75: CRPS factor  1.35 ratio 0.983 [0.958, 1.006] lower 14/21; coverage factor  1.55 (coverage 0.803; TabPFN-GP 0.796) width ratio 0.946 [0.872, 1.040]
+  zone  TabPFN       n=100: CRPS factor  1.35 ratio 0.969 [0.935, 1.001] lower 10/15; coverage factor  1.60 (coverage 0.803; TabPFN-GP 0.802) width ratio 0.902 [0.822, 1.006]
+  zone  TabPFN       all n: CRPS ratio 0.985 [0.976, 0.993] lower 32/43; width ratio 0.934 [0.864, 1.017] lower 31/43
+  zone  TabPFN-KpR   n=  5: CRPS factor  6.80 ratio 0.915 [0.881, 0.948] lower 34/43; coverage factor 17.60 (coverage 0.800; TabPFN-GP 0.792) width ratio 0.601 [0.538, 0.671]
+  zone  TabPFN-KpR   n= 10 (grid edge): CRPS factor  3.55 ratio 0.756 [0.725, 0.787] lower 42/43; coverage factor 20.00 (coverage 0.751; TabPFN-GP 0.786) width ratio 0.279 [0.252, 0.308]
+  zone  TabPFN-KpR   n= 15: CRPS factor  2.30 ratio 0.843 [0.826, 0.862] lower 42/43; coverage factor  3.95 (coverage 0.801; TabPFN-GP 0.787) width ratio 0.675 [0.625, 0.733]
+  zone  TabPFN-KpR   n= 20: CRPS factor  1.90 ratio 0.874 [0.852, 0.896] lower 42/43; coverage factor  2.80 (coverage 0.805; TabPFN-GP 0.794) width ratio 0.791 [0.730, 0.864]
+  zone  TabPFN-KpR   n= 30: CRPS factor  1.75 ratio 0.890 [0.866, 0.914] lower 38/40; coverage factor  2.30 (coverage 0.806; TabPFN-GP 0.794) width ratio 0.816 [0.756, 0.889]
+  zone  TabPFN-KpR   n= 50: CRPS factor  1.55 ratio 0.911 [0.881, 0.940] lower 28/34; coverage factor  1.85 (coverage 0.800; TabPFN-GP 0.811) width ratio 0.898 [0.830, 0.984]
+  zone  TabPFN-KpR   n= 75: CRPS factor  1.45 ratio 0.922 [0.882, 0.963] lower 16/21; coverage factor  1.75 (coverage 0.804; TabPFN-GP 0.796) width ratio 0.906 [0.824, 1.010]
+  zone  TabPFN-KpR   n=100: CRPS factor  1.40 ratio 0.935 [0.907, 0.963] lower 12/15; coverage factor  1.70 (coverage 0.809; TabPFN-GP 0.802) width ratio 0.887 [0.807, 0.989]
+  zone  TabPFN-KpR   all n: CRPS ratio 0.855 [0.836, 0.874] lower 42/43; width ratio 0.537 [0.493, 0.583] lower 42/43
+  zone  Block RK     n=  5: CRPS factor  1.90 ratio 0.997 [0.989, 1.005] lower 25/43; coverage factor  2.65 (coverage 0.800; TabPFN-GP 0.792) width ratio 0.963 [0.899, 1.038]
+  zone  Block RK     n= 10: CRPS factor  1.45 ratio 0.992 [0.982, 1.001] lower 21/43; coverage factor  1.80 (coverage 0.803; TabPFN-GP 0.786) width ratio 0.948 [0.895, 1.012]
+  zone  Block RK     n= 15: CRPS factor  1.25 ratio 0.999 [0.987, 1.012] lower 22/43; coverage factor  1.50 (coverage 0.801; TabPFN-GP 0.787) width ratio 0.977 [0.921, 1.041]
+  zone  Block RK     n= 20: CRPS factor  1.20 ratio 1.006 [0.992, 1.021] lower 21/43; coverage factor  1.35 (coverage 0.806; TabPFN-GP 0.794) width ratio 0.992 [0.936, 1.055]
+  zone  Block RK     n= 30: CRPS factor  1.10 ratio 1.003 [0.989, 1.016] lower 21/40; coverage factor  1.25 (coverage 0.804; TabPFN-GP 0.794) width ratio 0.966 [0.917, 1.022]
+  zone  Block RK     n= 50: CRPS factor  1.05 ratio 1.005 [0.986, 1.023] lower 12/34; coverage factor  1.10 (coverage 0.813; TabPFN-GP 0.811) width ratio 1.000 [0.957, 1.047]
+  zone  Block RK     n= 75: CRPS factor  1.00 ratio 1.003 [0.974, 1.030] lower 8/21; coverage factor  1.05 (coverage 0.806; TabPFN-GP 0.796) width ratio 1.015 [0.959, 1.085]
+  zone  Block RK     n=100: CRPS factor  1.00 ratio 0.989 [0.950, 1.026] lower 8/15; coverage factor  1.05 (coverage 0.806; TabPFN-GP 0.802) width ratio 1.018 [0.961, 1.088]
+  zone  Block RK     all n: CRPS ratio 0.998 [0.988, 1.007] lower 23/43; width ratio 0.956 [0.904, 1.012] lower 28/43
+  zone  WH           n=  5: CRPS factor  1.85 ratio 1.009 [1.001, 1.016] lower 14/43; coverage factor  2.45 (coverage 0.803; TabPFN-GP 0.792) width ratio 0.971 [0.926, 1.016]
+  zone  WH           n= 10: CRPS factor  1.50 ratio 0.999 [0.994, 1.004] lower 23/43; coverage factor  1.80 (coverage 0.808; TabPFN-GP 0.786) width ratio 0.948 [0.911, 0.988]
+  zone  WH           n= 15: CRPS factor  1.35 ratio 1.001 [0.997, 1.005] lower 25/43; coverage factor  1.55 (coverage 0.807; TabPFN-GP 0.787) width ratio 0.961 [0.927, 0.999]
+  zone  WH           n= 20: CRPS factor  1.25 ratio 1.002 [0.997, 1.008] lower 24/43; coverage factor  1.40 (coverage 0.805; TabPFN-GP 0.794) width ratio 0.975 [0.938, 1.017]
+  zone  WH           n= 30: CRPS factor  1.20 ratio 0.989 [0.974, 1.005] lower 23/40; coverage factor  1.30 (coverage 0.801; TabPFN-GP 0.794) width ratio 0.938 [0.906, 0.974]
+  zone  WH           n= 50: CRPS factor  1.05 ratio 0.993 [0.978, 1.008] lower 21/34; coverage factor  1.15 (coverage 0.816; TabPFN-GP 0.811) width ratio 0.952 [0.922, 0.985]
+  zone  WH           n= 75: CRPS factor  1.00 ratio 0.997 [0.974, 1.019] lower 12/21; coverage factor  1.05 (coverage 0.801; TabPFN-GP 0.796) width ratio 0.969 [0.924, 1.012]
+  zone  WH           n=100: CRPS factor  0.95 ratio 0.980 [0.948, 1.009] lower 6/15; coverage factor  1.05 (coverage 0.817; TabPFN-GP 0.802) width ratio 0.926 [0.861, 0.989]
+  zone  WH           all n: CRPS ratio 0.999 [0.994, 1.004] lower 24/43; width ratio 0.954 [0.922, 0.988] lower 27/43
+  zone  Sample mean  n=  5: CRPS factor  0.70 ratio 0.856 [0.809, 0.900] lower 36/43; coverage factor  1.10 (coverage 0.813; TabPFN-GP 0.810) width ratio 0.525 [0.506, 0.546]
+  zone  Sample mean  n= 10: CRPS factor  0.80 ratio 0.788 [0.765, 0.813] lower 41/43; coverage factor  1.10 (coverage 0.806; TabPFN-GP 0.799) width ratio 0.505 [0.489, 0.521]
+  zone  Sample mean  n= 15: CRPS factor  0.80 ratio 0.778 [0.751, 0.804] lower 43/43; coverage factor  1.05 (coverage 0.801; TabPFN-GP 0.793) width ratio 0.587 [0.569, 0.605]
+  zone  Sample mean  n= 20: CRPS factor  0.85 ratio 0.787 [0.754, 0.820] lower 41/43; coverage factor  1.05 (coverage 0.812; TabPFN-GP 0.798) width ratio 0.647 [0.624, 0.671]
+  zone  Sample mean  n= 30: CRPS factor  0.90 ratio 0.802 [0.771, 0.835] lower 37/40; coverage factor  1.05 (coverage 0.813; TabPFN-GP 0.794) width ratio 0.708 [0.679, 0.738]
+  zone  Sample mean  n= 50: CRPS factor  0.95 ratio 0.814 [0.772, 0.855] lower 33/34; coverage factor  1.00 (coverage 0.803; TabPFN-GP 0.811) width ratio 0.794 [0.753, 0.834]
+  zone  Sample mean  n= 75: CRPS factor  0.95 ratio 0.813 [0.755, 0.873] lower 19/21; coverage factor  1.00 (coverage 0.802; TabPFN-GP 0.796) width ratio 0.800 [0.743, 0.858]
+  zone  Sample mean  n=100: CRPS factor  0.95 ratio 0.789 [0.716, 0.861] lower 15/15; coverage factor  1.00 (coverage 0.816; TabPFN-GP 0.802) width ratio 0.785 [0.720, 0.856]
+  zone  Sample mean  all n: CRPS ratio 0.801 [0.777, 0.826] lower 43/43; width ratio 0.624 [0.608, 0.639] lower 43/43

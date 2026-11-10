@@ -1,0 +1,17 @@
+=== Exploratory: other sampling designs, and the seeds of TabPFN and of the fold split ===
+coverage of 80 % intervals (field means / zone means / zones without a revealed sample), 20 fields, 10 replicates, 3 properties; TabPFN-GP and the offset-only model at kappa = 1.10; difference estimators and sample mean as t intervals without a factor
+  srs8     J1pK 0.822/0.815/0.809; O1 0.825/0.769/0.704; DE/DEz 0.808/0.829/nan; DB 0.783/0.807/nan | CRPS TabPFN-GP/offset-only zones 1.005 [1.000, 1.010] (6/20); /sample mean fields 0.913 [0.864, 0.965] (16/20)
+  strat8   J1pK 0.822/0.805/nan; O1 0.842/0.765/nan; DE/DEz 0.815/0.811/nan; DB 0.805/0.809/nan | CRPS TabPFN-GP/offset-only zones 1.004 [0.999, 1.008] (8/20); /sample mean fields 0.959 [0.890, 1.026] (11/20)
+    stratified estimator, field means: coverage 0.770 [0.725, 0.813] (600 blocks); CRPS TabPFN-GP / stratified estimator 0.920 [0.848, 0.993] (13/20)
+  clust8   J1pK 0.760/0.723/0.697; O1 0.732/0.668/0.623; DE/DEz 0.725/0.754/nan; DB 0.683/0.702/nan | CRPS TabPFN-GP/offset-only zones 0.995 [0.991, 0.999] (15/20); /sample mean fields 0.911 [0.865, 0.959] (17/20)
+  sys8     J1pK 0.853/0.810/nan; O1 0.892/0.789/nan; DE/DEz 0.882/0.823/nan; DB 0.878/0.829/nan | CRPS TabPFN-GP/offset-only zones 1.003 [1.000, 1.005] (7/20); /sample mean fields 0.959 [0.913, 1.007] (14/20)
+  tran8    J1pK 0.725/0.708/0.660; O1 0.682/0.638/0.573; DE/DEz 0.675/0.754/nan; DB 0.645/0.701/nan | CRPS TabPFN-GP/offset-only zones 0.995 [0.986, 1.005] (14/20); /sample mean fields 0.899 [0.834, 0.966] (15/20)
+  srs20    J1pK 0.843/0.785/0.944; O1 0.852/0.727/0.667; DE/DEz 0.827/0.793/nan; DB 0.825/0.780/nan | CRPS TabPFN-GP/offset-only zones 0.999 [0.994, 1.003] (10/20); /sample mean fields 0.823 [0.773, 0.873] (19/20)
+  strat20  J1pK 0.782/0.767/nan; O1 0.783/0.716/nan; DE/DEz 0.755/0.784/nan; DB 0.753/0.767/nan | CRPS TabPFN-GP/offset-only zones 0.997 [0.991, 1.003] (12/20); /sample mean fields 0.858 [0.788, 0.931] (16/20)
+    stratified estimator, field means: coverage 0.752 [0.713, 0.783] (600 blocks); CRPS TabPFN-GP / stratified estimator 0.893 [0.824, 0.957] (16/20)
+  clust20  J1pK 0.677/0.674/0.617; O1 0.597/0.591/0.521; DE/DEz 0.567/0.683/nan; DB 0.575/0.624/nan | CRPS TabPFN-GP/offset-only zones 0.986 [0.978, 0.994] (14/20); /sample mean fields 0.856 [0.785, 0.929] (16/20)
+  sys20    J1pK 0.792/0.774/nan; O1 0.840/0.747/nan; DE/DEz 0.818/0.816/nan; DB 0.855/0.833/nan | CRPS TabPFN-GP/offset-only zones 0.999 [0.996, 1.003] (12/20); /sample mean fields 0.914 [0.837, 0.988] (13/20)
+  tran20   J1pK 0.653/0.627/0.530; O1 0.568/0.554/0.451; DE/DEz 0.513/0.660/nan; DB 0.567/0.607/nan | CRPS TabPFN-GP/offset-only zones 0.983 [0.976, 0.991] (15/20); /sample mean fields 0.893 [0.809, 0.982] (15/20)
+  seeds, n = 5: 600 blocks; sd of the interval endpoints over five seeds / half-width: median 0.040, 90th percentile 0.074
+  seeds, n = 20: 600 blocks; sd of the interval endpoints over five seeds / half-width: median 0.085, 90th percentile 0.151
+  coverage by seed (n5 | n20): seed 0: 0.767 | 0.792; seed 1: 0.765 | 0.795; seed 2: 0.763 | 0.790; seed 3: 0.762 | 0.793; seed 4: 0.760 | 0.793

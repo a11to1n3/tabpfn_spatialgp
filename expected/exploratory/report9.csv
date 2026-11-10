@@ -1,0 +1,23 @@
+test,kind,method,weighting,ratio,lo,hi,lower,fields,holm,verdict
+5,field,TabPFN,unweighted,0.967,0.959,0.974,40.0,43,7.003e-11,better
+5,field,TabPFN,weighted,0.975,0.967,0.982,36.0,43,1.191e-07,better
+5,field,TabPFN-KpR,unweighted,0.796,0.784,0.808,43.0,43,1.137e-12,better
+5,field,TabPFN-KpR,weighted,0.826,0.812,0.84,43.0,43,1.137e-12,better
+5,field,Block RK,unweighted,0.988,0.98,0.997,32.0,43,0.0009804,better
+5,field,Block RK,weighted,0.993,0.985,1.001,27.0,43,0.02483,better
+5,field,WH,unweighted,0.987,0.981,0.992,33.0,43,2.652e-05,better
+5,field,WH,weighted,0.988,0.984,0.994,31.0,43,0.0002751,better
+5,field,Sample mean,unweighted,0.949,0.915,0.982,27.0,43,0.02115,better
+5,field,Sample mean,weighted,0.965,0.933,0.995,25.0,43,0.1555,no worse
+5,zone,TabPFN,unweighted,0.955,0.947,0.964,40.0,43,1.153e-10,better
+5,zone,TabPFN,weighted,0.969,0.961,0.976,39.0,43,2.557e-09,better
+5,zone,TabPFN-KpR,unweighted,0.795,0.775,0.814,43.0,43,1.137e-12,better
+5,zone,TabPFN-KpR,weighted,0.784,0.767,0.8,43.0,43,1.137e-12,better
+5,zone,Block RK,unweighted,0.98,0.969,0.991,31.0,43,0.0009804,better
+5,zone,Block RK,weighted,0.986,0.976,0.996,27.0,43,0.008104,better
+5,zone,WH,unweighted,0.983,0.978,0.988,39.0,43,5.143e-08,better
+5,zone,WH,weighted,0.988,0.984,0.994,36.0,43,5.162e-06,better
+5,zone,Sample mean,unweighted,0.797,0.772,0.821,43.0,43,1.137e-12,better
+5,zone,Sample mean,weighted,0.787,0.763,0.81,43.0,43,1.137e-12,better
+4a,field,Shared-error-only,unweighted,1.005,1.003,1.007,,43,,met
+4a,field,Shared-error-only,weighted,1.005,1.004,1.006,,43,,met

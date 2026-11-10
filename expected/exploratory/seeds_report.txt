@@ -1,0 +1,19 @@
+=== E8 (docs/exploratory/plan_E7-E8.md): TabPFN-GP over seeds 0-4 of TabPFN and of the fold split, kappa = 1.15 ===
+fields: DK_EST, DK_FAA, DR_AUZ, DR_EPO, NX_CZK, NX_ON, PO_NE, PO_RS, SOIL250, SOJA98; designs ['n20', 'n5', 'n50']; rows 6865
+check, seed 0 against the study rows: 1373 of 1373 matched; largest relative difference M 0.0e+00, V 0.0e+00
+
+field means (275 areas with all five seeds):
+  sd of an interval endpoint over the seeds / half-width: median 0.066, 90th percentile 0.171
+    n5: median 0.035, 90th percentile 0.070 (95 areas)
+    n20: median 0.068, 90th percentile 0.127 (95 areas)
+    n50: median 0.142, 90th percentile 0.295 (85 areas)
+  coverage by seed: 0: 0.851; 1: 0.851; 2: 0.851; 3: 0.862; 4: 0.858  (range 0.011)
+  CRPS relative to seed 0: 1: 1.009; 2: 1.030; 3: 1.016; 4: 1.030
+
+zone means (1098 areas with all five seeds):
+  sd of an interval endpoint over the seeds / half-width: median 0.065, 90th percentile 0.162
+    n5: median 0.036, 90th percentile 0.075 (380 areas)
+    n20: median 0.069, 90th percentile 0.135 (378 areas)
+    n50: median 0.116, 90th percentile 0.241 (340 areas)
+  coverage by seed: 0: 0.801; 1: 0.796; 2: 0.799; 3: 0.799; 4: 0.794  (range 0.006)
+  CRPS relative to seed 0: 1: 1.012; 2: 1.003; 3: 1.004; 4: 1.029

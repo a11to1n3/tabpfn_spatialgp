@@ -1,0 +1,78 @@
+=== E19, addition (docs/exploratory/plan_E19.md; specified after the study's results had been seen; exploratory) ===
+CRPS of each mean multiplied by m_B / (m_B + n_B); TabPFN-GP with kappa = 1.15.
+  weights alone:            the study's versions, factors and CRPS versions (configs/fixed/)
+  weights, lowest versions: each comparator's version with the lowest weighted CRPS on the development splits; factor and CRPS version
+                            set on the factor-setting data with the weighted CRPS
+
+-- comparators: version, factor, CRPS version; weighted CRPS on the development splits relative to TabPFN's (lower is better) --
+  TabPFN       weights alone             TAB, factor 2.40, CRPS calibrated, score 1.0000
+               weights, lowest versions  TAB, factor 2.40, CRPS calibrated, score 1.0000
+  TabPFN-KpR   weights alone             KpR4, factor 4.20, CRPS uncalibrated, score 1.1997
+               weights, lowest versions  KpR4, factor 4.20, CRPS calibrated, score 1.1997
+  Block RK     weights alone             RK_ins_fix_v, factor 1.55, CRPS calibrated, score 0.9298
+               weights, lowest versions  PI_fix, factor 1.15, CRPS uncalibrated, score 0.9266
+                                         score ratio 0.9966
+  WH           weights alone             WH_fix, factor 1.60, CRPS calibrated, score 0.9474
+               weights, lowest versions  WH_fix, factor 1.60, CRPS calibrated, score 0.9474
+  Sample mean  weights alone             DB, factor 1.05, CRPS uncalibrated
+               weights, lowest versions  DB, factor 1.05, CRPS uncalibrated
+
+-- test 5: CRPS ratio TabPFN-GP / method [95 % interval], fields lower, Holm p, verdict --
+  field TabPFN       unweighted                0.967 [0.959, 0.974], 40/43, Holm 7e-11: better
+                     weights alone             0.975 [0.967, 0.982], 36/43, Holm 1.19e-07: better
+                     weights, lowest versions  0.975 [0.967, 0.982], 36/43, Holm 1.19e-07: better
+  field TabPFN-KpR   unweighted                0.796 [0.784, 0.808], 43/43, Holm 1.14e-12: better
+                     weights alone             0.781 [0.769, 0.794], 43/43, Holm 1.14e-12: better
+                     weights, lowest versions  0.826 [0.812, 0.840], 43/43, Holm 1.14e-12: better
+  field Block RK     unweighted                0.988 [0.980, 0.997], 32/43, Holm 0.00098: better
+                     weights alone             0.993 [0.985, 1.001], 27/43, Holm 0.0248: better
+                     weights, lowest versions  1.003 [1.000, 1.005], 11/43, Holm 1: no worse
+  field WH           unweighted                0.987 [0.981, 0.992], 33/43, Holm 2.65e-05: better
+                     weights alone             0.988 [0.984, 0.994], 31/43, Holm 0.000275: better
+                     weights, lowest versions  0.988 [0.984, 0.994], 31/43, Holm 0.000275: better
+  field Sample mean  unweighted                0.949 [0.915, 0.982], 27/43, Holm 0.0211: better
+                     weights alone             0.965 [0.933, 0.995], 25/43, Holm 0.155: no worse
+                     weights, lowest versions  0.965 [0.933, 0.995], 25/43, Holm 0.311: no worse
+  zone  TabPFN       unweighted                0.955 [0.947, 0.964], 40/43, Holm 1.15e-10: better
+                     weights alone             0.969 [0.961, 0.976], 39/43, Holm 2.56e-09: better
+                     weights, lowest versions  0.969 [0.961, 0.976], 39/43, Holm 2.56e-09: better
+  zone  TabPFN-KpR   unweighted                0.795 [0.775, 0.814], 43/43, Holm 1.14e-12: better
+                     weights alone             0.782 [0.762, 0.803], 43/43, Holm 1.14e-12: better
+                     weights, lowest versions  0.784 [0.767, 0.800], 43/43, Holm 1.14e-12: better
+  zone  Block RK     unweighted                0.980 [0.969, 0.991], 31/43, Holm 0.00098: better
+                     weights alone             0.986 [0.976, 0.996], 27/43, Holm 0.0081: better
+                     weights, lowest versions  0.993 [0.989, 0.997], 28/43, Holm 0.00398: better
+  zone  WH           unweighted                0.983 [0.978, 0.988], 39/43, Holm 5.14e-08: better
+                     weights alone             0.988 [0.984, 0.994], 36/43, Holm 5.16e-06: better
+                     weights, lowest versions  0.988 [0.984, 0.994], 36/43, Holm 5.16e-06: better
+  zone  Sample mean  unweighted                0.797 [0.772, 0.821], 43/43, Holm 1.14e-12: better
+                     weights alone             0.787 [0.763, 0.810], 43/43, Holm 1.14e-12: better
+                     weights, lowest versions  0.787 [0.763, 0.810], 43/43, Holm 1.14e-12: better
+
+-- test 4a: CRPS ratio shared-error-only / TabPFN-GP --
+  unweighted                1.005 [1.003, 1.007]: met
+  weights alone             1.005 [1.004, 1.006]: met
+  weights, lowest versions  1.005 [1.004, 1.006]: met
+
+-- test 1: rise in field-mean coverage D [95 % interval] (coverage does not depend on the weights) --
+  TabPFN       unweighted                D = +0.325 [+0.296, +0.355] (40 fields)
+               weights alone             D = +0.325 [+0.296, +0.355] (40 fields)
+               weights, lowest versions  D = +0.325 [+0.296, +0.355] (40 fields)
+  TabPFN-KpR   unweighted                D = +0.578 [+0.537, +0.615] (40 fields)
+               weights alone             D = +0.578 [+0.537, +0.615] (40 fields)
+               weights, lowest versions  D = +0.578 [+0.537, +0.615] (40 fields)
+  Block RK     unweighted                D = +0.261 [+0.236, +0.286] (40 fields)
+               weights alone             D = +0.261 [+0.236, +0.286] (40 fields)
+               weights, lowest versions  D = -0.018 [-0.041, +0.005] (40 fields)
+  WH           unweighted                D = +0.310 [+0.288, +0.331] (40 fields)
+               weights alone             D = +0.310 [+0.288, +0.331] (40 fields)
+               weights, lowest versions  D = +0.310 [+0.288, +0.331] (40 fields)
+  test 1       unweighted                met
+  test 1       weights alone             met
+  test 1       weights, lowest versions  not met
+
+-- against the unweighted results --
+  weights alone: verdicts of test 5 that differ: field / Sample mean: better -> no worse
+                 weighted ratios above 1: none
+  weights, lowest versions: verdicts of test 5 that differ: field / Block RK: better -> no worse; field / Sample mean: better -> no worse
+                            weighted ratios above 1: field / Block RK (1.003)

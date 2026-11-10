@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tabpfn_spatialgp"
+version = "0.0.1"
+description = "TabPFN with a spatial Gaussian process on its cross-fitted errors: field and zone means of soil properties with intervals (Built with TabPFN)"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [{name = "Anh-Duy Pham"}]
+keywords = ["soil", "digital soil mapping", "spatial mean", "uncertainty", "Gaussian process", "TabPFN", "precision agriculture"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: GIS",
+]
+dependencies = [
+    "tabpfn==2.0.9",          # the version behind every result of the paper
+    "torch",
+    "numpy",
+    "scipy",
+    "scikit-learn",
+    "threadpoolctl",          # fixes the BLAS thread count (see settings.BLAS_THREADS)
+]
+
+[project.optional-dependencies]
+epsg = ["pyproj"]             # only for coordinates given as an EPSG code
+dev = ["pytest", "pandas"]    # the tests and the example
+
+[project.urls]
+Repository = "https://github.com/a11to1n3/tabpfn_spatialgp"
+
+[tool.setuptools.packages.find]
+where = ["src"]

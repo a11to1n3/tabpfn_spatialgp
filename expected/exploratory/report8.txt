@@ -1,0 +1,50 @@
+=== E18 (docs/exploratory/plan_E18.md; specified after the study's results had been seen; exploratory) ===
+
+-- ALL: medians over all 14 development fields (as in the study) --
+  Block RK, in-sample residuals (r_ins): range/extent 0.075, nugget share 0.079 (619 fits)
+  Block RK, held-out errors (r_oof): range/extent 0.073, nugget share 0.092 (617 fits)
+  WH (z_oof): range/extent 0.068, nugget share 0.117 (621 fits)
+  areas scored by all methods: 9995 field and 38880 zone means
+  Block RK: version RK_ins_fix_v; factor 1.55; CRPS calibrated; failed 0/49698 areas
+    field: coverage 0.788 [0.768, 0.807]; D +0.261 [+0.236, +0.286]; CRPS ratio TabPFN-GP / Block RK 0.988 [0.980, 0.997], lower on 32 of 43 fields, Holm 0.0009804: better
+    zone: coverage 0.814 [0.798, 0.828]; D +0.229 [+0.211, +0.248]; CRPS ratio TabPFN-GP / Block RK 0.980 [0.969, 0.991], lower on 31 of 43 fields, Holm 0.0009804: better
+  WH: version WH_fix; factor 1.60; CRPS calibrated; failed 0/49698 areas
+    field: coverage 0.756 [0.737, 0.776]; D +0.310 [+0.288, +0.331]; CRPS ratio TabPFN-GP / WH 0.987 [0.981, 0.992], lower on 33 of 43 fields, Holm 2.652e-05: better
+    zone: coverage 0.826 [0.811, 0.843]; D +0.196 [+0.180, +0.214]; CRPS ratio TabPFN-GP / WH 0.983 [0.978, 0.988], lower on 39 of 43 fields, Holm 5.143e-08: better
+  test 1: TabPFN D +0.325 [+0.296, +0.355]; TabPFN-KpR D +0.578 [+0.537, +0.615]; Block RK D +0.261 [+0.236, +0.286]; WH D +0.310 [+0.288, +0.331]
+  H1 (coverage rises with n without a shared-error term; all four lower bounds above 0): met
+  test 5, all ten contrasts: field / TabPFN: better; field / TabPFN-KpR: better; field / Block RK: better; field / WH: better; field / Sample mean: better; zone / TabPFN: better; zone / TabPFN-KpR: better; zone / Block RK: better; zone / WH: better; zone / Sample mean: better
+
+-- X2: medians over without SL.125 and UL.120 --
+  Block RK, in-sample residuals (r_ins): range/extent 0.075, nugget share 0.108 (534 fits)
+  Block RK, held-out errors (r_oof): range/extent 0.073, nugget share 0.115 (534 fits)
+  WH (z_oof): range/extent 0.069, nugget share 0.151 (531 fits)
+  areas scored by all methods: 9995 field and 38880 zone means
+  Block RK: version RK_ins_fix_v; factor 1.55; CRPS calibrated; failed 0/49698 areas
+    field: coverage 0.788 [0.768, 0.807]; D +0.260 [+0.236, +0.285]; CRPS ratio TabPFN-GP / Block RK 0.988 [0.980, 0.997], lower on 32 of 43 fields, Holm 0.0007608: better
+    zone: coverage 0.814 [0.798, 0.828]; D +0.230 [+0.212, +0.249]; CRPS ratio TabPFN-GP / Block RK 0.980 [0.969, 0.991], lower on 32 of 43 fields, Holm 0.0007608: better
+  WH: version WH_fix; factor 1.60; CRPS calibrated; failed 0/49698 areas
+    field: coverage 0.755 [0.736, 0.775]; D +0.312 [+0.289, +0.334]; CRPS ratio TabPFN-GP / WH 0.987 [0.981, 0.992], lower on 33 of 43 fields, Holm 2.473e-05: better
+    zone: coverage 0.824 [0.809, 0.840]; D +0.198 [+0.181, +0.217]; CRPS ratio TabPFN-GP / WH 0.983 [0.978, 0.988], lower on 39 of 43 fields, Holm 7.174e-08: better
+  test 1: TabPFN D +0.325 [+0.296, +0.355]; TabPFN-KpR D +0.578 [+0.537, +0.615]; Block RK D +0.260 [+0.236, +0.285]; WH D +0.312 [+0.289, +0.334]
+  H1 (coverage rises with n without a shared-error term; all four lower bounds above 0): met
+  test 5, all ten contrasts: field / TabPFN: better; field / TabPFN-KpR: better; field / Block RK: better; field / WH: better; field / Sample mean: better; zone / TabPFN: better; zone / TabPFN-KpR: better; zone / Block RK: better; zone / WH: better; zone / Sample mean: better
+
+-- X3: medians over without SL.125, UL.120 and SP.231 --
+  Block RK, in-sample residuals (r_ins): range/extent 0.077, nugget share 0.091 (474 fits)
+  Block RK, held-out errors (r_oof): range/extent 0.082, nugget share 0.086 (474 fits)
+  WH (z_oof): range/extent 0.074, nugget share 0.029 (471 fits)
+  areas scored by all methods: 9995 field and 38880 zone means
+  Block RK: version RK_ins_fix_v; factor 1.55; CRPS calibrated; failed 0/49698 areas
+    field: coverage 0.788 [0.768, 0.807]; D +0.262 [+0.236, +0.287]; CRPS ratio TabPFN-GP / Block RK 0.988 [0.980, 0.998], lower on 32 of 43 fields, Holm 0.001138: better
+    zone: coverage 0.814 [0.799, 0.829]; D +0.229 [+0.211, +0.248]; CRPS ratio TabPFN-GP / Block RK 0.980 [0.969, 0.991], lower on 30 of 43 fields, Holm 0.001138: better
+  WH: version WH_fix; factor 1.50; CRPS calibrated; failed 0/49698 areas
+    field: coverage 0.757 [0.737, 0.777]; D +0.307 [+0.285, +0.329]; CRPS ratio TabPFN-GP / WH 0.988 [0.982, 0.993], lower on 32 of 43 fields, Holm 0.000162: better
+    zone: coverage 0.823 [0.807, 0.840]; D +0.194 [+0.178, +0.212]; CRPS ratio TabPFN-GP / WH 0.984 [0.979, 0.990], lower on 39 of 43 fields, Holm 2.772e-07: better
+  test 1: TabPFN D +0.325 [+0.296, +0.355]; TabPFN-KpR D +0.578 [+0.537, +0.615]; Block RK D +0.262 [+0.236, +0.287]; WH D +0.307 [+0.285, +0.329]
+  H1 (coverage rises with n without a shared-error term; all four lower bounds above 0): met
+  test 5, all ten contrasts: field / TabPFN: better; field / TabPFN-KpR: better; field / Block RK: better; field / WH: better; field / Sample mean: better; zone / TabPFN: better; zone / TabPFN-KpR: better; zone / Block RK: better; zone / WH: better; zone / Sample mean: better
+
+-- reading (fixed before running, docs/exploratory/plan_E18.md) --
+  X2: test 1 met; test 5 met; verdicts for Block RK and WH unchanged
+  X3: test 1 met; test 5 met; verdicts for Block RK and WH unchanged

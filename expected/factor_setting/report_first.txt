@@ -1,0 +1,188 @@
+=== Analysis of the area rows, set 'first' ===
+selected comparator variants: {'TabPFN': 'TAB', 'TabPFN-KpR': 'KpR4', 'Block RK': 'RK_ins_fix_v', 'WH': 'WH_fix', 'Sample mean': 'DB'}
+factors: TabPFN: TAB x2.40 (CRPS version calibrated), TabPFN-KpR: KpR4 x4.20 (CRPS version uncalibrated), Block RK: RK_ins_fix_v x1.55 (CRPS version calibrated), WH: WH_fix x1.60 (CRPS version calibrated), Sample mean: DB x1.05 (CRPS version uncalibrated)
+
+-- failures (share of blocks, LimeSoDa) and common set --
+  J1pK           failed 0.0000 of 19497 blocks
+  TAB            failed 0.0000 of 19497 blocks
+  KpR4           failed 0.0202 of 19497 blocks
+  RK_ins_fix_v   failed 0.0000 of 19497 blocks
+  WH_fix         failed 0.0000 of 19497 blocks
+  DB             failed 0.0059 of 16803 blocks
+  common set: 3911 of 3990 field blocks
+
+-- design and failures (reporting only) --
+  zones, limesoda: per n, number of zone blocks; unrevealed locations m_B (min, quartiles, max); revealed samples n_B (median; share with n_B = 0, >= 2, >= 3)
+    n =   5:  2397 zones; m_B 3 / 12 / 22 / 31 / 116; n_B median 1; n_B = 0 0.253, >= 2 0.364, >= 3 0.118
+    n =  10:  2400 zones; m_B 3 / 10 / 21 / 30 / 113; n_B median 2; n_B = 0 0.065, >= 2 0.720, >= 3 0.484
+    n =  15:  2343 zones; m_B 3 / 10 / 20 / 29 / 112; n_B median 4; n_B = 0 0.031, >= 2 0.890, >= 3 0.750
+    n =  20:  2268 zones; m_B 3 / 9 / 20 / 28 / 109; n_B median 5; n_B = 0 0.019, >= 2 0.958, >= 3 0.910
+    n =  30:  2070 zones; m_B 3 / 8 / 19 / 27 / 106; n_B median 7; n_B = 0 0.012, >= 2 0.974, >= 3 0.962
+    n =  50:  1653 zones; m_B 3 / 11 / 16 / 25 / 98; n_B median 13; n_B = 0 0.007, >= 2 0.973, >= 3 0.967
+    n =  75:  1410 zones; m_B 3 / 7 / 11 / 21 / 85; n_B median 19; n_B = 0 0.013, >= 2 0.977, >= 3 0.964
+    n = 100:   966 zones; m_B 3 / 5 / 9 / 26 / 75; n_B median 25; n_B = 0 0.003, >= 2 0.988, >= 3 0.966
+  zones, external: per n, number of zone blocks; unrevealed locations m_B (min, quartiles, max); revealed samples n_B (median; share with n_B = 0, >= 2, >= 3)
+    n =   5:   320 zones; m_B 26 / 29 / 30 / 35 / 43; n_B median 1; n_B = 0 0.225, >= 2 0.344, >= 3 0.113
+    n =   6:   240 zones; m_B 25 / 28 / 29 / 30.5 / 36; n_B median 1; n_B = 0 0.237, >= 2 0.412, >= 3 0.237
+    n =   8:    80 zones; m_B 29 / 32 / 36.5 / 41 / 43; n_B median 2; n_B = 0 0.100, >= 2 0.662, >= 3 0.325
+    n =  10:   320 zones; m_B 25 / 28 / 29 / 33 / 43; n_B median 2; n_B = 0 0.047, >= 2 0.759, >= 3 0.472
+    n =  13:   240 zones; m_B 23 / 26 / 27 / 30 / 36; n_B median 3; n_B = 0 0.037, >= 2 0.875, >= 3 0.750
+    n =  15:   400 zones; m_B 24 / 26 / 29 / 33 / 42; n_B median 4; n_B = 0 0.010, >= 2 0.945, >= 3 0.770
+    n =  20:   320 zones; m_B 21 / 25 / 27 / 30 / 41; n_B median 5; n_B = 0 0.003, >= 2 0.997, >= 3 0.925
+    n =  25:   240 zones; m_B 19 / 23 / 25 / 27 / 34; n_B median 6; n_B = 0 0.000, >= 2 1.000, >= 3 0.938
+    n =  30:   320 zones; m_B 18 / 23 / 24 / 28 / 39; n_B median 7; n_B = 0 0.000, >= 2 1.000, >= 3 0.997
+    n =  31:    80 zones; m_B 23 / 26 / 30 / 35 / 39; n_B median 7.5; n_B = 0 0.000, >= 2 1.000, >= 3 1.000
+    n =  38:   240 zones; m_B 17 / 20 / 22 / 24 / 28; n_B median 10; n_B = 0 0.000, >= 2 1.000, >= 3 1.000
+    n =  46:    80 zones; m_B 18 / 24 / 26.5 / 30 / 35; n_B median 11; n_B = 0 0.000, >= 2 1.000, >= 3 1.000
+    n =  50:   320 zones; m_B 12 / 18 / 20 / 23 / 34; n_B median 12; n_B = 0 0.000, >= 2 1.000, >= 3 1.000
+    n =  63:   240 zones; m_B 10 / 14 / 15 / 18 / 22; n_B median 16; n_B = 0 0.000, >= 2 1.000, >= 3 1.000
+    n =  75:   320 zones; m_B 7 / 12 / 14 / 16 / 29; n_B median 19; n_B = 0 0.000, >= 2 1.000, >= 3 1.000
+    n =  76:    80 zones; m_B 12 / 16 / 18.5 / 22 / 27; n_B median 18; n_B = 0 0.000, >= 2 1.000, >= 3 1.000
+    n =  88:   240 zones; m_B 3 / 7 / 9.5 / 12 / 16; n_B median 22; n_B = 0 0.000, >= 2 1.000, >= 3 1.000
+    n = 100:   314 zones; m_B 3 / 6 / 7 / 10 / 23; n_B median 24; n_B = 0 0.000, >= 2 1.000, >= 3 1.000
+    n = 107:    80 zones; m_B 5 / 9 / 11.5 / 14 / 18; n_B median 26.5; n_B = 0 0.000, >= 2 1.000, >= 3 1.000
+    n = 113:   171 zones; m_B 3 / 3 / 4 / 4 / 8; n_B median 27; n_B = 0 0.000, >= 2 1.000, >= 3 1.000
+    n = 138:    60 zones; m_B 3 / 3 / 4 / 5 / 7; n_B median 36.5; n_B = 0 0.000, >= 2 1.000, >= 3 1.000
+  failed split x property cases, limesoda (failed / total) per design:
+    J1pK           n10 0/600, n100 0/270, n15 0/600, n20 0/600, n30 0/540, n5 0/600, n50 0/420, n75 0/360
+    KpR            n10 0/600, n100 0/270, n15 0/600, n20 0/600, n30 1/540, n5 75/600, n50 1/420, n75 2/360
+    KpR4           n10 0/600, n100 0/270, n15 0/600, n20 0/600, n30 1/540, n5 75/600, n50 1/420, n75 2/360
+    RK_ins_fix_v   n10 0/600, n100 0/270, n15 0/600, n20 0/600, n30 0/540, n5 0/600, n50 0/420, n75 0/360
+    RK_ins_loc     n10 0/600, n100 0/270, n15 0/600, n20 0/600, n30 0/540, n5 75/600, n50 0/420, n75 0/360
+    TAB            n10 0/600, n100 0/270, n15 0/600, n20 0/600, n30 0/540, n5 0/600, n50 0/420, n75 0/360
+    WH_fix         n10 0/600, n100 0/270, n15 0/600, n20 0/600, n30 0/540, n5 0/600, n50 0/420, n75 0/360
+    WH_loc         n10 0/600, n100 0/270, n15 0/600, n20 0/600, n30 0/540, n5 75/600, n50 0/420, n75 0/360
+  failed split x property cases, external (failed / total) per design:
+    J1pK           n10 0/80, n100 0/80, n15 0/80, n20 0/80, n30 0/80, n5 0/80, n50 0/80, n75 0/80, random10 0/80, random20 0/80, random30 0/80, random5 0/80, random50 0/80, random70 0/80, random90 0/80
+    KpR            n10 0/80, n100 0/80, n15 0/80, n20 0/80, n30 0/80, n5 0/80, n50 0/80, n75 0/80, random10 0/80, random20 0/80, random30 0/80, random5 0/80, random50 0/80, random70 0/80, random90 0/80
+    KpR4           n10 0/80, n100 0/80, n15 0/80, n20 0/80, n30 0/80, n5 0/80, n50 0/80, n75 0/80, random10 0/80, random20 0/80, random30 0/80, random5 0/80, random50 0/80, random70 0/80, random90 0/80
+    RK_ins_fix_v   n10 0/80, n100 0/80, n15 0/80, n20 0/80, n30 0/80, n5 0/80, n50 0/80, n75 0/80, random10 0/80, random20 0/80, random30 0/80, random5 0/80, random50 0/80, random70 0/80, random90 0/80
+    RK_ins_loc     n10 0/80, n100 0/80, n15 0/80, n20 0/80, n30 0/80, n5 0/80, n50 0/80, n75 0/80, random10 0/80, random20 0/80, random30 0/80, random5 0/80, random50 0/80, random70 0/80, random90 0/80
+    TAB            n10 0/80, n100 0/80, n15 0/80, n20 0/80, n30 0/80, n5 0/80, n50 0/80, n75 0/80, random10 0/80, random20 0/80, random30 0/80, random5 0/80, random50 0/80, random70 0/80, random90 0/80
+    WH_fix         n10 0/80, n100 0/80, n15 0/80, n20 0/80, n30 0/80, n5 0/80, n50 0/80, n75 0/80, random10 0/80, random20 0/80, random30 0/80, random5 0/80, random50 0/80, random70 0/80, random90 0/80
+    WH_loc         n10 0/80, n100 0/80, n15 0/80, n20 0/80, n30 0/80, n5 0/80, n50 0/80, n75 0/80, random10 0/80, random20 0/80, random30 0/80, random5 0/80, random50 0/80, random70 0/80, random90 0/80
+  common set by n (LimeSoDa): field blocks kept / all; zone blocks kept / all
+    n =   5: field 525/600, zone 2097/2397
+    n =  10: field 600/600, zone 2400/2400
+    n =  15: field 600/600, zone 2343/2343
+    n =  20: field 600/600, zone 2268/2268
+    n =  30: field 539/540, zone 2066/2070
+    n =  50: field 419/420, zone 1649/1653
+    n =  75: field 358/360, zone 1403/1410
+    n = 100: field 270/270, zone 966/966
+
+-- E1: TabPFN-GP coverage (pooled; 95 % bootstrap over fields), LimeSoDa common set --
+  field means: 0.808 [0.791, 0.824] -> MET (band (0.75, 0.85))
+  zone means: 0.782 [0.769, 0.797] -> MET (band (0.75, 0.85))
+
+-- E2: CRPS ratio TabPFN-GP / comparator (Wilcoxon over fields, Holm over 10) --
+  vs TabPFN       (TAB         ) field: 0.973 [0.963, 0.982], fields better 16/20; p = 6.7e-05, Holm 0.00033 -> SUPERIOR
+  vs TabPFN       (TAB         ) zone : 0.956 [0.946, 0.965], fields better 20/20; p = 9.5e-07, Holm 9.5e-06 -> SUPERIOR
+  vs TabPFN-KpR   (KpR4        ) field: 0.775 [0.757, 0.795], fields better 20/20; p = 9.5e-07, Holm 9.5e-06 -> SUPERIOR
+  vs TabPFN-KpR   (KpR4        ) zone : 0.782 [0.756, 0.808], fields better 20/20; p = 9.5e-07, Holm 9.5e-06 -> SUPERIOR
+  vs Block RK     (RK_ins_fix_v) field: 1.004 [0.993, 1.016], fields better 9/20; p = 0.68, Holm 0.68 -> non-inferior (2 %)
+  vs Block RK     (RK_ins_fix_v) zone : 0.991 [0.981, 1.002], fields better 13/20; p = 0.1, Holm 0.21 -> non-inferior (2 %)
+  vs WH           (WH_fix      ) field: 0.979 [0.948, 1.000], fields better 12/20; p = 0.071, Holm 0.21 -> non-inferior (2 %)
+  vs WH           (WH_fix      ) zone : 0.974 [0.954, 0.988], fields better 16/20; p = 8.4e-05, Holm 0.00034 -> SUPERIOR
+  vs Sample mean  (DB          ) field: 0.880 [0.839, 0.921], fields better 17/20; p = 1.3e-05, Holm 8e-05 -> SUPERIOR
+  vs Sample mean  (DB          ) zone : 0.740 [0.697, 0.779], fields better 20/20; p = 9.5e-07, Holm 9.5e-06 -> SUPERIOR
+
+-- S1: n <= 20 --
+  TabPFN-GP field coverage 0.801 [0.780, 0.821]
+    vs TabPFN       field: 0.983 [0.970, 0.995], fields better 14/20
+    vs TabPFN-KpR   field: 0.736 [0.711, 0.762], fields better 20/20
+    vs Block RK     field: 1.003 [0.995, 1.010], fields better 7/20
+    vs WH           field: 0.989 [0.969, 1.004], fields better 10/20
+    vs Sample mean  field: 0.927 [0.889, 0.964], fields better 15/20
+  TabPFN-GP zone coverage 0.783 [0.765, 0.799]
+    vs TabPFN       zone: 0.978 [0.965, 0.991], fields better 14/20
+    vs TabPFN-KpR   zone: 0.740 [0.707, 0.774], fields better 20/20
+    vs Block RK     zone: 0.996 [0.987, 1.004], fields better 14/20
+    vs WH           zone: 0.988 [0.970, 0.999], fields better 14/20
+    vs Sample mean  zone: 0.748 [0.708, 0.787], fields better 20/20
+
+-- S2: transfer --
+  held-back fields, TabPFN-GP field coverage 0.794 [0.778, 0.817]
+    vs TabPFN       field: 0.974 [0.964, 0.987], fields better 5/6
+    vs TabPFN-KpR   field: 0.804 [0.764, 0.834], fields better 6/6
+    vs Block RK     field: 0.993 [0.983, 1.004], fields better 4/6
+    vs WH           field: 0.996 [0.977, 1.016], fields better 4/6
+  held-back fields, TabPFN-GP zone coverage 0.790 [0.769, 0.815]
+    vs TabPFN       zone: 0.932 [0.921, 0.944], fields better 6/6
+    vs TabPFN-KpR   zone: 0.814 [0.766, 0.856], fields better 6/6
+    vs Block RK     zone: 0.974 [0.957, 0.989], fields better 6/6
+    vs WH           zone: 0.987 [0.977, 0.997], fields better 4/6
+  Oxford/Meuse primary tasks, TabPFN-GP field coverage 0.801
+    vs TabPFN       field: 0.955 [0.941, 0.969], per task 0.972, 0.948, 0.929, 0.969
+    vs TabPFN-KpR   field: 0.802 [0.774, 0.833], per task 0.719, 0.848, 0.820, 0.825
+    vs Block RK     field: 0.991 [0.979, 1.004], per task 0.991, 0.962, 0.997, 1.014
+    vs WH           field: 0.974 [0.961, 0.988], per task 0.992, 0.976, 0.944, 0.984
+  Oxford/Meuse primary tasks, TabPFN-GP zone coverage 0.815
+    vs TabPFN       zone: 0.957 [0.950, 0.965], per task 0.947, 0.935, 0.967, 0.980
+    vs TabPFN-KpR   zone: 0.780 [0.762, 0.798], per task 0.615, 0.899, 0.723, 0.923
+    vs Block RK     zone: 0.978 [0.971, 0.986], per task 0.980, 0.945, 1.006, 0.983
+    vs WH           zone: 0.977 [0.970, 0.984], per task 0.977, 0.974, 0.987, 0.970
+
+-- S3: interval width ratio TabPFN-GP / comparator (aggregated like the CRPS), with coverage --
+  vs TabPFN       field: width 1.148 [1.045, 1.270], fields narrower 6/20; coverage TabPFN 0.759
+  vs TabPFN       zone: width 0.808 [0.754, 0.874], fields narrower 18/20; coverage TabPFN 0.842
+  vs TabPFN-KpR   field: width 0.816 [0.762, 0.881], fields narrower 17/20; coverage TabPFN-KpR 0.778
+  vs TabPFN-KpR   zone: width 0.589 [0.560, 0.625], fields narrower 20/20; coverage TabPFN-KpR 0.810
+  vs Block RK     field: width 1.159 [1.074, 1.259], fields narrower 4/20; coverage Block RK 0.768
+  vs Block RK     zone: width 0.941 [0.889, 1.001], fields narrower 14/20; coverage Block RK 0.811
+  vs WH           field: width 1.142 [1.014, 1.227], fields narrower 1/20; coverage WH 0.777
+  vs WH           zone: width 0.874 [0.809, 0.918], fields narrower 20/20; coverage WH 0.839
+
+-- S4: comparator coverage, calibrated | uncalibrated (LimeSoDa common set) --
+  TabPFN       TAB          field 0.759 | 0.428;  zone 0.842 | 0.505
+  TabPFN-KpR   KpR4         field 0.778 | 0.353;  zone 0.810 | 0.405
+  Block RK     RK_ins_fix_v field 0.768 | 0.605;  zone 0.811 | 0.641
+  WH           WH_fix       field 0.777 | 0.603;  zone 0.839 | 0.663
+
+-- S5: published comparator versions (uncalibrated): TAB, KpR, block RK as in the KpR authors' code (RK_ins_loc), WH local --
+  vs TAB          field: 0.908 [0.890, 0.927], fields better 19/20; coverage TAB 0.428
+  vs TAB          zone: 0.941 [0.923, 0.961], fields better 18/20; coverage TAB 0.505
+  vs KpR          field: 0.748 [0.719, 0.776], fields better 20/20; coverage KpR 0.350
+  vs KpR          zone: 0.769 [0.740, 0.797], fields better 20/20; coverage KpR 0.404
+  vs RK_ins_loc   field: 0.877 [0.852, 0.901], fields better 20/20; coverage RK_ins_loc 0.567
+  vs RK_ins_loc   zone: 0.879 [0.855, 0.901], fields better 20/20; coverage RK_ins_loc 0.546
+  vs WH_loc       field: 0.916 [0.900, 0.934], fields better 20/20; coverage WH_loc 0.604
+  vs WH_loc       zone: 0.957 [0.941, 0.973], fields better 18/20; coverage WH_loc 0.655
+
+-- S6 --
+  dense covariates, 14 fields without spectra: TabPFN-GP field coverage 0.802 [0.779, 0.821]
+    vs TabPFN       field: 0.970 [0.958, 0.981], fields better 11/14
+    vs TabPFN-KpR   field: 0.772 [0.751, 0.795], fields better 14/14
+    vs Block RK     field: 1.001 [0.987, 1.017], fields better 8/14
+    vs WH           field: 0.989 [0.975, 1.003], fields better 9/14
+  dense covariates, 14 fields without spectra: TabPFN-GP zone coverage 0.769 [0.757, 0.783]
+    vs TabPFN       zone: 0.955 [0.944, 0.966], fields better 14/14
+    vs TabPFN-KpR   zone: 0.767 [0.737, 0.798], fields better 14/14
+    vs Block RK     zone: 0.989 [0.977, 1.001], fields better 10/14
+    vs WH           zone: 0.985 [0.976, 0.993], fields better 10/14
+  dense covariates, Meuse + Oxford without colour: TabPFN-GP field coverage 0.812
+  dense covariates, Meuse + Oxford without colour: TabPFN-GP zone coverage 0.809
+  without SL.125/UL.120: TabPFN-GP field coverage 0.804 [0.785, 0.820]
+  without SL.125/UL.120: TabPFN-GP zone coverage 0.781 [0.766, 0.796]
+  leave-one-field-out prior (development fields), J1pL x1.10 vs J1pK field: 1.000 [1.000, 1.000], fields better 4/14; coverage J1pL 0.813
+  leave-one-field-out prior (development fields), J1pL x1.10 vs J1pK zone: 1.000 [1.000, 1.000], fields better 6/14; coverage J1pL 0.782
+  all blocks with substitutes: TabPFN-GP field coverage 0.809 [0.791, 0.824]
+    vs TabPFN       field: 0.972 [0.964, 0.980], fields better 19/20
+    vs TabPFN-KpR   field: 0.775 [0.756, 0.793], fields better 20/20
+    vs Block RK     field: 1.003 [0.992, 1.015], fields better 9/20
+    vs WH           field: 0.978 [0.947, 0.998], fields better 12/20
+  all blocks with substitutes: TabPFN-GP zone coverage 0.784 [0.770, 0.798]
+    vs TabPFN       zone: 0.957 [0.947, 0.966], fields better 20/20
+    vs TabPFN-KpR   zone: 0.783 [0.758, 0.808], fields better 20/20
+    vs Block RK     zone: 0.991 [0.981, 1.001], fields better 13/20
+    vs WH           zone: 0.975 [0.954, 0.988], fields better 16/20
+  field-averaged coverage (each field equal), TabPFN-GP: field 0.806, zone 0.782
+  by n, field means: TabPFN-GP coverage | CRPS ratio vs TabPFN, TabPFN-KpR, Block RK, WH
+    n =   5: 0.783 | 0.983, 0.769, 0.993, 0.996
+    n =  10: 0.792 | 0.996, 0.666, 1.004, 1.000
+    n =  15: 0.812 | 0.997, 0.743, 1.021, 0.992
+    n =  20: 0.815 | 0.983, 0.844, 1.026, 0.987
+    n =  30: 0.833 | 0.987, 0.922, 1.036, 0.977
+    n =  50: 0.833 | 0.971, 0.891, 1.040, 0.948
+    n =  75: 0.793 | 0.895, 0.903, 0.976, 0.890
+    n = 100: 0.807 | 0.908, 1.019, 1.005, 0.877

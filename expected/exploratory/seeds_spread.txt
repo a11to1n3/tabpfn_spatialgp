@@ -1,0 +1,28 @@
+=== E12 (docs/exploratory/plan_E9-E13.md), the measures of E8 on all 43 fields: TabPFN-GP over seeds 0-4, kappa = 1.15 ===
+fields 43; areas with all five seeds 49698 of 49698
+
+field means (10160 areas):
+  sd of an interval endpoint over the seeds / half-width: median 0.072, 90th percentile 0.172
+    n =   5: median 0.033, 90th percentile 0.065
+    n =  10: median 0.074, 90th percentile 0.128
+    n =  15: median 0.065, 90th percentile 0.117
+    n =  20: median 0.057, 90th percentile 0.107
+    n =  30: median 0.131, 90th percentile 0.255
+    n =  50: median 0.112, 90th percentile 0.220
+    n =  75: median 0.112, 90th percentile 0.243
+    n = 100: median 0.116, 90th percentile 0.272
+  coverage by seed: 0: 0.830; 1: 0.829; 2: 0.828; 3: 0.832; 4: 0.831  (range 0.004)
+  CRPS relative to seed 0: 1: 1.008; 2: 1.001; 3: 1.010; 4: 1.003
+
+zone means (39538 areas):
+  sd of an interval endpoint over the seeds / half-width: median 0.066, 90th percentile 0.153
+    n =   5: median 0.034, 90th percentile 0.070
+    n =  10: median 0.069, 90th percentile 0.128
+    n =  15: median 0.061, 90th percentile 0.121
+    n =  20: median 0.057, 90th percentile 0.115
+    n =  30: median 0.105, 90th percentile 0.219
+    n =  50: median 0.090, 90th percentile 0.191
+    n =  75: median 0.091, 90th percentile 0.203
+    n = 100: median 0.098, 90th percentile 0.225
+  coverage by seed: 0: 0.795; 1: 0.797; 2: 0.797; 3: 0.796; 4: 0.796  (range 0.002)
+  CRPS relative to seed 0: 1: 1.004; 2: 0.998; 3: 1.003; 4: 1.004
