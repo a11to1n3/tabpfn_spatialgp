@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Reproduces every result of the paper from the public data, in six stages (README.md describes each one).
+# Reproduces the study of the paper from the public data, in six stages (README.md describes each one).
 #   bash reproduce.sh all                  every stage in order
 #   bash reproduce.sh data dev prior ...   the named stages, in the order given
 # Stages: data dev prior factor_setting study compare

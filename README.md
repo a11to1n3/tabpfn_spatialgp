@@ -64,7 +64,7 @@ experiments/            the code behind the paper, one folder per stage (experim
 paper/                  the scripts that make the paper's tables and figures from the outputs
 expected/               the outputs behind the paper
 environment/            the exact Python and R versions
-reproduce.sh            runs everything, from the public data to the report
+reproduce.sh            runs every stage, from the public data to the study's report
 ```
 
 Every module of `experiments/` runs from the repository root, as `python -m experiments.<stage>.<module>`.

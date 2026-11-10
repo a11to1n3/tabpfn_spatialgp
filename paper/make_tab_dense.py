@@ -46,8 +46,8 @@ def main():
     out = [r"\begin{table}[!htbp]", r"\centering",
            r"\caption{\textbf{Means over fewer and more locations of the same area} (exploratory). (a) Coverage of $80\,\%$ intervals of"
            r" the mean over $10$ randomly chosen unrevealed locations of an area and over all of them, on the same splits, with each"
-           r" method's factor; $D$: all minus $10$, over the areas with more than $10$ unrevealed locations. (b) TabPFN-GP by the number"
-           r" of unrevealed locations $m_B$: $D$ as in (a); coverage with all locations; share of the variance from the independent part,"
+           r" method's factor; difference: all minus $10$, over the areas with more than $10$ unrevealed locations. (b) TabPFN-GP by the number"
+           r" of unrevealed locations $m_B$: difference as in (a); coverage with all locations; share of the variance from the independent part,"
            r" which averages out over more locations (median); coverage with that part removed, a lower bound for a mean over a dense grid"
            r" of the same area. Intervals: $95\,\%$ bootstrap intervals over fields; none where all areas are on one field.}",
            r"\label{tab:dense}", r"\scriptsize", r"\setlength{\tabcolsep}{3pt}", r"\vspace{0.6ex}",
@@ -55,7 +55,7 @@ def main():
            r"\multicolumn{7}{@{}l}{\textbf{(a) Ten and all locations}} \\", r"\toprule",
            r" & \multicolumn{3}{c}{Field means} & \multicolumn{3}{c}{Zone means} \\",
            r"\cmidrule(lr){2-4} \cmidrule(lr){5-7}",
-           r"Method & $10$ & All & $D$ & $10$ & All & $D$ \\", r"\midrule"]
+           r"Method & $10$ & All & Difference & $10$ & All & Difference \\", r"\midrule"]
     for name in ("TabPFN-GP", "Shared-error-only", "TabPFN", "Sample mean"):
         cells = []
         for kind in ("field", "zone"):
@@ -65,7 +65,7 @@ def main():
     out += [r"\bottomrule", r"\end{tabular*}", "", r"\vspace{1.5ex}",
             r"\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llllll@{}}",
             r"\multicolumn{6}{@{}l}{\textbf{(b) TabPFN-GP by number of locations}} \\", r"\toprule",
-            r"Means, $m_B$ & Fields & $D$ & Coverage & \begin{tabular}[b]{@{}l@{}}Independent\\share\end{tabular} & "
+            r"Means, $m_B$ & Fields & Difference & Coverage & \begin{tabular}[b]{@{}l@{}}Independent\\share\end{tabular} & "
             r"\begin{tabular}[b]{@{}l@{}}Coverage\\without it\end{tabular} \\", r"\midrule"]
     rows = (("field", 0, 0), ("field", 101, 101), ("field", 201, 201), ("zone", 3, None), ("zone", 10, 11), ("zone", 30, 30),
             ("zone", 100, 100))
@@ -77,7 +77,7 @@ def main():
         dcell = ci(dd[:3], True) if dd else "--"
         if dd and dd[3] != d["fields"]:                          # D is over fewer fields than the coverage (no D where m_B = 10)
             dcell += r"$^{\ast}$"
-            notes.append(rf" $^{{\ast}}$ (in b): $D$ over the ${dd[3]}$ fields with zones of ${ck}$ to ${d['hi']}$ locations ($D = 0$ with $10$).")
+            notes.append(rf" $^{{\ast}}$ (in b): difference over the ${dd[3]}$ fields with zones of ${ck}$ to ${d['hi']}$ locations (it is $0$ with $10$).")
         out.append(f"{kind.capitalize()}, {rng} & ${d['fields']}$ & " + dcell + f" & {ci(d['cov'])} & "
                    f"${d['share']:.3f}$ & {ci(d['vinf'])} \\\\")
     out += [r"\bottomrule", r"\end{tabular*}", r"\end{table}"]
