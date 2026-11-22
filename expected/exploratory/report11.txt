@@ -1,0 +1,874 @@
+=== E21: other sampling designs on the 43 fields (docs/exploratory/plan_E21.md; exploratory) ===
+coverage of 80 % intervals with each method's study factor; [95 % interval over fields] (fields); change from the reference, paired by field
+
+-- strat10 against the study (n = 10) --
+  field  TabPFN-GP              0.854 [0.827, 0.882] (43); change +0.029 [-0.005, +0.066]
+  field  Shared-error-only      0.861 [0.834, 0.890] (43); change +0.031 [-0.005, +0.067]
+  field  TabPFN                 0.681 [0.626, 0.732] (43); change +0.032 [-0.013, +0.074]
+  field  Block RK               0.755 [0.713, 0.796] (43); change +0.031 [-0.004, +0.065]
+  field  WH                     0.698 [0.660, 0.734] (43); change +0.046 [+0.003, +0.087]
+  field  Sample mean            0.839 [0.814, 0.864] (43); change +0.036 [+0.007, +0.066]
+  field  Difference estimator   0.859 [0.832, 0.886] (43); change +0.032 [+0.000, +0.064]
+  field  Stratified estimator   0.806 [0.782, 0.829] (43); change +nan [+nan, +nan]
+  zone   TabPFN-GP              0.814 [0.794, 0.835] (43); change +0.028 [+0.009, +0.048]
+  zone   Shared-error-only      0.768 [0.745, 0.792] (43); change +0.030 [+0.011, +0.049]
+  zone   TabPFN                 0.787 [0.749, 0.822] (43); change +0.018 [+0.001, +0.035]
+  zone   Block RK               0.781 [0.752, 0.809] (43); change +0.034 [+0.013, +0.056]
+  zone   WH                     0.786 [0.763, 0.810] (43); change +0.020 [+0.002, +0.039]
+  zone   Sample mean            0.813 [0.800, 0.824] (43); change +0.016 [+0.004, +0.028]
+  zone   Difference estimator   0.827 [0.809, 0.844] (43); change +0.009 [-0.009, +0.027]
+  field  crps ratio TabPFN-GP / Shared-error-only      0.991 [0.989, 0.993] (40/43 fields lower)
+  field  width ratio TabPFN-GP / Shared-error-only      0.962 [0.956, 0.968] (41/43 fields lower)
+  field  crps ratio TabPFN-GP / TabPFN                 0.997 [0.977, 1.015] (20/43 fields lower)
+  field  width ratio TabPFN-GP / TabPFN                 1.613 [1.462, 1.795] (2/43 fields lower)
+  field  crps ratio TabPFN-GP / Block RK               0.999 [0.983, 1.015] (21/43 fields lower)
+  field  width ratio TabPFN-GP / Block RK               1.251 [1.189, 1.318] (4/43 fields lower)
+  field  crps ratio TabPFN-GP / WH                     1.015 [1.001, 1.029] (18/43 fields lower)
+  field  width ratio TabPFN-GP / WH                     1.531 [1.471, 1.596] (0/43 fields lower)
+  field  crps ratio TabPFN-GP / Sample mean            0.996 [0.957, 1.035] (17/43 fields lower)
+  field  width ratio TabPFN-GP / Sample mean            1.031 [0.997, 1.064] (12/43 fields lower)
+  field  crps ratio TabPFN-GP / Difference estimator   0.971 [0.952, 0.991] (30/43 fields lower)
+  field  width ratio TabPFN-GP / Difference estimator   0.962 [0.956, 0.968] (41/43 fields lower)
+  zone   crps ratio TabPFN-GP / Shared-error-only      1.004 [1.001, 1.008] (16/43 fields lower)
+  zone   width ratio TabPFN-GP / Shared-error-only      1.119 [1.107, 1.129] (0/43 fields lower)
+  zone   crps ratio TabPFN-GP / TabPFN                 0.983 [0.971, 0.994] (32/43 fields lower)
+  zone   width ratio TabPFN-GP / TabPFN                 1.060 [0.967, 1.171] (20/43 fields lower)
+  zone   crps ratio TabPFN-GP / Block RK               0.989 [0.977, 1.001] (23/43 fields lower)
+  zone   width ratio TabPFN-GP / Block RK               1.072 [1.014, 1.136] (14/43 fields lower)
+  zone   crps ratio TabPFN-GP / WH                     1.003 [0.998, 1.008] (22/43 fields lower)
+  zone   width ratio TabPFN-GP / WH                     1.071 [1.030, 1.116] (14/43 fields lower)
+  zone   crps ratio TabPFN-GP / Sample mean            0.754 [0.716, 0.794] (42/43 fields lower)
+  zone   width ratio TabPFN-GP / Sample mean            0.646 [0.623, 0.673] (42/43 fields lower)
+  zone   crps ratio TabPFN-GP / Difference estimator   0.685 [0.652, 0.719] (43/43 fields lower)
+  zone   width ratio TabPFN-GP / Difference estimator   0.544 [0.527, 0.563] (43/43 fields lower)
+  zones with one or two revealed samples: TabPFN-GP 0.814 [0.791, 0.837] (43 fields)
+  zones with three or more revealed samples: TabPFN-GP 0.814 [0.789, 0.840] (43 fields)
+
+-- strat20 against the study (n = 20) --
+  field  TabPFN-GP              0.855 [0.830, 0.881] (42); change +0.004 [-0.027, +0.037]
+  field  Shared-error-only      0.862 [0.833, 0.890] (42); change +0.012 [-0.024, +0.048]
+  field  TabPFN                 0.804 [0.749, 0.853] (42); change +0.021 [-0.016, +0.060]
+  field  Block RK               0.850 [0.810, 0.886] (42); change +0.024 [-0.013, +0.060]
+  field  WH                     0.805 [0.767, 0.843] (42); change +0.006 [-0.034, +0.047]
+  field  Sample mean            0.831 [0.791, 0.868] (42); change +0.015 [-0.029, +0.062]
+  field  Difference estimator   0.840 [0.810, 0.870] (42); change +0.018 [-0.015, +0.054]
+  field  Stratified estimator   0.828 [0.796, 0.857] (42); change +nan [+nan, +nan]
+  zone   TabPFN-GP              0.798 [0.779, 0.817] (42); change +0.005 [-0.011, +0.024]
+  zone   Shared-error-only      0.758 [0.732, 0.784] (42); change +0.012 [-0.008, +0.034]
+  zone   TabPFN                 0.865 [0.828, 0.897] (42); change +0.010 [-0.007, +0.026]
+  zone   Block RK               0.856 [0.831, 0.880] (42); change +0.002 [-0.014, +0.020]
+  zone   WH                     0.860 [0.838, 0.882] (42); change +0.004 [-0.011, +0.021]
+  zone   Sample mean            0.805 [0.790, 0.821] (42); change -0.007 [-0.027, +0.012]
+  zone   Difference estimator   0.817 [0.803, 0.832] (42); change -0.007 [-0.022, +0.008]
+  field  crps ratio TabPFN-GP / Shared-error-only      0.997 [0.995, 0.998] (30/42 fields lower)
+  field  width ratio TabPFN-GP / Shared-error-only      0.983 [0.978, 0.987] (37/42 fields lower)
+  field  crps ratio TabPFN-GP / TabPFN                 0.987 [0.972, 1.001] (24/42 fields lower)
+  field  width ratio TabPFN-GP / TabPFN                 1.137 [1.028, 1.271] (13/42 fields lower)
+  field  crps ratio TabPFN-GP / Block RK               1.004 [0.987, 1.022] (20/42 fields lower)
+  field  width ratio TabPFN-GP / Block RK               1.017 [0.958, 1.091] (20/42 fields lower)
+  field  crps ratio TabPFN-GP / WH                     1.009 [1.002, 1.016] (15/42 fields lower)
+  field  width ratio TabPFN-GP / WH                     1.119 [1.075, 1.170] (10/42 fields lower)
+  field  crps ratio TabPFN-GP / Sample mean            0.941 [0.884, 0.995] (27/42 fields lower)
+  field  width ratio TabPFN-GP / Sample mean            0.977 [0.934, 1.016] (19/42 fields lower)
+  field  crps ratio TabPFN-GP / Difference estimator   0.994 [0.963, 1.027] (24/42 fields lower)
+  field  width ratio TabPFN-GP / Difference estimator   1.010 [1.004, 1.016] (11/42 fields lower)
+  zone   crps ratio TabPFN-GP / Shared-error-only      1.001 [0.998, 1.004] (18/42 fields lower)
+  zone   width ratio TabPFN-GP / Shared-error-only      1.116 [1.100, 1.133] (0/42 fields lower)
+  zone   crps ratio TabPFN-GP / TabPFN                 0.958 [0.943, 0.972] (36/42 fields lower)
+  zone   width ratio TabPFN-GP / TabPFN                 0.816 [0.751, 0.898] (34/42 fields lower)
+  zone   crps ratio TabPFN-GP / Block RK               0.988 [0.971, 1.007] (25/42 fields lower)
+  zone   width ratio TabPFN-GP / Block RK               0.863 [0.813, 0.925] (38/42 fields lower)
+  zone   crps ratio TabPFN-GP / WH                     0.986 [0.978, 0.994] (28/42 fields lower)
+  zone   width ratio TabPFN-GP / WH                     0.853 [0.821, 0.892] (40/42 fields lower)
+  zone   crps ratio TabPFN-GP / Sample mean            0.775 [0.741, 0.811] (40/42 fields lower)
+  zone   width ratio TabPFN-GP / Sample mean            0.710 [0.691, 0.729] (42/42 fields lower)
+  zone   crps ratio TabPFN-GP / Difference estimator   0.765 [0.734, 0.798] (41/42 fields lower)
+  zone   width ratio TabPFN-GP / Difference estimator   0.663 [0.650, 0.678] (42/42 fields lower)
+  zones with three or more revealed samples: TabPFN-GP 0.798 [0.779, 0.817] (42 fields)
+
+-- strat30 against the study (n = 30) --
+  field  TabPFN-GP              0.867 [0.831, 0.900] (38); change +0.044 [+0.007, +0.079]
+  field  Shared-error-only      0.873 [0.835, 0.909] (38); change +0.045 [+0.001, +0.086]
+  field  TabPFN                 0.863 [0.815, 0.908] (38); change +0.028 [-0.008, +0.062]
+  field  Block RK               0.887 [0.849, 0.922] (38); change +0.032 [+0.001, +0.063]
+  field  WH                     0.882 [0.854, 0.909] (38); change +0.054 [+0.021, +0.087]
+  field  Sample mean            0.816 [0.758, 0.868] (38); change -0.004 [-0.067, +0.054]
+  field  Difference estimator   0.857 [0.818, 0.894] (38); change +0.039 [-0.005, +0.080]
+  field  Stratified estimator   0.848 [0.814, 0.881] (38); change +nan [+nan, +nan]
+  zone   TabPFN-GP              0.813 [0.788, 0.835] (38); change +0.021 [-0.002, +0.042]
+  zone   Shared-error-only      0.759 [0.727, 0.790] (38); change +0.026 [-0.002, +0.050]
+  zone   TabPFN                 0.890 [0.852, 0.923] (38); change +0.011 [-0.008, +0.031]
+  zone   Block RK               0.891 [0.863, 0.916] (38); change +0.017 [-0.004, +0.037]
+  zone   WH                     0.893 [0.870, 0.915] (38); change +0.021 [+0.002, +0.039]
+  zone   Sample mean            0.813 [0.795, 0.833] (38); change -0.002 [-0.023, +0.018]
+  zone   Difference estimator   0.833 [0.816, 0.850] (38); change +0.014 [-0.004, +0.030]
+  field  crps ratio TabPFN-GP / Shared-error-only      0.988 [0.974, 1.002] (23/38 fields lower)
+  field  width ratio TabPFN-GP / Shared-error-only      0.992 [0.986, 0.998] (32/38 fields lower)
+  field  crps ratio TabPFN-GP / TabPFN                 0.956 [0.917, 0.995] (25/38 fields lower)
+  field  width ratio TabPFN-GP / TabPFN                 0.955 [0.860, 1.068] (25/38 fields lower)
+  field  crps ratio TabPFN-GP / Block RK               0.984 [0.950, 1.019] (23/38 fields lower)
+  field  width ratio TabPFN-GP / Block RK               0.907 [0.850, 0.972] (30/38 fields lower)
+  field  crps ratio TabPFN-GP / WH                     0.989 [0.957, 1.023] (22/38 fields lower)
+  field  width ratio TabPFN-GP / WH                     0.946 [0.908, 0.986] (25/38 fields lower)
+  field  crps ratio TabPFN-GP / Sample mean            0.876 [0.786, 0.959] (24/38 fields lower)
+  field  width ratio TabPFN-GP / Sample mean            0.933 [0.878, 0.985] (18/38 fields lower)
+  field  crps ratio TabPFN-GP / Difference estimator   0.996 [0.980, 1.012] (21/38 fields lower)
+  field  width ratio TabPFN-GP / Difference estimator   1.024 [1.015, 1.032] (5/38 fields lower)
+  zone   crps ratio TabPFN-GP / Shared-error-only      0.979 [0.962, 0.996] (23/38 fields lower)
+  zone   width ratio TabPFN-GP / Shared-error-only      1.106 [1.088, 1.125] (0/38 fields lower)
+  zone   crps ratio TabPFN-GP / TabPFN                 0.919 [0.892, 0.945] (33/38 fields lower)
+  zone   width ratio TabPFN-GP / TabPFN                 0.728 [0.672, 0.797] (34/38 fields lower)
+  zone   crps ratio TabPFN-GP / Block RK               0.967 [0.942, 0.991] (26/38 fields lower)
+  zone   width ratio TabPFN-GP / Block RK               0.776 [0.734, 0.825] (35/38 fields lower)
+  zone   crps ratio TabPFN-GP / WH                     0.952 [0.932, 0.973] (29/38 fields lower)
+  zone   width ratio TabPFN-GP / WH                     0.766 [0.741, 0.793] (37/38 fields lower)
+  zone   crps ratio TabPFN-GP / Sample mean            0.783 [0.743, 0.824] (36/38 fields lower)
+  zone   width ratio TabPFN-GP / Sample mean            0.740 [0.714, 0.767] (38/38 fields lower)
+  zone   crps ratio TabPFN-GP / Difference estimator   0.824 [0.798, 0.849] (38/38 fields lower)
+  zone   width ratio TabPFN-GP / Difference estimator   0.746 [0.727, 0.766] (38/38 fields lower)
+  zones with three or more revealed samples: TabPFN-GP 0.813 [0.788, 0.835] (38 fields)
+
+-- clust10 against the study (n = 10) --
+  field  TabPFN-GP              0.728 [0.686, 0.769] (43); change -0.097 [-0.141, -0.053]
+  field  Shared-error-only      0.684 [0.638, 0.729] (43); change -0.147 [-0.194, -0.102]
+  field  TabPFN                 0.547 [0.496, 0.600] (43); change -0.102 [-0.146, -0.057]
+  field  Block RK               0.644 [0.590, 0.699] (43); change -0.080 [-0.127, -0.031]
+  field  WH                     0.561 [0.512, 0.612] (43); change -0.091 [-0.139, -0.040]
+  field  Sample mean            0.652 [0.608, 0.697] (43); change -0.150 [-0.199, -0.101]
+  field  Difference estimator   0.655 [0.609, 0.700] (43); change -0.172 [-0.215, -0.130]
+  zone   TabPFN-GP              0.709 [0.677, 0.741] (43); change -0.077 [-0.108, -0.046]
+  zone   Shared-error-only      0.649 [0.618, 0.681] (43); change -0.089 [-0.118, -0.061]
+  zone   TabPFN                 0.735 [0.686, 0.781] (43); change -0.034 [-0.062, -0.008]
+  zone   Block RK               0.708 [0.669, 0.748] (43); change -0.039 [-0.070, -0.009]
+  zone   WH                     0.721 [0.685, 0.756] (43); change -0.045 [-0.072, -0.019]
+  zone   Sample mean            0.709 [0.685, 0.734] (43); change -0.088 [-0.114, -0.063]
+  zone   Difference estimator   0.781 [0.755, 0.806] (43); change -0.038 [-0.062, -0.014]
+  nozone TabPFN-GP              0.673 [0.626, 0.721] (43); change -0.061 [-0.115, -0.006]
+  nozone Shared-error-only      0.606 [0.556, 0.657] (43); change -0.020 [-0.078, +0.034]
+  nozone TabPFN                 0.702 [0.652, 0.750] (43); change -0.016 [-0.074, +0.048]
+  nozone Block RK               0.674 [0.621, 0.727] (43); change -0.027 [-0.078, +0.027]
+  nozone WH                     0.688 [0.638, 0.737] (43); change -0.049 [-0.097, +0.009]
+  field  crps ratio TabPFN-GP / Shared-error-only      1.002 [0.997, 1.007] (27/43 fields lower)
+  field  width ratio TabPFN-GP / Shared-error-only      1.100 [1.091, 1.109] (0/43 fields lower)
+  field  crps ratio TabPFN-GP / TabPFN                 0.978 [0.960, 0.996] (30/43 fields lower)
+  field  width ratio TabPFN-GP / TabPFN                 1.566 [1.418, 1.741] (4/43 fields lower)
+  field  crps ratio TabPFN-GP / Block RK               0.984 [0.970, 0.998] (29/43 fields lower)
+  field  width ratio TabPFN-GP / Block RK               1.195 [1.130, 1.266] (6/43 fields lower)
+  field  crps ratio TabPFN-GP / WH                     0.989 [0.973, 1.006] (27/43 fields lower)
+  field  width ratio TabPFN-GP / WH                     1.486 [1.410, 1.566] (1/43 fields lower)
+  field  crps ratio TabPFN-GP / Sample mean            0.999 [0.950, 1.047] (18/43 fields lower)
+  field  width ratio TabPFN-GP / Sample mean            1.133 [1.085, 1.181] (7/43 fields lower)
+  field  crps ratio TabPFN-GP / Difference estimator   0.984 [0.967, 1.000] (24/43 fields lower)
+  field  width ratio TabPFN-GP / Difference estimator   1.128 [1.116, 1.140] (0/43 fields lower)
+  zone   crps ratio TabPFN-GP / Shared-error-only      0.997 [0.992, 1.002] (28/43 fields lower)
+  zone   width ratio TabPFN-GP / Shared-error-only      1.142 [1.129, 1.156] (0/43 fields lower)
+  zone   crps ratio TabPFN-GP / TabPFN                 0.984 [0.973, 0.995] (28/43 fields lower)
+  zone   width ratio TabPFN-GP / TabPFN                 0.959 [0.884, 1.048] (30/43 fields lower)
+  zone   crps ratio TabPFN-GP / Block RK               0.983 [0.972, 0.993] (30/43 fields lower)
+  zone   width ratio TabPFN-GP / Block RK               0.981 [0.933, 1.036] (25/43 fields lower)
+  zone   crps ratio TabPFN-GP / WH                     0.999 [0.994, 1.004] (24/43 fields lower)
+  zone   width ratio TabPFN-GP / WH                     0.967 [0.923, 1.013] (21/43 fields lower)
+  zone   crps ratio TabPFN-GP / Sample mean            0.798 [0.768, 0.827] (42/43 fields lower)
+  zone   width ratio TabPFN-GP / Sample mean            0.813 [0.786, 0.841] (42/43 fields lower)
+  zone   crps ratio TabPFN-GP / Difference estimator   0.821 [0.792, 0.849] (43/43 fields lower)
+  zone   width ratio TabPFN-GP / Difference estimator   0.692 [0.670, 0.716] (43/43 fields lower)
+  zones with none revealed samples: TabPFN-GP 0.673 [0.626, 0.721] (43 fields)
+  zones with one or two revealed samples: TabPFN-GP 0.688 [0.647, 0.730] (43 fields)
+  zones with three or more revealed samples: TabPFN-GP 0.741 [0.707, 0.775] (43 fields)
+
+-- clust20 against the study (n = 20) --
+  field  TabPFN-GP              0.694 [0.646, 0.742] (43); change -0.156 [-0.209, -0.104]
+  field  Shared-error-only      0.636 [0.588, 0.686] (43); change -0.214 [-0.267, -0.160]
+  field  TabPFN                 0.670 [0.600, 0.737] (43); change -0.114 [-0.167, -0.061]
+  field  Block RK               0.704 [0.643, 0.762] (43); change -0.123 [-0.181, -0.065]
+  field  WH                     0.656 [0.596, 0.716] (43); change -0.145 [-0.201, -0.089]
+  field  Sample mean            0.596 [0.551, 0.642] (43); change -0.219 [-0.265, -0.175]
+  field  Difference estimator   0.573 [0.519, 0.625] (43); change -0.250 [-0.307, -0.194]
+  zone   TabPFN-GP              0.689 [0.649, 0.729] (43); change -0.105 [-0.143, -0.069]
+  zone   Shared-error-only      0.628 [0.586, 0.670] (43); change -0.119 [-0.155, -0.084]
+  zone   TabPFN                 0.776 [0.720, 0.826] (43); change -0.081 [-0.112, -0.052]
+  zone   Block RK               0.761 [0.712, 0.808] (43); change -0.095 [-0.135, -0.055]
+  zone   WH                     0.775 [0.734, 0.815] (43); change -0.083 [-0.117, -0.050]
+  zone   Sample mean            0.684 [0.646, 0.721] (43); change -0.128 [-0.172, -0.089]
+  zone   Difference estimator   0.730 [0.696, 0.763] (43); change -0.094 [-0.126, -0.062]
+  nozone TabPFN-GP              0.588 [0.525, 0.651] (43); change -0.157 [-0.264, +0.181]
+  nozone Shared-error-only      0.510 [0.444, 0.579] (43); change -0.181 [-0.253, +0.055]
+  nozone TabPFN                 0.679 [0.603, 0.751] (43); change -0.113 [-0.173, +0.137]
+  nozone Block RK               0.673 [0.599, 0.746] (43); change -0.145 [-0.202, -0.056]
+  nozone WH                     0.716 [0.641, 0.785] (43); change -0.136 [-0.214, -0.058]
+  field  crps ratio TabPFN-GP / Shared-error-only      0.997 [0.992, 1.003] (30/43 fields lower)
+  field  width ratio TabPFN-GP / Shared-error-only      1.140 [1.127, 1.153] (0/43 fields lower)
+  field  crps ratio TabPFN-GP / TabPFN                 0.993 [0.977, 1.011] (25/43 fields lower)
+  field  width ratio TabPFN-GP / TabPFN                 1.135 [1.033, 1.250] (15/43 fields lower)
+  field  crps ratio TabPFN-GP / Block RK               0.970 [0.950, 0.990] (30/43 fields lower)
+  field  width ratio TabPFN-GP / Block RK               0.938 [0.889, 0.993] (28/43 fields lower)
+  field  crps ratio TabPFN-GP / WH                     1.000 [0.990, 1.013] (25/43 fields lower)
+  field  width ratio TabPFN-GP / WH                     1.095 [1.043, 1.147] (12/43 fields lower)
+  field  crps ratio TabPFN-GP / Sample mean            0.920 [0.860, 0.984] (29/43 fields lower)
+  field  width ratio TabPFN-GP / Sample mean            1.147 [1.099, 1.194] (6/43 fields lower)
+  field  crps ratio TabPFN-GP / Difference estimator   0.959 [0.939, 0.979] (33/43 fields lower)
+  field  width ratio TabPFN-GP / Difference estimator   1.232 [1.211, 1.256] (0/43 fields lower)
+  zone   crps ratio TabPFN-GP / Shared-error-only      0.993 [0.988, 0.998] (28/43 fields lower)
+  zone   width ratio TabPFN-GP / Shared-error-only      1.164 [1.146, 1.182] (0/43 fields lower)
+  zone   crps ratio TabPFN-GP / TabPFN                 0.969 [0.952, 0.986] (33/43 fields lower)
+  zone   width ratio TabPFN-GP / TabPFN                 0.777 [0.729, 0.834] (36/43 fields lower)
+  zone   crps ratio TabPFN-GP / Block RK               0.973 [0.954, 0.991] (25/43 fields lower)
+  zone   width ratio TabPFN-GP / Block RK               0.806 [0.772, 0.845] (39/43 fields lower)
+  zone   crps ratio TabPFN-GP / WH                     0.994 [0.980, 1.006] (21/43 fields lower)
+  zone   width ratio TabPFN-GP / WH                     0.799 [0.768, 0.830] (42/43 fields lower)
+  zone   crps ratio TabPFN-GP / Sample mean            0.815 [0.775, 0.856] (39/43 fields lower)
+  zone   width ratio TabPFN-GP / Sample mean            0.839 [0.815, 0.863] (42/43 fields lower)
+  zone   crps ratio TabPFN-GP / Difference estimator   0.845 [0.812, 0.880] (39/43 fields lower)
+  zone   width ratio TabPFN-GP / Difference estimator   0.770 [0.747, 0.792] (43/43 fields lower)
+  zones with none revealed samples: TabPFN-GP 0.588 [0.525, 0.651] (43 fields)
+  zones with one or two revealed samples: TabPFN-GP 0.705 [0.640, 0.765] (40 fields)
+  zones with three or more revealed samples: TabPFN-GP 0.719 [0.676, 0.761] (43 fields)
+
+-- clust30 against the study (n = 30) --
+  field  TabPFN-GP              0.634 [0.584, 0.688] (40); change -0.191 [-0.240, -0.137]
+  field  Shared-error-only      0.568 [0.511, 0.629] (40); change -0.262 [-0.317, -0.201]
+  field  TabPFN                 0.641 [0.573, 0.708] (40); change -0.199 [-0.241, -0.150]
+  field  Block RK               0.693 [0.637, 0.752] (40); change -0.163 [-0.213, -0.110]
+  field  WH                     0.656 [0.599, 0.718] (40); change -0.177 [-0.223, -0.127]
+  field  Sample mean            0.572 [0.525, 0.619] (40); change -0.246 [-0.296, -0.196]
+  field  Difference estimator   0.535 [0.481, 0.595] (40); change -0.285 [-0.336, -0.226]
+  zone   TabPFN-GP              0.657 [0.618, 0.694] (40); change -0.137 [-0.170, -0.103]
+  zone   Shared-error-only      0.594 [0.553, 0.635] (40); change -0.142 [-0.176, -0.109]
+  zone   TabPFN                 0.781 [0.723, 0.833] (40); change -0.100 [-0.134, -0.070]
+  zone   Block RK               0.773 [0.728, 0.816] (40); change -0.103 [-0.137, -0.071]
+  zone   WH                     0.785 [0.743, 0.826] (40); change -0.091 [-0.126, -0.060]
+  zone   Sample mean            0.675 [0.636, 0.713] (40); change -0.138 [-0.178, -0.099]
+  zone   Difference estimator   0.714 [0.682, 0.744] (40); change -0.104 [-0.135, -0.075]
+  nozone TabPFN-GP              0.582 [0.509, 0.667] (34); change -0.027 [-0.556, +0.250]
+  nozone Shared-error-only      0.508 [0.429, 0.601] (34); change -0.107 [-0.778, +0.250]
+  nozone TabPFN                 0.662 [0.578, 0.750] (34); change -0.320 [-0.778, -0.062]
+  nozone Block RK               0.669 [0.593, 0.753] (34); change +0.013 [-0.556, +0.312]
+  nozone WH                     0.723 [0.645, 0.800] (34); change -0.160 [-0.333, -0.062]
+  field  crps ratio TabPFN-GP / Shared-error-only      0.987 [0.976, 0.999] (27/40 fields lower)
+  field  width ratio TabPFN-GP / Shared-error-only      1.151 [1.133, 1.170] (0/40 fields lower)
+  field  crps ratio TabPFN-GP / TabPFN                 0.983 [0.954, 1.010] (20/40 fields lower)
+  field  width ratio TabPFN-GP / TabPFN                 0.966 [0.882, 1.063] (25/40 fields lower)
+  field  crps ratio TabPFN-GP / Block RK               0.981 [0.960, 1.002] (20/40 fields lower)
+  field  width ratio TabPFN-GP / Block RK               0.824 [0.785, 0.867] (36/40 fields lower)
+  field  crps ratio TabPFN-GP / WH                     1.000 [0.980, 1.020] (17/40 fields lower)
+  field  width ratio TabPFN-GP / WH                     0.922 [0.878, 0.966] (30/40 fields lower)
+  field  crps ratio TabPFN-GP / Sample mean            0.912 [0.836, 0.987] (25/40 fields lower)
+  field  width ratio TabPFN-GP / Sample mean            1.115 [1.050, 1.177] (7/40 fields lower)
+  field  crps ratio TabPFN-GP / Difference estimator   0.969 [0.957, 0.982] (32/40 fields lower)
+  field  width ratio TabPFN-GP / Difference estimator   1.264 [1.233, 1.298] (0/40 fields lower)
+  zone   crps ratio TabPFN-GP / Shared-error-only      0.987 [0.978, 0.998] (32/40 fields lower)
+  zone   width ratio TabPFN-GP / Shared-error-only      1.161 [1.139, 1.184] (0/40 fields lower)
+  zone   crps ratio TabPFN-GP / TabPFN                 0.978 [0.958, 0.998] (25/40 fields lower)
+  zone   width ratio TabPFN-GP / TabPFN                 0.706 [0.665, 0.754] (37/40 fields lower)
+  zone   crps ratio TabPFN-GP / Block RK               0.983 [0.963, 1.001] (20/40 fields lower)
+  zone   width ratio TabPFN-GP / Block RK               0.731 [0.703, 0.762] (39/40 fields lower)
+  zone   crps ratio TabPFN-GP / WH                     1.000 [0.981, 1.018] (18/40 fields lower)
+  zone   width ratio TabPFN-GP / WH                     0.723 [0.694, 0.752] (40/40 fields lower)
+  zone   crps ratio TabPFN-GP / Sample mean            0.814 [0.770, 0.859] (35/40 fields lower)
+  zone   width ratio TabPFN-GP / Sample mean            0.824 [0.784, 0.865] (36/40 fields lower)
+  zone   crps ratio TabPFN-GP / Difference estimator   0.900 [0.876, 0.923] (36/40 fields lower)
+  zone   width ratio TabPFN-GP / Difference estimator   0.821 [0.785, 0.861] (37/40 fields lower)
+  zones with none revealed samples: TabPFN-GP 0.582 [0.509, 0.667] (34 fields)
+  zones with one or two revealed samples: TabPFN-GP 0.512 [0.437, 0.592] (37 fields)
+  zones with three or more revealed samples: TabPFN-GP 0.691 [0.653, 0.727] (40 fields)
+
+-- tcov10 against the study (n = 10) --
+  field  TabPFN-GP              0.738 [0.706, 0.771] (43); change -0.087 [-0.126, -0.046]
+  field  Shared-error-only      0.714 [0.680, 0.749] (43); change -0.117 [-0.159, -0.073]
+  field  TabPFN                 0.593 [0.541, 0.647] (43); change -0.057 [-0.100, -0.010]
+  field  Block RK               0.630 [0.588, 0.676] (43); change -0.094 [-0.141, -0.045]
+  field  WH                     0.576 [0.529, 0.627] (43); change -0.076 [-0.120, -0.028]
+  field  Sample mean            0.640 [0.577, 0.705] (43); change -0.162 [-0.230, -0.093]
+  field  Difference estimator   0.679 [0.643, 0.716] (43); change -0.148 [-0.191, -0.105]
+  zone   TabPFN-GP              0.747 [0.720, 0.776] (43); change -0.039 [-0.068, -0.009]
+  zone   Shared-error-only      0.684 [0.653, 0.717] (43); change -0.054 [-0.084, -0.022]
+  zone   TabPFN                 0.754 [0.710, 0.795] (43); change -0.015 [-0.038, +0.010]
+  zone   Block RK               0.720 [0.688, 0.754] (43); change -0.027 [-0.053, +0.001]
+  zone   WH                     0.746 [0.711, 0.783] (43); change -0.020 [-0.049, +0.010]
+  zone   Sample mean            0.745 [0.713, 0.777] (43); change -0.052 [-0.086, -0.019]
+  zone   Difference estimator   0.788 [0.767, 0.809] (43); change -0.030 [-0.055, -0.006]
+  nozone TabPFN-GP              0.680 [0.628, 0.734] (43); change -0.047 [-0.113, +0.019]
+  nozone Shared-error-only      0.564 [0.507, 0.625] (43); change -0.052 [-0.127, +0.017]
+  nozone TabPFN                 0.700 [0.641, 0.759] (43); change -0.015 [-0.082, +0.052]
+  nozone Block RK               0.645 [0.589, 0.704] (43); change -0.048 [-0.115, +0.018]
+  nozone WH                     0.703 [0.644, 0.764] (43); change -0.026 [-0.090, +0.045]
+  field  crps ratio TabPFN-GP / Shared-error-only      0.998 [0.995, 1.001] (30/43 fields lower)
+  field  width ratio TabPFN-GP / Shared-error-only      1.052 [1.042, 1.062] (2/43 fields lower)
+  field  crps ratio TabPFN-GP / TabPFN                 0.975 [0.958, 0.991] (31/43 fields lower)
+  field  width ratio TabPFN-GP / TabPFN                 1.517 [1.376, 1.685] (5/43 fields lower)
+  field  crps ratio TabPFN-GP / Block RK               0.976 [0.962, 0.990] (30/43 fields lower)
+  field  width ratio TabPFN-GP / Block RK               1.278 [1.207, 1.359] (2/43 fields lower)
+  field  crps ratio TabPFN-GP / WH                     0.986 [0.971, 1.001] (29/43 fields lower)
+  field  width ratio TabPFN-GP / WH                     1.434 [1.355, 1.514] (3/43 fields lower)
+  field  crps ratio TabPFN-GP / Sample mean            0.992 [0.889, 1.107] (20/43 fields lower)
+  field  width ratio TabPFN-GP / Sample mean            1.130 [1.095, 1.165] (5/43 fields lower)
+  field  crps ratio TabPFN-GP / Difference estimator   0.984 [0.958, 1.011] (29/43 fields lower)
+  field  width ratio TabPFN-GP / Difference estimator   1.078 [1.064, 1.093] (2/43 fields lower)
+  zone   crps ratio TabPFN-GP / Shared-error-only      0.996 [0.992, 1.001] (26/43 fields lower)
+  zone   width ratio TabPFN-GP / Shared-error-only      1.157 [1.141, 1.175] (0/43 fields lower)
+  zone   crps ratio TabPFN-GP / TabPFN                 0.980 [0.969, 0.990] (30/43 fields lower)
+  zone   width ratio TabPFN-GP / TabPFN                 0.985 [0.904, 1.083] (27/43 fields lower)
+  zone   crps ratio TabPFN-GP / Block RK               0.983 [0.972, 0.994] (26/43 fields lower)
+  zone   width ratio TabPFN-GP / Block RK               1.063 [1.004, 1.133] (17/43 fields lower)
+  zone   crps ratio TabPFN-GP / WH                     0.994 [0.987, 1.001] (26/43 fields lower)
+  zone   width ratio TabPFN-GP / WH                     0.992 [0.944, 1.040] (23/43 fields lower)
+  zone   crps ratio TabPFN-GP / Sample mean            0.801 [0.752, 0.853] (36/43 fields lower)
+  zone   width ratio TabPFN-GP / Sample mean            0.796 [0.770, 0.823] (43/43 fields lower)
+  zone   crps ratio TabPFN-GP / Difference estimator   0.810 [0.778, 0.845] (40/43 fields lower)
+  zone   width ratio TabPFN-GP / Difference estimator   0.693 [0.672, 0.715] (43/43 fields lower)
+  zones with none revealed samples: TabPFN-GP 0.680 [0.628, 0.734] (43 fields)
+  zones with one or two revealed samples: TabPFN-GP 0.745 [0.715, 0.778] (43 fields)
+  zones with three or more revealed samples: TabPFN-GP 0.772 [0.735, 0.809] (43 fields)
+
+-- tcov20 against the study (n = 20) --
+  field  TabPFN-GP              0.719 [0.676, 0.758] (43); change -0.131 [-0.178, -0.088]
+  field  Shared-error-only      0.672 [0.628, 0.716] (43); change -0.177 [-0.221, -0.136]
+  field  TabPFN                 0.690 [0.623, 0.752] (43); change -0.094 [-0.141, -0.048]
+  field  Block RK               0.706 [0.660, 0.751] (43); change -0.121 [-0.164, -0.079]
+  field  WH                     0.680 [0.630, 0.731] (43); change -0.121 [-0.168, -0.075]
+  field  Sample mean            0.566 [0.496, 0.634] (43); change -0.249 [-0.315, -0.184]
+  field  Difference estimator   0.662 [0.617, 0.705] (43); change -0.160 [-0.207, -0.114]
+  zone   TabPFN-GP              0.739 [0.708, 0.766] (43); change -0.056 [-0.084, -0.029]
+  zone   Shared-error-only      0.668 [0.633, 0.701] (43); change -0.079 [-0.107, -0.052]
+  zone   TabPFN                 0.801 [0.753, 0.844] (43); change -0.056 [-0.083, -0.032]
+  zone   Block RK               0.780 [0.746, 0.814] (43); change -0.075 [-0.102, -0.050]
+  zone   WH                     0.801 [0.769, 0.832] (43); change -0.057 [-0.084, -0.032]
+  zone   Sample mean            0.713 [0.685, 0.741] (43); change -0.099 [-0.134, -0.067]
+  zone   Difference estimator   0.762 [0.734, 0.790] (43); change -0.061 [-0.089, -0.034]
+  nozone TabPFN-GP              0.637 [0.517, 0.766] (26); change -0.179 [-0.328, -0.004]
+  nozone Shared-error-only      0.519 [0.387, 0.667] (26); change -0.135 [-0.430, +0.080]
+  nozone TabPFN                 0.681 [0.548, 0.802] (26); change -0.094 [-0.305, -0.018]
+  nozone Block RK               0.652 [0.538, 0.770] (26); change -0.076 [-0.292, +0.030]
+  nozone WH                     0.711 [0.583, 0.827] (26); change -0.077 [-0.182, -0.020]
+  field  crps ratio TabPFN-GP / Shared-error-only      0.997 [0.993, 1.000] (28/43 fields lower)
+  field  width ratio TabPFN-GP / Shared-error-only      1.069 [1.055, 1.084] (0/43 fields lower)
+  field  crps ratio TabPFN-GP / TabPFN                 0.983 [0.969, 0.997] (27/43 fields lower)
+  field  width ratio TabPFN-GP / TabPFN                 1.108 [0.998, 1.240] (18/43 fields lower)
+  field  crps ratio TabPFN-GP / Block RK               0.984 [0.968, 0.999] (26/43 fields lower)
+  field  width ratio TabPFN-GP / Block RK               1.019 [0.960, 1.085] (21/43 fields lower)
+  field  crps ratio TabPFN-GP / WH                     0.997 [0.990, 1.005] (23/43 fields lower)
+  field  width ratio TabPFN-GP / WH                     1.081 [1.019, 1.146] (14/43 fields lower)
+  field  crps ratio TabPFN-GP / Sample mean            0.867 [0.771, 0.977] (30/43 fields lower)
+  field  width ratio TabPFN-GP / Sample mean            1.103 [1.061, 1.144] (7/43 fields lower)
+  field  crps ratio TabPFN-GP / Difference estimator   0.960 [0.940, 0.982] (32/43 fields lower)
+  field  width ratio TabPFN-GP / Difference estimator   1.148 [1.128, 1.171] (0/43 fields lower)
+  zone   crps ratio TabPFN-GP / Shared-error-only      0.990 [0.985, 0.995] (34/43 fields lower)
+  zone   width ratio TabPFN-GP / Shared-error-only      1.156 [1.132, 1.182] (0/43 fields lower)
+  zone   crps ratio TabPFN-GP / TabPFN                 0.963 [0.947, 0.977] (31/43 fields lower)
+  zone   width ratio TabPFN-GP / TabPFN                 0.795 [0.733, 0.871] (35/43 fields lower)
+  zone   crps ratio TabPFN-GP / Block RK               0.981 [0.963, 0.998] (25/43 fields lower)
+  zone   width ratio TabPFN-GP / Block RK               0.868 [0.821, 0.920] (36/43 fields lower)
+  zone   crps ratio TabPFN-GP / WH                     0.989 [0.977, 1.001] (25/43 fields lower)
+  zone   width ratio TabPFN-GP / WH                     0.824 [0.785, 0.866] (40/43 fields lower)
+  zone   crps ratio TabPFN-GP / Sample mean            0.782 [0.732, 0.835] (40/43 fields lower)
+  zone   width ratio TabPFN-GP / Sample mean            0.765 [0.737, 0.792] (43/43 fields lower)
+  zone   crps ratio TabPFN-GP / Difference estimator   0.821 [0.789, 0.855] (41/43 fields lower)
+  zone   width ratio TabPFN-GP / Difference estimator   0.715 [0.691, 0.740] (43/43 fields lower)
+  zones with none revealed samples: TabPFN-GP 0.637 [0.517, 0.766] (26 fields)
+  zones with one or two revealed samples: TabPFN-GP 0.695 [0.643, 0.747] (43 fields)
+  zones with three or more revealed samples: TabPFN-GP 0.756 [0.727, 0.785] (43 fields)
+
+-- tcov30 against the study (n = 30) --
+  field  TabPFN-GP              0.689 [0.654, 0.723] (40); change -0.136 [-0.174, -0.098]
+  field  Shared-error-only      0.656 [0.620, 0.694] (40); change -0.173 [-0.213, -0.133]
+  field  TabPFN                 0.704 [0.650, 0.755] (40); change -0.135 [-0.170, -0.098]
+  field  Block RK               0.721 [0.681, 0.765] (40); change -0.135 [-0.175, -0.093]
+  field  WH                     0.707 [0.656, 0.760] (40); change -0.126 [-0.167, -0.083]
+  field  Sample mean            0.558 [0.485, 0.632] (40); change -0.261 [-0.343, -0.175]
+  field  Difference estimator   0.620 [0.583, 0.659] (40); change -0.200 [-0.240, -0.158]
+  zone   TabPFN-GP              0.729 [0.703, 0.756] (40); change -0.065 [-0.092, -0.035]
+  zone   Shared-error-only      0.672 [0.643, 0.703] (40); change -0.064 [-0.090, -0.036]
+  zone   TabPFN                 0.832 [0.792, 0.868] (40); change -0.050 [-0.070, -0.029]
+  zone   Block RK               0.813 [0.785, 0.842] (40); change -0.062 [-0.085, -0.038]
+  zone   WH                     0.824 [0.794, 0.856] (40); change -0.052 [-0.073, -0.030]
+  zone   Sample mean            0.713 [0.675, 0.751] (40); change -0.100 [-0.139, -0.062]
+  zone   Difference estimator   0.741 [0.710, 0.772] (40); change -0.077 [-0.105, -0.048]
+  nozone TabPFN-GP              0.737 [0.549, 0.874] (16); change +0.222 [-1.000, +0.500]
+  nozone Shared-error-only      0.645 [0.418, 0.816] (16); change +0.222 [-1.000, +0.500]
+  nozone TabPFN                 0.842 [0.679, 0.936] (16); change -0.111 [-1.000, +0.000]
+  nozone Block RK               0.763 [0.590, 0.885] (16); change +0.222 [-1.000, +0.500]
+  nozone WH                     0.868 [0.714, 0.948] (16); change -0.111 [-1.000, +0.000]
+  field  crps ratio TabPFN-GP / Shared-error-only      1.018 [1.005, 1.033] (17/40 fields lower)
+  field  width ratio TabPFN-GP / Shared-error-only      1.062 [1.049, 1.077] (0/40 fields lower)
+  field  crps ratio TabPFN-GP / TabPFN                 1.020 [0.993, 1.046] (17/40 fields lower)
+  field  width ratio TabPFN-GP / TabPFN                 0.936 [0.846, 1.045] (26/40 fields lower)
+  field  crps ratio TabPFN-GP / Block RK               1.020 [0.994, 1.046] (14/40 fields lower)
+  field  width ratio TabPFN-GP / Block RK               0.894 [0.846, 0.945] (31/40 fields lower)
+  field  crps ratio TabPFN-GP / WH                     1.034 [1.014, 1.057] (12/40 fields lower)
+  field  width ratio TabPFN-GP / WH                     0.917 [0.871, 0.964] (28/40 fields lower)
+  field  crps ratio TabPFN-GP / Sample mean            0.904 [0.762, 1.054] (20/40 fields lower)
+  field  width ratio TabPFN-GP / Sample mean            1.052 [1.004, 1.098] (10/40 fields lower)
+  field  crps ratio TabPFN-GP / Difference estimator   1.001 [0.987, 1.015] (22/40 fields lower)
+  field  width ratio TabPFN-GP / Difference estimator   1.154 [1.132, 1.178] (0/40 fields lower)
+  zone   crps ratio TabPFN-GP / Shared-error-only      0.998 [0.987, 1.010] (25/40 fields lower)
+  zone   width ratio TabPFN-GP / Shared-error-only      1.133 [1.108, 1.160] (0/40 fields lower)
+  zone   crps ratio TabPFN-GP / TabPFN                 0.971 [0.947, 0.996] (29/40 fields lower)
+  zone   width ratio TabPFN-GP / TabPFN                 0.708 [0.657, 0.772] (36/40 fields lower)
+  zone   crps ratio TabPFN-GP / Block RK               0.998 [0.975, 1.021] (19/40 fields lower)
+  zone   width ratio TabPFN-GP / Block RK               0.772 [0.737, 0.811] (36/40 fields lower)
+  zone   crps ratio TabPFN-GP / WH                     0.997 [0.980, 1.015] (24/40 fields lower)
+  zone   width ratio TabPFN-GP / WH                     0.740 [0.710, 0.773] (39/40 fields lower)
+  zone   crps ratio TabPFN-GP / Sample mean            0.827 [0.769, 0.883] (34/40 fields lower)
+  zone   width ratio TabPFN-GP / Sample mean            0.769 [0.737, 0.802] (39/40 fields lower)
+  zone   crps ratio TabPFN-GP / Difference estimator   0.857 [0.827, 0.886] (38/40 fields lower)
+  zone   width ratio TabPFN-GP / Difference estimator   0.762 [0.737, 0.786] (40/40 fields lower)
+  zones with none revealed samples: TabPFN-GP 0.737 [0.549, 0.874] (16 fields)
+  zones with one or two revealed samples: TabPFN-GP 0.684 [0.603, 0.773] (30 fields)
+  zones with three or more revealed samples: TabPFN-GP 0.733 [0.706, 0.760] (40 fields)
+
+-- tsoil10 against the study (n = 10) --
+  field  TabPFN-GP              0.043 [0.025, 0.063] (43); change -0.782 [-0.812, -0.749]
+  field  Shared-error-only      0.039 [0.022, 0.058] (43); change -0.792 [-0.822, -0.759]
+  field  TabPFN                 0.020 [0.009, 0.034] (43); change -0.629 [-0.676, -0.577]
+  field  Block RK               0.026 [0.016, 0.037] (43); change -0.698 [-0.735, -0.656]
+  field  WH                     0.018 [0.007, 0.030] (43); change -0.634 [-0.670, -0.596]
+  field  Sample mean            0.000 [0.000, 0.000] (43); change -0.802 [-0.821, -0.783]
+  field  Difference estimator   0.051 [0.030, 0.075] (43); change -0.776 [-0.810, -0.739]
+  zone   TabPFN-GP              0.186 [0.155, 0.216] (43); change -0.600 [-0.636, -0.565]
+  zone   Shared-error-only      0.141 [0.115, 0.167] (43); change -0.597 [-0.631, -0.564]
+  zone   TabPFN                 0.216 [0.170, 0.261] (43); change -0.553 [-0.590, -0.517]
+  zone   Block RK               0.194 [0.160, 0.228] (43); change -0.553 [-0.590, -0.517]
+  zone   WH                     0.184 [0.147, 0.219] (43); change -0.583 [-0.619, -0.548]
+  zone   Sample mean            0.367 [0.341, 0.391] (43); change -0.430 [-0.458, -0.405]
+  zone   Difference estimator   0.495 [0.466, 0.524] (43); change -0.323 [-0.350, -0.296]
+  nozone TabPFN-GP              0.178 [0.135, 0.227] (43); change -0.548 [-0.610, -0.491]
+  nozone Shared-error-only      0.097 [0.069, 0.127] (43); change -0.522 [-0.594, -0.455]
+  nozone TabPFN                 0.219 [0.155, 0.290] (43); change -0.491 [-0.557, -0.430]
+  nozone Block RK               0.176 [0.126, 0.235] (43); change -0.517 [-0.572, -0.464]
+  nozone WH                     0.191 [0.140, 0.247] (43); change -0.541 [-0.598, -0.480]
+  field  crps ratio TabPFN-GP / Shared-error-only      0.996 [0.994, 0.997] (35/43 fields lower)
+  field  width ratio TabPFN-GP / Shared-error-only      1.033 [1.021, 1.047] (7/43 fields lower)
+  field  crps ratio TabPFN-GP / TabPFN                 0.934 [0.923, 0.945] (41/43 fields lower)
+  field  width ratio TabPFN-GP / TabPFN                 1.608 [1.462, 1.783] (2/43 fields lower)
+  field  crps ratio TabPFN-GP / Block RK               0.975 [0.966, 0.984] (32/43 fields lower)
+  field  width ratio TabPFN-GP / Block RK               1.290 [1.217, 1.375] (1/43 fields lower)
+  field  crps ratio TabPFN-GP / WH                     0.936 [0.928, 0.943] (43/43 fields lower)
+  field  width ratio TabPFN-GP / WH                     1.523 [1.456, 1.593] (0/43 fields lower)
+  field  crps ratio TabPFN-GP / Sample mean            0.855 [0.822, 0.888] (41/43 fields lower)
+  field  width ratio TabPFN-GP / Sample mean            1.132 [1.108, 1.157] (2/43 fields lower)
+  field  crps ratio TabPFN-GP / Difference estimator   1.004 [0.995, 1.013] (19/43 fields lower)
+  field  width ratio TabPFN-GP / Difference estimator   1.045 [1.028, 1.066] (6/43 fields lower)
+  zone   crps ratio TabPFN-GP / Shared-error-only      0.973 [0.971, 0.976] (43/43 fields lower)
+  zone   width ratio TabPFN-GP / Shared-error-only      1.152 [1.135, 1.170] (0/43 fields lower)
+  zone   crps ratio TabPFN-GP / TabPFN                 0.998 [0.983, 1.013] (22/43 fields lower)
+  zone   width ratio TabPFN-GP / TabPFN                 1.032 [0.948, 1.132] (23/43 fields lower)
+  zone   crps ratio TabPFN-GP / Block RK               1.004 [0.992, 1.015] (19/43 fields lower)
+  zone   width ratio TabPFN-GP / Block RK               1.075 [1.015, 1.146] (15/43 fields lower)
+  zone   crps ratio TabPFN-GP / WH                     0.994 [0.986, 1.003] (29/43 fields lower)
+  zone   width ratio TabPFN-GP / WH                     1.038 [0.997, 1.080] (16/43 fields lower)
+  zone   crps ratio TabPFN-GP / Sample mean            0.884 [0.846, 0.923] (36/43 fields lower)
+  zone   width ratio TabPFN-GP / Sample mean            0.782 [0.758, 0.807] (42/43 fields lower)
+  zone   crps ratio TabPFN-GP / Difference estimator   0.999 [0.982, 1.017] (22/43 fields lower)
+  zone   width ratio TabPFN-GP / Difference estimator   0.660 [0.632, 0.691] (42/43 fields lower)
+  zones with none revealed samples: TabPFN-GP 0.178 [0.135, 0.227] (43 fields)
+  zones with one or two revealed samples: TabPFN-GP 0.172 [0.140, 0.205] (43 fields)
+  zones with three or more revealed samples: TabPFN-GP 0.200 [0.157, 0.245] (43 fields)
+
+-- tsoil20 against the study (n = 20) --
+  field  TabPFN-GP              0.030 [0.009, 0.056] (43); change -0.820 [-0.848, -0.790]
+  field  Shared-error-only      0.025 [0.005, 0.051] (43); change -0.825 [-0.853, -0.795]
+  field  TabPFN                 0.024 [0.007, 0.046] (43); change -0.761 [-0.801, -0.716]
+  field  Block RK               0.020 [0.006, 0.038] (43); change -0.807 [-0.839, -0.772]
+  field  WH                     0.020 [0.007, 0.035] (43); change -0.781 [-0.815, -0.745]
+  field  Sample mean            0.000 [0.000, 0.000] (43); change -0.816 [-0.838, -0.792]
+  field  Difference estimator   0.030 [0.012, 0.051] (43); change -0.792 [-0.818, -0.765]
+  zone   TabPFN-GP              0.141 [0.103, 0.180] (43); change -0.654 [-0.698, -0.608]
+  zone   Shared-error-only      0.113 [0.080, 0.148] (43); change -0.634 [-0.676, -0.591]
+  zone   TabPFN                 0.257 [0.200, 0.314] (43); change -0.600 [-0.651, -0.550]
+  zone   Block RK               0.223 [0.178, 0.265] (43); change -0.633 [-0.680, -0.587]
+  zone   WH                     0.191 [0.148, 0.234] (43); change -0.667 [-0.714, -0.620]
+  zone   Sample mean            0.257 [0.231, 0.280] (43); change -0.556 [-0.587, -0.527]
+  zone   Difference estimator   0.353 [0.320, 0.387] (43); change -0.470 [-0.505, -0.436]
+  nozone TabPFN-GP              0.122 [0.059, 0.188] (26); change -0.679 [-0.799, -0.300]
+  nozone Shared-error-only      0.056 [0.015, 0.113] (26); change -0.717 [-0.829, -0.333]
+  nozone TabPFN                 0.233 [0.125, 0.347] (26); change -0.540 [-0.684, -0.084]
+  nozone Block RK               0.200 [0.105, 0.302] (26); change -0.577 [-0.723, -0.326]
+  nozone WH                     0.211 [0.111, 0.305] (26); change -0.604 [-0.760, -0.326]
+  field  crps ratio TabPFN-GP / Shared-error-only      0.994 [0.992, 0.996] (37/43 fields lower)
+  field  width ratio TabPFN-GP / Shared-error-only      1.041 [1.028, 1.054] (6/43 fields lower)
+  field  crps ratio TabPFN-GP / TabPFN                 0.991 [0.978, 1.005] (30/43 fields lower)
+  field  width ratio TabPFN-GP / TabPFN                 1.160 [1.046, 1.295] (13/43 fields lower)
+  field  crps ratio TabPFN-GP / Block RK               1.035 [1.023, 1.048] (8/43 fields lower)
+  field  width ratio TabPFN-GP / Block RK               0.990 [0.938, 1.044] (20/43 fields lower)
+  field  crps ratio TabPFN-GP / WH                     0.986 [0.979, 0.993] (31/43 fields lower)
+  field  width ratio TabPFN-GP / WH                     1.131 [1.077, 1.188] (12/43 fields lower)
+  field  crps ratio TabPFN-GP / Sample mean            0.793 [0.725, 0.855] (42/43 fields lower)
+  field  width ratio TabPFN-GP / Sample mean            1.057 [1.013, 1.094] (7/43 fields lower)
+  field  crps ratio TabPFN-GP / Difference estimator   0.995 [0.989, 1.002] (28/43 fields lower)
+  field  width ratio TabPFN-GP / Difference estimator   1.081 [1.066, 1.097] (0/43 fields lower)
+  zone   crps ratio TabPFN-GP / Shared-error-only      0.977 [0.974, 0.980] (43/43 fields lower)
+  zone   width ratio TabPFN-GP / Shared-error-only      1.143 [1.121, 1.167] (0/43 fields lower)
+  zone   crps ratio TabPFN-GP / TabPFN                 1.049 [1.033, 1.066] (8/43 fields lower)
+  zone   width ratio TabPFN-GP / TabPFN                 0.815 [0.749, 0.893] (35/43 fields lower)
+  zone   crps ratio TabPFN-GP / Block RK               1.069 [1.056, 1.083] (1/43 fields lower)
+  zone   width ratio TabPFN-GP / Block RK               0.835 [0.795, 0.878] (39/43 fields lower)
+  zone   crps ratio TabPFN-GP / WH                     1.040 [1.032, 1.048] (2/43 fields lower)
+  zone   width ratio TabPFN-GP / WH                     0.844 [0.812, 0.876] (39/43 fields lower)
+  zone   crps ratio TabPFN-GP / Sample mean            0.894 [0.828, 0.954] (27/43 fields lower)
+  zone   width ratio TabPFN-GP / Sample mean            0.729 [0.704, 0.752] (43/43 fields lower)
+  zone   crps ratio TabPFN-GP / Difference estimator   1.053 [1.038, 1.068] (6/43 fields lower)
+  zone   width ratio TabPFN-GP / Difference estimator   0.671 [0.653, 0.689] (43/43 fields lower)
+  zones with none revealed samples: TabPFN-GP 0.122 [0.059, 0.188] (26 fields)
+  zones with one or two revealed samples: TabPFN-GP 0.179 [0.113, 0.249] (43 fields)
+  zones with three or more revealed samples: TabPFN-GP 0.134 [0.098, 0.172] (43 fields)
+
+-- tsoil30 against the study (n = 30) --
+  field  TabPFN-GP              0.034 [0.007, 0.067] (40); change -0.791 [-0.824, -0.752]
+  field  Shared-error-only      0.023 [0.001, 0.049] (40); change -0.807 [-0.836, -0.773]
+  field  TabPFN                 0.018 [0.003, 0.039] (40); change -0.821 [-0.861, -0.778]
+  field  Block RK               0.021 [0.005, 0.043] (40); change -0.835 [-0.868, -0.793]
+  field  WH                     0.010 [0.000, 0.026] (40); change -0.823 [-0.853, -0.793]
+  field  Sample mean            0.000 [0.000, 0.000] (40); change -0.818 [-0.837, -0.798]
+  field  Difference estimator   0.027 [0.001, 0.057] (40); change -0.793 [-0.825, -0.754]
+  zone   TabPFN-GP              0.118 [0.078, 0.161] (40); change -0.676 [-0.715, -0.635]
+  zone   Shared-error-only      0.084 [0.051, 0.121] (40); change -0.652 [-0.691, -0.612]
+  zone   TabPFN                 0.200 [0.148, 0.254] (40); change -0.681 [-0.728, -0.632]
+  zone   Block RK               0.174 [0.134, 0.216] (40); change -0.701 [-0.744, -0.658]
+  zone   WH                     0.154 [0.112, 0.198] (40); change -0.722 [-0.770, -0.674]
+  zone   Sample mean            0.159 [0.135, 0.183] (40); change -0.655 [-0.683, -0.625]
+  zone   Difference estimator   0.247 [0.211, 0.289] (40); change -0.571 [-0.613, -0.524]
+  nozone TabPFN-GP              0.000 [0.000, 0.000] (9); change -0.667 [-1.000, -0.500]
+  nozone Shared-error-only      0.000 [0.000, 0.000] (9); change -0.667 [-1.000, -0.500]
+  nozone TabPFN                 0.208 [0.000, 0.417] (9); change -0.571 [-1.000, -0.500]
+  nozone Block RK               0.083 [0.000, 0.222] (9); change -0.524 [-1.000, -0.333]
+  nozone WH                     0.167 [0.000, 0.316] (9); change -0.714 [-1.000, -0.667]
+  field  crps ratio TabPFN-GP / Shared-error-only      0.957 [0.945, 0.969] (36/40 fields lower)
+  field  width ratio TabPFN-GP / Shared-error-only      1.048 [1.034, 1.065] (3/40 fields lower)
+  field  crps ratio TabPFN-GP / TabPFN                 0.968 [0.946, 0.990] (23/40 fields lower)
+  field  width ratio TabPFN-GP / TabPFN                 0.992 [0.892, 1.114] (25/40 fields lower)
+  field  crps ratio TabPFN-GP / Block RK               1.008 [0.991, 1.025] (14/40 fields lower)
+  field  width ratio TabPFN-GP / Block RK               0.893 [0.844, 0.947] (31/40 fields lower)
+  field  crps ratio TabPFN-GP / WH                     0.962 [0.944, 0.980] (31/40 fields lower)
+  field  width ratio TabPFN-GP / WH                     0.972 [0.925, 1.025] (22/40 fields lower)
+  field  crps ratio TabPFN-GP / Sample mean            0.755 [0.679, 0.824] (40/40 fields lower)
+  field  width ratio TabPFN-GP / Sample mean            1.017 [0.961, 1.063] (10/40 fields lower)
+  field  crps ratio TabPFN-GP / Difference estimator   0.948 [0.935, 0.960] (39/40 fields lower)
+  field  width ratio TabPFN-GP / Difference estimator   1.089 [1.069, 1.112] (0/40 fields lower)
+  zone   crps ratio TabPFN-GP / Shared-error-only      0.949 [0.936, 0.961] (38/40 fields lower)
+  zone   width ratio TabPFN-GP / Shared-error-only      1.132 [1.109, 1.158] (0/40 fields lower)
+  zone   crps ratio TabPFN-GP / TabPFN                 1.028 [1.003, 1.054] (12/40 fields lower)
+  zone   width ratio TabPFN-GP / TabPFN                 0.733 [0.678, 0.802] (35/40 fields lower)
+  zone   crps ratio TabPFN-GP / Block RK               1.052 [1.034, 1.070] (7/40 fields lower)
+  zone   width ratio TabPFN-GP / Block RK               0.757 [0.721, 0.796] (38/40 fields lower)
+  zone   crps ratio TabPFN-GP / WH                     1.017 [0.998, 1.036] (12/40 fields lower)
+  zone   width ratio TabPFN-GP / WH                     0.763 [0.733, 0.797] (38/40 fields lower)
+  zone   crps ratio TabPFN-GP / Sample mean            0.872 [0.806, 0.930] (33/40 fields lower)
+  zone   width ratio TabPFN-GP / Sample mean            0.738 [0.704, 0.769] (40/40 fields lower)
+  zone   crps ratio TabPFN-GP / Difference estimator   1.037 [1.019, 1.055] (11/40 fields lower)
+  zone   width ratio TabPFN-GP / Difference estimator   0.713 [0.692, 0.733] (40/40 fields lower)
+  zones with none revealed samples: TabPFN-GP 0.000 [0.000, 0.000] (9 fields)
+  zones with one or two revealed samples: TabPFN-GP 0.095 [0.035, 0.156] (27 fields)
+  zones with three or more revealed samples: TabPFN-GP 0.120 [0.079, 0.166] (40 fields)
+
+-- strat against the study --
+  field  TabPFN-GP              0.858 [0.840, 0.877] (43); change +0.025 [+0.007, +0.044]
+  field  Shared-error-only      0.865 [0.844, 0.885] (43); change +0.028 [+0.006, +0.051]
+  field  TabPFN                 0.778 [0.733, 0.817] (43); change +0.023 [-0.003, +0.049]
+  field  Block RK               0.827 [0.794, 0.859] (43); change +0.027 [+0.005, +0.050]
+  field  WH                     0.790 [0.763, 0.815] (43); change +0.030 [+0.003, +0.056]
+  field  Sample mean            0.829 [0.797, 0.859] (43); change +0.017 [-0.015, +0.048]
+  field  Difference estimator   0.852 [0.830, 0.873] (43); change +0.028 [+0.006, +0.051]
+  field  Stratified estimator   0.826 [0.809, 0.843] (43); change +nan [+nan, +nan]
+  zone   TabPFN-GP              0.808 [0.791, 0.825] (43); change +0.017 [+0.004, +0.029]
+  zone   Shared-error-only      0.762 [0.739, 0.784] (43); change +0.022 [+0.006, +0.036]
+  zone   TabPFN                 0.844 [0.809, 0.874] (43); change +0.010 [-0.003, +0.023]
+  zone   Block RK               0.839 [0.815, 0.860] (43); change +0.015 [+0.003, +0.028]
+  zone   WH                     0.843 [0.824, 0.862] (43); change +0.012 [-0.000, +0.023]
+  zone   Sample mean            0.810 [0.801, 0.820] (43); change +0.002 [-0.007, +0.012]
+  zone   Difference estimator   0.825 [0.812, 0.838] (43); change +0.005 [-0.007, +0.018]
+  field  crps ratio TabPFN-GP / Shared-error-only      0.993 [0.989, 0.996] (31/43 fields lower)
+  field  width ratio TabPFN-GP / Shared-error-only      0.977 [0.972, 0.982] (40/43 fields lower)
+  field  crps ratio TabPFN-GP / TabPFN                 0.978 [0.963, 0.994] (31/43 fields lower)
+  field  width ratio TabPFN-GP / TabPFN                 1.235 [1.118, 1.375] (12/43 fields lower)
+  field  crps ratio TabPFN-GP / Block RK               0.994 [0.979, 1.009] (24/43 fields lower)
+  field  width ratio TabPFN-GP / Block RK               1.071 [1.012, 1.137] (13/43 fields lower)
+  field  crps ratio TabPFN-GP / WH                     1.002 [0.992, 1.013] (21/43 fields lower)
+  field  width ratio TabPFN-GP / WH                     1.209 [1.163, 1.260] (3/43 fields lower)
+  field  crps ratio TabPFN-GP / Sample mean            0.946 [0.891, 0.994] (23/43 fields lower)
+  field  width ratio TabPFN-GP / Sample mean            0.992 [0.952, 1.031] (17/43 fields lower)
+  field  crps ratio TabPFN-GP / Difference estimator   0.982 [0.967, 0.997] (26/43 fields lower)
+  field  width ratio TabPFN-GP / Difference estimator   0.991 [0.986, 0.997] (30/43 fields lower)
+  zone   crps ratio TabPFN-GP / Shared-error-only      0.997 [0.991, 1.002] (24/43 fields lower)
+  zone   width ratio TabPFN-GP / Shared-error-only      1.114 [1.100, 1.128] (0/43 fields lower)
+  zone   crps ratio TabPFN-GP / TabPFN                 0.959 [0.947, 0.972] (38/43 fields lower)
+  zone   width ratio TabPFN-GP / TabPFN                 0.874 [0.805, 0.957] (33/43 fields lower)
+  zone   crps ratio TabPFN-GP / Block RK               0.984 [0.971, 0.998] (27/43 fields lower)
+  zone   width ratio TabPFN-GP / Block RK               0.914 [0.866, 0.970] (35/43 fields lower)
+  zone   crps ratio TabPFN-GP / WH                     0.986 [0.979, 0.993] (33/43 fields lower)
+  zone   width ratio TabPFN-GP / WH                     0.908 [0.878, 0.943] (39/43 fields lower)
+  zone   crps ratio TabPFN-GP / Sample mean            0.778 [0.750, 0.807] (43/43 fields lower)
+  zone   width ratio TabPFN-GP / Sample mean            0.698 [0.680, 0.716] (43/43 fields lower)
+  zone   crps ratio TabPFN-GP / Difference estimator   0.760 [0.738, 0.782] (43/43 fields lower)
+  zone   width ratio TabPFN-GP / Difference estimator   0.642 [0.629, 0.657] (43/43 fields lower)
+  zones with one or two revealed samples: TabPFN-GP 0.814 [0.791, 0.837] (43 fields)
+  zones with three or more revealed samples: TabPFN-GP 0.807 [0.788, 0.825] (43 fields)
+
+-- clust against the study --
+  field  TabPFN-GP              0.687 [0.648, 0.727] (43); change -0.146 [-0.183, -0.108]
+  field  Shared-error-only      0.632 [0.591, 0.674] (43); change -0.205 [-0.244, -0.166]
+  field  TabPFN                 0.619 [0.564, 0.671] (43); change -0.136 [-0.168, -0.101]
+  field  Block RK               0.680 [0.631, 0.731] (43); change -0.121 [-0.160, -0.079]
+  field  WH                     0.623 [0.576, 0.672] (43); change -0.136 [-0.170, -0.099]
+  field  Sample mean            0.608 [0.574, 0.644] (43); change -0.204 [-0.238, -0.169]
+  field  Difference estimator   0.590 [0.549, 0.631] (43); change -0.234 [-0.270, -0.196]
+  zone   TabPFN-GP              0.687 [0.655, 0.719] (43); change -0.104 [-0.131, -0.078]
+  zone   Shared-error-only      0.626 [0.592, 0.660] (43); change -0.115 [-0.139, -0.090]
+  zone   TabPFN                 0.763 [0.713, 0.808] (43); change -0.071 [-0.094, -0.048]
+  zone   Block RK               0.745 [0.706, 0.785] (43); change -0.078 [-0.105, -0.052]
+  zone   WH                     0.758 [0.723, 0.794] (43); change -0.073 [-0.096, -0.050]
+  zone   Sample mean            0.690 [0.663, 0.716] (43); change -0.119 [-0.147, -0.091]
+  zone   Difference estimator   0.742 [0.718, 0.765] (43); change -0.078 [-0.100, -0.057]
+  nozone TabPFN-GP              0.623 [0.574, 0.676] (43); change -0.116 [-0.161, -0.061]
+  nozone Shared-error-only      0.550 [0.497, 0.609] (43); change -0.083 [-0.133, -0.032]
+  nozone TabPFN                 0.685 [0.625, 0.745] (43); change -0.049 [-0.101, +0.012]
+  nozone Block RK               0.673 [0.614, 0.731] (43); change -0.038 [-0.076, +0.011]
+  nozone WH                     0.706 [0.649, 0.761] (43); change -0.048 [-0.094, +0.010]
+  field  crps ratio TabPFN-GP / Shared-error-only      0.994 [0.989, 1.000] (29/43 fields lower)
+  field  width ratio TabPFN-GP / Shared-error-only      1.125 [1.114, 1.136] (0/43 fields lower)
+  field  crps ratio TabPFN-GP / TabPFN                 0.983 [0.968, 0.998] (26/43 fields lower)
+  field  width ratio TabPFN-GP / TabPFN                 1.205 [1.098, 1.331] (13/43 fields lower)
+  field  crps ratio TabPFN-GP / Block RK               0.979 [0.967, 0.990] (33/43 fields lower)
+  field  width ratio TabPFN-GP / Block RK               0.990 [0.940, 1.044] (24/43 fields lower)
+  field  crps ratio TabPFN-GP / WH                     0.995 [0.985, 1.007] (30/43 fields lower)
+  field  width ratio TabPFN-GP / WH                     1.163 [1.108, 1.220] (6/43 fields lower)
+  field  crps ratio TabPFN-GP / Sample mean            0.945 [0.900, 0.991] (27/43 fields lower)
+  field  width ratio TabPFN-GP / Sample mean            1.133 [1.084, 1.181] (8/43 fields lower)
+  field  crps ratio TabPFN-GP / Difference estimator   0.968 [0.957, 0.979] (33/43 fields lower)
+  field  width ratio TabPFN-GP / Difference estimator   1.193 [1.177, 1.212] (0/43 fields lower)
+  zone   crps ratio TabPFN-GP / Shared-error-only      0.992 [0.987, 0.998] (34/43 fields lower)
+  zone   width ratio TabPFN-GP / Shared-error-only      1.154 [1.138, 1.169] (0/43 fields lower)
+  zone   crps ratio TabPFN-GP / TabPFN                 0.979 [0.965, 0.992] (28/43 fields lower)
+  zone   width ratio TabPFN-GP / TabPFN                 0.814 [0.761, 0.876] (34/43 fields lower)
+  zone   crps ratio TabPFN-GP / Block RK               0.981 [0.966, 0.994] (23/43 fields lower)
+  zone   width ratio TabPFN-GP / Block RK               0.845 [0.810, 0.884] (38/43 fields lower)
+  zone   crps ratio TabPFN-GP / WH                     0.999 [0.989, 1.009] (21/43 fields lower)
+  zone   width ratio TabPFN-GP / WH                     0.837 [0.804, 0.869] (42/43 fields lower)
+  zone   crps ratio TabPFN-GP / Sample mean            0.814 [0.786, 0.842] (42/43 fields lower)
+  zone   width ratio TabPFN-GP / Sample mean            0.823 [0.800, 0.848] (41/43 fields lower)
+  zone   crps ratio TabPFN-GP / Difference estimator   0.858 [0.836, 0.880] (42/43 fields lower)
+  zone   width ratio TabPFN-GP / Difference estimator   0.753 [0.733, 0.774] (43/43 fields lower)
+  zones with none revealed samples: TabPFN-GP 0.623 [0.574, 0.676] (43 fields)
+  zones with one or two revealed samples: TabPFN-GP 0.664 [0.624, 0.703] (43 fields)
+  zones with three or more revealed samples: TabPFN-GP 0.715 [0.682, 0.747] (43 fields)
+
+-- tcov against the study --
+  field  TabPFN-GP              0.716 [0.690, 0.743] (43); change -0.117 [-0.146, -0.089]
+  field  Shared-error-only      0.682 [0.655, 0.711] (43); change -0.155 [-0.183, -0.126]
+  field  TabPFN                 0.661 [0.612, 0.708] (43); change -0.094 [-0.122, -0.064]
+  field  Block RK               0.684 [0.649, 0.722] (43); change -0.116 [-0.147, -0.083]
+  field  WH                     0.652 [0.614, 0.694] (43); change -0.107 [-0.136, -0.076]
+  field  Sample mean            0.589 [0.528, 0.652] (43); change -0.223 [-0.285, -0.159]
+  field  Difference estimator   0.655 [0.627, 0.685] (43); change -0.168 [-0.196, -0.138]
+  zone   TabPFN-GP              0.739 [0.717, 0.761] (43); change -0.053 [-0.073, -0.031]
+  zone   Shared-error-only      0.675 [0.648, 0.703] (43); change -0.065 [-0.086, -0.044]
+  zone   TabPFN                 0.794 [0.753, 0.831] (43); change -0.040 [-0.060, -0.021]
+  zone   Block RK               0.769 [0.741, 0.797] (43); change -0.054 [-0.075, -0.033]
+  zone   WH                     0.788 [0.760, 0.818] (43); change -0.043 [-0.063, -0.022]
+  zone   Sample mean            0.722 [0.694, 0.750] (43); change -0.086 [-0.117, -0.057]
+  zone   Difference estimator   0.762 [0.739, 0.785] (43); change -0.058 [-0.080, -0.035]
+  nozone TabPFN-GP              0.678 [0.615, 0.745] (43); change -0.055 [-0.119, +0.008]
+  nozone Shared-error-only      0.564 [0.490, 0.644] (43); change -0.064 [-0.136, +0.002]
+  nozone TabPFN                 0.711 [0.636, 0.779] (43); change -0.020 [-0.087, +0.050]
+  nozone Block RK               0.659 [0.593, 0.728] (43); change -0.046 [-0.112, +0.019]
+  nozone WH                     0.722 [0.652, 0.790] (43); change -0.026 [-0.092, +0.045]
+  field  crps ratio TabPFN-GP / Shared-error-only      1.002 [0.998, 1.007] (22/43 fields lower)
+  field  width ratio TabPFN-GP / Shared-error-only      1.059 [1.049, 1.070] (1/43 fields lower)
+  field  crps ratio TabPFN-GP / TabPFN                 0.988 [0.974, 1.002] (26/43 fields lower)
+  field  width ratio TabPFN-GP / TabPFN                 1.178 [1.065, 1.313] (15/43 fields lower)
+  field  crps ratio TabPFN-GP / Block RK               0.989 [0.978, 1.000] (25/43 fields lower)
+  field  width ratio TabPFN-GP / Block RK               1.069 [1.012, 1.133] (17/43 fields lower)
+  field  crps ratio TabPFN-GP / WH                     1.001 [0.992, 1.012] (23/43 fields lower)
+  field  width ratio TabPFN-GP / WH                     1.148 [1.087, 1.211] (6/43 fields lower)
+  field  crps ratio TabPFN-GP / Sample mean            0.929 [0.828, 1.040] (24/43 fields lower)
+  field  width ratio TabPFN-GP / Sample mean            1.103 [1.065, 1.140] (6/43 fields lower)
+  field  crps ratio TabPFN-GP / Difference estimator   0.977 [0.966, 0.988] (33/43 fields lower)
+  field  width ratio TabPFN-GP / Difference estimator   1.118 [1.103, 1.135] (0/43 fields lower)
+  zone   crps ratio TabPFN-GP / Shared-error-only      0.995 [0.990, 1.000] (29/43 fields lower)
+  zone   width ratio TabPFN-GP / Shared-error-only      1.148 [1.129, 1.169] (0/43 fields lower)
+  zone   crps ratio TabPFN-GP / TabPFN                 0.973 [0.960, 0.985] (32/43 fields lower)
+  zone   width ratio TabPFN-GP / TabPFN                 0.830 [0.767, 0.908] (34/43 fields lower)
+  zone   crps ratio TabPFN-GP / Block RK               0.987 [0.973, 1.000] (26/43 fields lower)
+  zone   width ratio TabPFN-GP / Block RK               0.906 [0.861, 0.956] (35/43 fields lower)
+  zone   crps ratio TabPFN-GP / WH                     0.994 [0.986, 1.003] (25/43 fields lower)
+  zone   width ratio TabPFN-GP / WH                     0.860 [0.822, 0.899] (40/43 fields lower)
+  zone   crps ratio TabPFN-GP / Sample mean            0.806 [0.763, 0.852] (39/43 fields lower)
+  zone   width ratio TabPFN-GP / Sample mean            0.775 [0.753, 0.796] (43/43 fields lower)
+  zone   crps ratio TabPFN-GP / Difference estimator   0.833 [0.808, 0.859] (41/43 fields lower)
+  zone   width ratio TabPFN-GP / Difference estimator   0.723 [0.705, 0.741] (43/43 fields lower)
+  zones with none revealed samples: TabPFN-GP 0.678 [0.615, 0.745] (43 fields)
+  zones with one or two revealed samples: TabPFN-GP 0.723 [0.696, 0.754] (43 fields)
+  zones with three or more revealed samples: TabPFN-GP 0.751 [0.728, 0.774] (43 fields)
+
+-- tsoil against the study --
+  field  TabPFN-GP              0.035 [0.016, 0.059] (43); change -0.798 [-0.823, -0.769]
+  field  Shared-error-only      0.029 [0.012, 0.050] (43); change -0.808 [-0.831, -0.781]
+  field  TabPFN                 0.021 [0.008, 0.037] (43); change -0.734 [-0.770, -0.693]
+  field  Block RK               0.023 [0.011, 0.036] (43); change -0.778 [-0.807, -0.743]
+  field  WH                     0.016 [0.006, 0.028] (43); change -0.743 [-0.771, -0.714]
+  field  Sample mean            0.000 [0.000, 0.000] (43); change -0.812 [-0.823, -0.800]
+  field  Difference estimator   0.036 [0.018, 0.058] (43); change -0.787 [-0.812, -0.757]
+  zone   TabPFN-GP              0.150 [0.117, 0.184] (43); change -0.641 [-0.678, -0.604]
+  zone   Shared-error-only      0.114 [0.086, 0.145] (43); change -0.626 [-0.661, -0.591]
+  zone   TabPFN                 0.225 [0.177, 0.274] (43); change -0.608 [-0.650, -0.566]
+  zone   Block RK               0.198 [0.162, 0.234] (43); change -0.625 [-0.664, -0.587]
+  zone   WH                     0.177 [0.138, 0.216] (43); change -0.654 [-0.695, -0.614]
+  zone   Sample mean            0.255 [0.234, 0.275] (43); change -0.554 [-0.577, -0.530]
+  zone   Difference estimator   0.358 [0.328, 0.389] (43); change -0.462 [-0.493, -0.429]
+  nozone TabPFN-GP              0.160 [0.121, 0.206] (43); change -0.573 [-0.629, -0.517]
+  nozone Shared-error-only      0.085 [0.060, 0.114] (43); change -0.544 [-0.612, -0.475]
+  nozone TabPFN                 0.221 [0.153, 0.296] (43); change -0.507 [-0.563, -0.450]
+  nozone Block RK               0.176 [0.123, 0.239] (43); change -0.529 [-0.576, -0.480]
+  nozone WH                     0.193 [0.139, 0.254] (43); change -0.556 [-0.608, -0.499]
+  field  crps ratio TabPFN-GP / Shared-error-only      0.984 [0.980, 0.988] (38/43 fields lower)
+  field  width ratio TabPFN-GP / Shared-error-only      1.039 [1.027, 1.052] (5/43 fields lower)
+  field  crps ratio TabPFN-GP / TabPFN                 0.965 [0.952, 0.979] (33/43 fields lower)
+  field  width ratio TabPFN-GP / TabPFN                 1.250 [1.134, 1.389] (12/43 fields lower)
+  field  crps ratio TabPFN-GP / Block RK               1.005 [0.996, 1.015] (20/43 fields lower)
+  field  width ratio TabPFN-GP / Block RK               1.072 [1.014, 1.132] (15/43 fields lower)
+  field  crps ratio TabPFN-GP / WH                     0.962 [0.953, 0.970] (41/43 fields lower)
+  field  width ratio TabPFN-GP / WH                     1.218 [1.166, 1.270] (5/43 fields lower)
+  field  crps ratio TabPFN-GP / Sample mean            0.811 [0.761, 0.858] (43/43 fields lower)
+  field  width ratio TabPFN-GP / Sample mean            1.081 [1.047, 1.111] (6/43 fields lower)
+  field  crps ratio TabPFN-GP / Difference estimator   0.985 [0.979, 0.991] (33/43 fields lower)
+  field  width ratio TabPFN-GP / Difference estimator   1.066 [1.050, 1.084] (1/43 fields lower)
+  zone   crps ratio TabPFN-GP / Shared-error-only      0.968 [0.964, 0.973] (43/43 fields lower)
+  zone   width ratio TabPFN-GP / Shared-error-only      1.143 [1.124, 1.164] (0/43 fields lower)
+  zone   crps ratio TabPFN-GP / TabPFN                 1.026 [1.009, 1.043] (12/43 fields lower)
+  zone   width ratio TabPFN-GP / TabPFN                 0.862 [0.797, 0.940] (33/43 fields lower)
+  zone   crps ratio TabPFN-GP / Block RK               1.040 [1.029, 1.051] (5/43 fields lower)
+  zone   width ratio TabPFN-GP / Block RK               0.899 [0.856, 0.945] (33/43 fields lower)
+  zone   crps ratio TabPFN-GP / WH                     1.017 [1.008, 1.027] (11/43 fields lower)
+  zone   width ratio TabPFN-GP / WH                     0.890 [0.860, 0.920] (38/43 fields lower)
+  zone   crps ratio TabPFN-GP / Sample mean            0.891 [0.840, 0.938] (31/43 fields lower)
+  zone   width ratio TabPFN-GP / Sample mean            0.747 [0.730, 0.764] (43/43 fields lower)
+  zone   crps ratio TabPFN-GP / Difference estimator   1.036 [1.026, 1.046] (6/43 fields lower)
+  zone   width ratio TabPFN-GP / Difference estimator   0.680 [0.664, 0.698] (43/43 fields lower)
+  zones with none revealed samples: TabPFN-GP 0.160 [0.121, 0.206] (43 fields)
+  zones with one or two revealed samples: TabPFN-GP 0.167 [0.130, 0.206] (43 fields)
+  zones with three or more revealed samples: TabPFN-GP 0.144 [0.108, 0.183] (43 fields)
+
+-- grid2 against gsrs2 --
+  field  TabPFN-GP              0.811 [0.741, 0.875] (15); change -0.038 [-0.093, +0.012]
+  field  Shared-error-only      0.856 [0.788, 0.919] (15); change -0.002 [-0.052, +0.037]
+  field  TabPFN                 0.826 [0.765, 0.883] (15); change +0.011 [-0.050, +0.064]
+  field  Block RK               0.826 [0.768, 0.882] (15); change +0.026 [-0.040, +0.086]
+  field  WH                     0.788 [0.720, 0.861] (15); change +0.042 [-0.032, +0.119]
+  field  Sample mean            0.909 [0.837, 0.967] (15); change +0.121 [+0.039, +0.196]
+  field  Difference estimator   0.864 [0.782, 0.929] (15); change +0.027 [-0.038, +0.080]
+  zone   TabPFN-GP              0.765 [0.725, 0.809] (15); change -0.007 [-0.057, +0.043]
+  zone   Shared-error-only      0.752 [0.705, 0.799] (15); change +0.022 [-0.031, +0.079]
+  zone   TabPFN                 0.892 [0.864, 0.923] (15); change +0.018 [-0.016, +0.055]
+  zone   Block RK               0.848 [0.807, 0.893] (15); change +0.014 [-0.041, +0.070]
+  zone   WH                     0.822 [0.767, 0.881] (15); change +0.006 [-0.047, +0.061]
+  zone   Sample mean            0.890 [0.858, 0.922] (15); change +0.092 [+0.066, +0.113]
+  zone   Difference estimator   0.840 [0.807, 0.870] (15); change +0.025 [-0.006, +0.057]
+  field  crps ratio TabPFN-GP / Shared-error-only      0.976 [0.957, 0.993] (13/15 fields lower)
+  field  width ratio TabPFN-GP / Shared-error-only      0.859 [0.851, 0.866] (15/15 fields lower)
+  field  crps ratio TabPFN-GP / TabPFN                 0.982 [0.957, 1.012] (11/15 fields lower)
+  field  width ratio TabPFN-GP / TabPFN                 0.907 [0.878, 0.938] (14/15 fields lower)
+  field  crps ratio TabPFN-GP / Block RK               1.030 [0.970, 1.102] (6/15 fields lower)
+  field  width ratio TabPFN-GP / Block RK               0.983 [0.926, 1.045] (7/15 fields lower)
+  field  crps ratio TabPFN-GP / WH                     0.988 [0.962, 1.019] (11/15 fields lower)
+  field  width ratio TabPFN-GP / WH                     1.009 [0.896, 1.127] (6/15 fields lower)
+  field  crps ratio TabPFN-GP / Sample mean            0.986 [0.906, 1.071] (8/15 fields lower)
+  field  width ratio TabPFN-GP / Sample mean            0.788 [0.722, 0.856] (14/15 fields lower)
+  field  crps ratio TabPFN-GP / Difference estimator   0.951 [0.893, 1.007] (10/15 fields lower)
+  field  width ratio TabPFN-GP / Difference estimator   0.884 [0.867, 0.902] (15/15 fields lower)
+  zone   crps ratio TabPFN-GP / Shared-error-only      0.995 [0.970, 1.018] (9/15 fields lower)
+  zone   width ratio TabPFN-GP / Shared-error-only      1.050 [1.036, 1.066] (0/15 fields lower)
+  zone   crps ratio TabPFN-GP / TabPFN                 0.956 [0.929, 0.978] (13/15 fields lower)
+  zone   width ratio TabPFN-GP / TabPFN                 0.717 [0.693, 0.746] (15/15 fields lower)
+  zone   crps ratio TabPFN-GP / Block RK               1.023 [0.996, 1.055] (7/15 fields lower)
+  zone   width ratio TabPFN-GP / Block RK               0.855 [0.812, 0.901] (13/15 fields lower)
+  zone   crps ratio TabPFN-GP / WH                     0.972 [0.946, 0.993] (11/15 fields lower)
+  zone   width ratio TabPFN-GP / WH                     0.833 [0.757, 0.909] (12/15 fields lower)
+  zone   crps ratio TabPFN-GP / Sample mean            0.831 [0.751, 0.918] (12/15 fields lower)
+  zone   width ratio TabPFN-GP / Sample mean            0.626 [0.587, 0.665] (15/15 fields lower)
+  zone   crps ratio TabPFN-GP / Difference estimator   0.795 [0.734, 0.854] (14/15 fields lower)
+  zone   width ratio TabPFN-GP / Difference estimator   0.640 [0.591, 0.687] (15/15 fields lower)
+  zones with one or two revealed samples: TabPFN-GP 0.702 [0.658, 0.769] (4 fields)
+  zones with three or more revealed samples: TabPFN-GP 0.777 [0.732, 0.823] (15 fields)
+
+-- grid3 against gsrs3 --
+  field  TabPFN-GP              0.862 [0.809, 0.917] (15); change -0.013 [-0.065, +0.044]
+  field  Shared-error-only      0.899 [0.858, 0.941] (15); change +0.011 [-0.028, +0.052]
+  field  TabPFN                 0.729 [0.654, 0.801] (15); change -0.002 [-0.082, +0.076]
+  field  Block RK               0.785 [0.701, 0.863] (15); change +0.043 [-0.040, +0.124]
+  field  WH                     0.709 [0.642, 0.774] (15); change +0.018 [-0.059, +0.090]
+  field  Sample mean            0.903 [0.862, 0.943] (15); change +0.060 [+0.002, +0.123]
+  field  Difference estimator   0.870 [0.821, 0.922] (15); change -0.002 [-0.060, +0.055]
+  zone   TabPFN-GP              0.824 [0.785, 0.867] (15); change +0.013 [-0.024, +0.058]
+  zone   Shared-error-only      0.805 [0.762, 0.850] (15); change +0.038 [-0.004, +0.088]
+  zone   TabPFN                 0.812 [0.770, 0.856] (15); change +0.001 [-0.048, +0.052]
+  zone   Block RK               0.782 [0.738, 0.831] (15); change +0.009 [-0.040, +0.063]
+  zone   WH                     0.776 [0.735, 0.820] (15); change +0.015 [-0.036, +0.072]
+  zone   Sample mean            0.851 [0.828, 0.875] (15); change +0.039 [+0.005, +0.066]
+  zone   Difference estimator   0.818 [0.785, 0.846] (15); change -0.003 [-0.044, +0.031]
+  field  crps ratio TabPFN-GP / Shared-error-only      0.963 [0.947, 0.979] (13/15 fields lower)
+  field  width ratio TabPFN-GP / Shared-error-only      0.851 [0.845, 0.858] (15/15 fields lower)
+  field  crps ratio TabPFN-GP / TabPFN                 1.039 [1.002, 1.073] (2/15 fields lower)
+  field  width ratio TabPFN-GP / TabPFN                 1.407 [1.346, 1.470] (0/15 fields lower)
+  field  crps ratio TabPFN-GP / Block RK               1.052 [1.010, 1.101] (4/15 fields lower)
+  field  width ratio TabPFN-GP / Block RK               1.316 [1.186, 1.475] (1/15 fields lower)
+  field  crps ratio TabPFN-GP / WH                     1.045 [1.009, 1.082] (3/15 fields lower)
+  field  width ratio TabPFN-GP / WH                     1.485 [1.304, 1.682] (2/15 fields lower)
+  field  crps ratio TabPFN-GP / Sample mean            0.961 [0.877, 1.058] (9/15 fields lower)
+  field  width ratio TabPFN-GP / Sample mean            0.839 [0.767, 0.909] (13/15 fields lower)
+  field  crps ratio TabPFN-GP / Difference estimator   0.947 [0.905, 0.987] (11/15 fields lower)
+  field  width ratio TabPFN-GP / Difference estimator   0.840 [0.812, 0.865] (15/15 fields lower)
+  zone   crps ratio TabPFN-GP / Shared-error-only      1.004 [0.997, 1.011] (4/15 fields lower)
+  zone   width ratio TabPFN-GP / Shared-error-only      1.073 [1.055, 1.092] (0/15 fields lower)
+  zone   crps ratio TabPFN-GP / TabPFN                 1.005 [0.993, 1.016] (8/15 fields lower)
+  zone   width ratio TabPFN-GP / TabPFN                 1.002 [0.966, 1.039] (9/15 fields lower)
+  zone   crps ratio TabPFN-GP / Block RK               1.035 [1.014, 1.058] (4/15 fields lower)
+  zone   width ratio TabPFN-GP / Block RK               1.143 [1.058, 1.238] (3/15 fields lower)
+  zone   crps ratio TabPFN-GP / WH                     1.016 [1.006, 1.026] (2/15 fields lower)
+  zone   width ratio TabPFN-GP / WH                     1.113 [1.006, 1.224] (3/15 fields lower)
+  zone   crps ratio TabPFN-GP / Sample mean            0.812 [0.724, 0.905] (9/11 fields lower)
+  zone   width ratio TabPFN-GP / Sample mean            0.626 [0.582, 0.675] (11/11 fields lower)
+  zone   crps ratio TabPFN-GP / Difference estimator   0.709 [0.623, 0.791] (11/11 fields lower)
+  zone   width ratio TabPFN-GP / Difference estimator   0.618 [0.569, 0.670] (11/11 fields lower)
+  zones with one or two revealed samples: TabPFN-GP 0.842 [0.807, 0.886] (12 fields)
+  zones with three or more revealed samples: TabPFN-GP 0.800 [0.751, 0.884] (11 fields)
+
+-- grid against gsrs --
+  field  TabPFN-GP              0.844 [0.794, 0.892] (15); change -0.018 [-0.057, +0.022]
+  field  Shared-error-only      0.884 [0.840, 0.925] (15); change +0.011 [-0.019, +0.041]
+  field  TabPFN                 0.763 [0.712, 0.815] (15); change -0.010 [-0.065, +0.043]
+  field  Block RK               0.799 [0.748, 0.850] (15); change +0.028 [-0.026, +0.081]
+  field  WH                     0.736 [0.691, 0.783] (15); change +0.018 [-0.043, +0.079]
+  field  Sample mean            0.905 [0.861, 0.944] (15); change +0.090 [+0.040, +0.138]
+  field  Difference estimator   0.868 [0.817, 0.917] (15); change +0.014 [-0.030, +0.057]
+  zone   TabPFN-GP              0.803 [0.773, 0.837] (15); change +0.012 [-0.020, +0.051]
+  zone   Shared-error-only      0.786 [0.751, 0.824] (15); change +0.038 [+0.005, +0.081]
+  zone   TabPFN                 0.840 [0.807, 0.874] (15); change -0.003 [-0.037, +0.035]
+  zone   Block RK               0.805 [0.771, 0.844] (15); change +0.001 [-0.041, +0.047]
+  zone   WH                     0.792 [0.752, 0.835] (15); change +0.004 [-0.037, +0.050]
+  zone   Sample mean            0.866 [0.840, 0.892] (15); change +0.062 [+0.039, +0.081]
+  zone   Difference estimator   0.826 [0.800, 0.850] (15); change +0.008 [-0.010, +0.027]
+  field  crps ratio TabPFN-GP / Shared-error-only      0.973 [0.964, 0.983] (13/15 fields lower)
+  field  width ratio TabPFN-GP / Shared-error-only      0.854 [0.849, 0.860] (15/15 fields lower)
+  field  crps ratio TabPFN-GP / TabPFN                 1.014 [0.987, 1.036] (4/15 fields lower)
+  field  width ratio TabPFN-GP / TabPFN                 1.225 [1.179, 1.273] (0/15 fields lower)
+  field  crps ratio TabPFN-GP / Block RK               1.034 [1.000, 1.078] (4/15 fields lower)
+  field  width ratio TabPFN-GP / Block RK               1.193 [1.105, 1.291] (2/15 fields lower)
+  field  crps ratio TabPFN-GP / WH                     1.016 [0.991, 1.037] (3/15 fields lower)
+  field  width ratio TabPFN-GP / WH                     1.315 [1.168, 1.466] (3/15 fields lower)
+  field  crps ratio TabPFN-GP / Sample mean            0.968 [0.902, 1.040] (9/15 fields lower)
+  field  width ratio TabPFN-GP / Sample mean            0.826 [0.758, 0.894] (15/15 fields lower)
+  field  crps ratio TabPFN-GP / Difference estimator   0.954 [0.909, 0.993] (10/15 fields lower)
+  field  width ratio TabPFN-GP / Difference estimator   0.854 [0.832, 0.874] (15/15 fields lower)
+  zone   crps ratio TabPFN-GP / Shared-error-only      1.002 [0.993, 1.011] (4/15 fields lower)
+  zone   width ratio TabPFN-GP / Shared-error-only      1.067 [1.051, 1.085] (0/15 fields lower)
+  zone   crps ratio TabPFN-GP / TabPFN                 0.990 [0.978, 1.001] (9/15 fields lower)
+  zone   width ratio TabPFN-GP / TabPFN                 0.898 [0.864, 0.935] (13/15 fields lower)
+  zone   crps ratio TabPFN-GP / Block RK               1.031 [1.013, 1.053] (3/15 fields lower)
+  zone   width ratio TabPFN-GP / Block RK               1.035 [0.976, 1.099] (5/15 fields lower)
+  zone   crps ratio TabPFN-GP / WH                     1.003 [0.994, 1.011] (5/15 fields lower)
+  zone   width ratio TabPFN-GP / WH                     1.012 [0.922, 1.100] (6/15 fields lower)
+  zone   crps ratio TabPFN-GP / Sample mean            0.829 [0.767, 0.900] (13/15 fields lower)
+  zone   width ratio TabPFN-GP / Sample mean            0.612 [0.576, 0.649] (15/15 fields lower)
+  zone   crps ratio TabPFN-GP / Difference estimator   0.759 [0.700, 0.821] (14/15 fields lower)
+  zone   width ratio TabPFN-GP / Difference estimator   0.613 [0.570, 0.657] (15/15 fields lower)
+  zones with one or two revealed samples: TabPFN-GP 0.824 [0.794, 0.856] (12 fields)
+  zones with three or more revealed samples: TabPFN-GP 0.789 [0.752, 0.835] (15 fields)

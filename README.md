@@ -41,8 +41,13 @@ means["field"]   # {'mean': ..., 'sd': ..., 'interval80': (low, high), ...}
 - Coordinates must be in metres; use `crs="lonlat"` for degrees. Missing covariate values are fine, missing coordinates are not.
 - Memory grows with the square of the number of prediction rows: predict at the sampled locations or on a coarse grid.
 - Tested on means over sampled locations, 5 to 100 random samples, compact zones and TabPFN 2.0.9. Coverage varied between fields
-  (0.77 to 0.89 for field means, 0.72 to 0.88 for zone means); zones without samples and large zones were covered less often. Dense
-  grids, other sampling designs and zones defined by covariates were not tested.
+  (0.77 to 0.89 for field means, 0.72 to 0.88 for zone means); zones without samples and large zones were covered less often. In an
+  exploratory check, coverage did not fall with grid or zone-stratified samples, but fell for every method with clustered samples or
+  samples aimed at high or low values: spread the samples over the field. Zones formed from the covariates by k-means were covered
+  slightly less often than compact zones (0.775 against 0.794), still within [0.75, 0.85] (`expected/exploratory/report12.txt`). Zones
+  formed from the measured property itself, which separate the soil more sharply, were covered too rarely (0.721; 0.513 without a
+  sample), whereas the sample mean kept its coverage (0.813; `expected/exploratory/report13.txt`): where zones separate soils sharply,
+  prefer the sample mean where the zone holds two or more samples. Zones delineated on the farm and dense grids were not tested.
 
 ## Structure
 

@@ -1,0 +1,362 @@
+=== E23 check 1: the compact zones through this module against the stored rows ===
+  TabPFN-GP              60 of 60 stored blocks matched (60 new); largest relative difference in M or V 1.72e-13
+  Shared-error-only      60 of 60 stored blocks matched (60 new); largest relative difference in M or V 1.89e-13
+  TabPFN                 60 of 60 stored blocks matched (60 new); largest relative difference in M or V 3.56e-13
+  TabPFN-KpR             60 of 60 stored blocks matched (60 new); largest relative difference in M or V 6.36e-13
+  Block RK               60 of 60 stored blocks matched (60 new); largest relative difference in M or V 2.38e-13
+  WH                     60 of 60 stored blocks matched (60 new); largest relative difference in M or V 4.48e-13
+  Sample mean            54 of 54 stored blocks matched (54 new); largest relative difference in M or V 8.08e-14
+  Difference estimator   42 of 42 stored blocks matched (42 new); largest relative difference in M or V 8.55e-14
+  Zone-effect model      60 of 60 stored blocks matched (60 new); largest relative difference in M or V 2.35e-13
+check 1 passed (largest 6.36e-13)
+
+=== E23 zones and check 2 (docs/exploratory/plan_E23.md) ===
+field, property: property-zone sizes (all locations); adjusted Rand index with the compact | covariate zones; share of the property's variance between zones, property | covariate | compact; contiguity (nearest other location in the same zone), property | covariate | compact
+  SOIL250 SOC: sizes 81/62/26/81; ARI 0.08 | 0.06; share 0.39 | 0.10 | 0.11; contiguity 0.54 | 0.82 | 0.91
+  SOIL250 Clay: sizes 94/79/54/23; ARI 0.08 | 0.14; share 0.66 | 0.17 | 0.18; contiguity 0.69 | 0.82 | 0.91
+  SOIL250 pH: sizes 57/66/82/45; ARI 0.09 | 0.10; share 0.73 | 0.29 | 0.01; contiguity 0.71 | 0.82 | 0.91
+  SOJA98 SOC: sizes 63/74/67/52; ARI 0.23 | 0.02; share 0.40 | 0.02 | 0.35; contiguity 0.61 | 0.24 | 0.92
+  SOJA98 pH: sizes 77/31/86/62; ARI 0.14 | 0.01; share 0.55 | 0.01 | 0.29; contiguity 0.60 | 0.24 | 0.92
+  DK_EST SOC: sizes 11/8/21/5; ARI 0.35 | 0.17; share 0.66 | 0.75 | 0.63; contiguity 0.73 | 0.80 | 0.91
+  DK_EST Clay: sizes 14/7/10/14; ARI 0.11 | 0.21; share 0.57 | 0.51 | 0.17; contiguity 0.44 | 0.80 | 0.91
+  DK_FAA SOC: sizes 13/30/23/27; ARI 0.14 | 0.04; share 0.44 | 0.13 | 0.12; contiguity 0.52 | 0.68 | 0.82
+  DK_FAA Clay: sizes 39/5/28/21; ARI 0.08 | 0.06; share 0.14 | 0.30 | 0.11; contiguity 0.38 | 0.68 | 0.82
+  DK_JYN SOC: sizes 33/19/12/24; ARI 0.13 | 0.05; share 0.42 | 0.13 | 0.19; contiguity 0.45 | 0.83 | 0.86
+  DK_JYN Clay: sizes 24/23/15/26; ARI 0.14 | 0.07; share 0.54 | 0.11 | 0.25; contiguity 0.64 | 0.83 | 0.86
+  DK_SIL SOC: sizes 21/11/16/12; ARI 0.22 | 0.27; share 0.60 | 0.39 | 0.42; contiguity 0.55 | 0.57 | 1.00
+  DK_SIL Clay: sizes 27/14/13/6; ARI 0.35 | 0.12; share 0.69 | 0.50 | 0.64; contiguity 0.77 | 0.57 | 1.00
+  DK_VIN SOC: sizes 242/2/23/13; ARI 0.02 | 0.10; share 0.71 | 0.65 | 0.06; contiguity 0.90 | 0.70 | 0.95; zone(s) [1] never evaluated (fewer than 3 locations)
+  DK_VIN Clay: sizes 82/49/85/64; ARI 0.14 | 0.15; share 0.63 | 0.24 | 0.32; contiguity 0.61 | 0.70 | 0.95
+  NI_BRA SOC: sizes 13/8/9/8; ARI 0.25 | 0.16; share 0.74 | 0.55 | 0.53; contiguity 0.76 | 0.50 | 0.89
+  NI_BRA Clay: sizes 10/5/11/12; ARI 0.17 | 0.14; share 0.37 | 0.38 | 0.29; contiguity 0.47 | 0.50 | 0.89
+  NI_BRA pH: sizes 14/11/11/2; ARI 0.07 | -0.04; share 0.05 | 0.09 | 0.12; contiguity 0.50 | 0.50 | 0.89; zone(s) [3] never evaluated (fewer than 3 locations)
+  NI_MAR SOC: sizes 10/9/10/8; ARI 0.08 | 0.09; share 0.08 | 0.07 | 0.10; contiguity 0.27 | 0.59 | 0.84
+  NI_MAR Clay: sizes 13/11/3/10; ARI 0.12 | 0.03; share 0.34 | 0.06 | 0.21; contiguity 0.38 | 0.59 | 0.84
+  NI_MAR pH: sizes 13/10/11/3; ARI 0.15 | 0.09; share 0.04 | 0.17 | 0.16; contiguity 0.35 | 0.59 | 0.84
+  TR_CIH SOC: sizes 21/27/13/19; ARI 0.21 | 0.26; share 0.57 | 0.45 | 0.42; contiguity 0.75 | 0.76 | 0.90
+  TR_CIH Clay: sizes 9/28/30/13; ARI 0.15 | 0.04; share 0.76 | 0.05 | 0.25; contiguity 0.57 | 0.76 | 0.90
+  TR_CIH pH: sizes 58/7/11/4; ARI 0.06 | 0.04; share 0.78 | 0.07 | 0.19; contiguity 0.75 | 0.76 | 0.90
+  TR_KAD SOC: sizes 26/20/29/5; ARI 0.15 | -0.00; share 0.18 | 0.02 | 0.22; contiguity 0.50 | 0.53 | 0.88
+  TR_KAD Clay: sizes 26/21/13/20; ARI 0.03 | 0.01; share 0.16 | 0.21 | 0.02; contiguity 0.45 | 0.53 | 0.88
+  TR_KAD pH: sizes 44/6/3/27; ARI 0.17 | -0.01; share 0.50 | 0.02 | 0.28; contiguity 0.56 | 0.53 | 0.88
+  TR_KAR SOC: sizes 36/3/22/18; ARI 0.02 | 0.03; share 0.45 | 0.24 | 0.04; contiguity 0.65 | 0.59 | 0.84
+  TR_KAR Clay: sizes 21/29/6/23; ARI 0.00 | 0.11; share 0.49 | 0.38 | 0.04; contiguity 0.62 | 0.59 | 0.84
+  TR_KAR pH: sizes 4/38/8/29; ARI 0.09 | 0.01; share 0.23 | 0.05 | 0.26; contiguity 0.59 | 0.59 | 0.84
+  TR_KAT SOC: sizes 20/14/13/33; ARI 0.11 | 0.15; share 0.54 | 0.33 | 0.07; contiguity 0.65 | 0.80 | 0.89
+  TR_KAT Clay: sizes 34/17/9/20; ARI 0.16 | 0.05; share 0.36 | 0.27 | 0.26; contiguity 0.61 | 0.80 | 0.89
+  TR_KAT pH: sizes 25/21/5/29; ARI 0.16 | 0.01; share 0.27 | 0.03 | 0.19; contiguity 0.45 | 0.80 | 0.89
+  PO_NE SOC: sizes 35/28/21/60; ARI 0.05 | 0.06; share 0.44 | 0.03 | 0.08; contiguity 0.76 | 0.86 | 0.99
+  PO_RS SOC: sizes 38/89/43/55; ARI 0.03 | 0.03; share 0.20 | 0.10 | 0.06; contiguity 0.45 | 0.60 | 0.94
+  PO_PT SOC: sizes 27/21/18/26; ARI 0.09 | 0.02; share 0.01 | 0.05 | 0.06; contiguity 0.43 | 0.65 | 0.90
+  PO_DG SOC: sizes 23/31/33/10; ARI 0.06 | 0.04; share 0.05 | 0.04 | 0.10; contiguity 0.45 | 0.38 | 0.88
+  PO_MC SOC: sizes 10/12/10/20; ARI 0.12 | 0.02; share 0.19 | 0.09 | 0.12; contiguity 0.58 | 0.54 | 0.96
+  PO_BR SOC: sizes 23/18/10/9; ARI 0.09 | -0.00; share 0.12 | 0.02 | 0.13; contiguity 0.53 | 0.55 | 0.95
+  PO_RD SOC: sizes 87/38/81/42; ARI 0.04 | 0.04; share 0.15 | 0.06 | 0.04; contiguity 0.48 | 0.65 | 0.96
+  PO_RT SOC: sizes 83/81/34/47; ARI 0.19 | 0.19; share 0.61 | 0.40 | 0.33; contiguity 0.64 | 0.69 | 0.98
+  NX_ON SOC: sizes 265/153/230/192; ARI 0.09 | 0.08; share 0.58 | 0.19 | 0.18; contiguity 0.71 | 0.92 | 0.98
+  NX_CZK SOC: sizes 16/23/32/9; ARI 0.05 | 0.05; share 0.21 | 0.21 | 0.08; contiguity 0.54 | 0.57 | 0.95
+  NX_CZK Clay: sizes 15/52/5/8; ARI 0.04 | 0.15; share 0.30 | 0.29 | 0.15; contiguity 0.76 | 0.57 | 0.95
+  NX_CZN SOC: sizes 35/18/24/2; ARI 0.10 | 0.01; share 0.05 | 0.03 | 0.08; contiguity 0.53 | 0.85 | 1.00; zone(s) [3] never evaluated (fewer than 3 locations)
+  NX_CZN Clay: sizes 26/19/9/25; ARI -0.00 | -0.01; share 0.07 | 0.02 | 0.01; contiguity 0.33 | 0.85 | 1.00
+  NX_CZP SOC: sizes 20/35/3/22; ARI 0.13 | 0.11; share 0.03 | 0.03 | 0.07; contiguity 0.53 | 0.61 | 0.93
+  NX_CZP Clay: sizes 22/20/18/20; ARI 0.02 | 0.06; share 0.06 | 0.07 | 0.03; contiguity 0.38 | 0.61 | 0.93
+  NX_CZU SOC: sizes 31/6/31/11; ARI 0.24 | 0.18; share 0.23 | 0.32 | 0.30; contiguity 0.70 | 0.82 | 1.00
+  NX_CZU Clay: sizes 21/10/16/32; ARI 0.21 | 0.16; share 0.53 | 0.46 | 0.42; contiguity 0.82 | 0.82 | 1.00
+  NX_IT1 SOC: sizes 6/15/10/9; ARI 0.05 | 0.08; share 0.03 | 0.08 | 0.06; contiguity 0.25 | 0.82 | 0.62
+  NX_IT2 SOC: sizes 13/12/5/10; ARI 0.07 | 0.10; share 0.21 | 0.05 | 0.06; contiguity 0.38 | 0.88 | 0.70
+  NX_IT3 SOC: sizes 11/10/15/4; ARI 0.20 | 0.09; share 0.22 | 0.16 | 0.16; contiguity 0.38 | 0.82 | 0.85
+  NX_CAF pH: sizes 48/34/5/87; ARI 0.03 | 0.02; share 0.04 | 0.04 | 0.01; contiguity 0.49 | 0.64 | 0.94
+  NX_CHHB SOC: sizes 10/8/8/10; ARI 0.10 | 0.01; share 0.26 | 0.12 | 0.18; contiguity 0.47 | 0.36 | 0.89
+  NX_CHHB Clay: sizes 11/6/9/10; ARI 0.13 | 0.06; share 0.16 | 0.18 | 0.20; contiguity 0.42 | 0.36 | 0.89
+  NX_CHHB pH: sizes 15/7/4/10; ARI 0.17 | 0.06; share 0.64 | 0.10 | 0.39; contiguity 0.56 | 0.36 | 0.89
+  NX_CHZO SOC: sizes 18/9/9/24; ARI 0.01 | -0.03; share 0.11 | 0.06 | 0.09; contiguity 0.40 | 0.63 | 0.88
+  NX_CHZO Clay: sizes 19/13/13/15; ARI 0.01 | 0.04; share 0.26 | 0.10 | 0.05; contiguity 0.62 | 0.63 | 0.88
+  NX_CHZO pH: sizes 24/17/11/8; ARI 0.03 | -0.03; share 0.01 | 0.00 | 0.05; contiguity 0.32 | 0.63 | 0.88
+  DR_AUZ SOC: sizes 25/27/13/52; ARI 0.06 | 0.00; share 0.20 | 0.02 | 0.09; contiguity 0.66 | 0.69 | 0.99
+  DR_AUZ Clay: sizes 40/32/14/31; ARI 0.09 | 0.02; share 0.36 | 0.10 | 0.09; contiguity 0.63 | 0.69 | 0.99
+  DR_AUZ pH: sizes 33/18/34/32; ARI 0.24 | 0.05; share 0.38 | 0.04 | 0.30; contiguity 0.72 | 0.69 | 0.99
+  DR_EPO Clay: sizes 22/16/22/37; ARI 0.15 | 0.04; share 0.53 | 0.14 | 0.19; contiguity 0.80 | 0.62 | 0.95
+  DR_EPO pH: sizes 36/7/26/28; ARI 0.03 | 0.01; share 0.20 | 0.16 | 0.06; contiguity 0.61 | 0.62 | 0.95
+  DR_PLO SOC: sizes 26/19/2/29; ARI 0.25 | 0.08; share 0.26 | 0.23 | 0.09; contiguity 0.83 | 0.71 | 1.00; zone(s) [2] never evaluated (fewer than 3 locations)
+  DR_PLO Clay: sizes 21/21/8/26; ARI 0.16 | 0.03; share 0.11 | 0.00 | 0.11; contiguity 0.59 | 0.71 | 1.00
+  DR_CRO SOC: sizes 22/9/28/14; ARI 0.10 | 0.01; share 0.13 | 0.01 | 0.02; contiguity 0.63 | 0.78 | 0.90
+  DR_CRO Clay: sizes 29/19/17/8; ARI 0.14 | 0.09; share 0.39 | 0.24 | 0.35; contiguity 0.55 | 0.78 | 0.90
+  DR_CRO pH: sizes 28/14/8/23; ARI 0.32 | 0.06; share 0.30 | 0.10 | 0.25; contiguity 0.73 | 0.78 | 0.90
+  DR_F013 Clay: sizes 51/45/70/14; ARI 0.05 | 0.02; share 0.06 | 0.12 | 0.08; contiguity 0.51 | 0.84 | 0.97
+  DR_F033 Clay: sizes 17/26/46/23; ARI 0.15 | 0.15; share 0.72 | 0.55 | 0.30; contiguity 0.77 | 0.55 | 0.92
+  DR_F111 Clay: sizes 41/33/10/29; ARI 0.03 | 0.05; share 0.00 | 0.02 | 0.04; contiguity 0.50 | 0.88 | 1.00
+  DR_WAL Clay: sizes 35/28/13/52; ARI 0.08 | 0.10; share 0.18 | 0.16 | 0.14; contiguity 0.43 | 0.88 | 0.91
+  DR_HEN SOC: sizes 51/19/28/17; ARI 0.12 | 0.12; share 0.07 | 0.09 | 0.17; contiguity 0.44 | 0.58 | 0.90
+  DR_HEN pH: sizes 24/41/31/19; ARI 0.13 | 0.06; share 0.36 | 0.06 | 0.21; contiguity 0.51 | 0.58 | 0.90
+  DR_NWY SOC: sizes 15/37/9/38; ARI 0.03 | 0.06; share 0.31 | 0.16 | 0.03; contiguity 0.47 | 0.73 | 0.93
+  DR_NWY pH: sizes 28/26/39/6; ARI 0.05 | 0.05; share 0.07 | 0.08 | 0.15; contiguity 0.41 | 0.73 | 0.93
+  DR_CAR Clay: sizes 15/7/4/18; ARI 0.18 | 0.05; share 0.50 | 0.06 | 0.24; contiguity 0.77 | 0.61 | 0.98
+  DR_CAR pH: sizes 25/4/3/12; ARI 0.01 | -0.05; share 0.07 | 0.20 | 0.04; contiguity 0.41 | 0.61 | 0.98
+
+43 fields, 80 field-property pairs. Medians (range): ARI with the compact zones 0.100 (-0.00-0.35), with the covariate zones 0.054 (-0.05-0.27); share between zones: property 0.281 (0.00-0.78), covariate 0.104 (0.00-0.75), compact 0.142 (0.01-0.64) (property higher than compact on 62 of 80 pairs); contiguity: property 0.549 (0.25-0.90), covariate 0.665 (0.24-0.92), compact 0.908 (0.62-1.00); smallest property zone 9 locations (2-153); pairs with a zone never evaluated 4
+check 4 passed (median share between zones 0.281 against 0.142)
+
+=== E23: zones formed from the soil property on the 43 fields (docs/exploratory/plan_E23.md; exploratory) ===
+80 % intervals with each method's study factor (TabPFN-GP 1.15, Shared-error-only 1.15, TabPFN 2.40, TabPFN-KpR 4.20, Block RK 1.55, WH 1.60, Sample mean 1.05, Difference estimator 1.05, Zone-effect model 1.20); [95 % interval over fields] (fields); change from the compact zones on the same splits, paired by field
+field rows against the stored ones: 71120 of 71120 matched (71120 new); largest relative difference in M or V 0.00e+00
+zone means scored: property: TabPFN-GP 37666, Shared-error-only 38317, TabPFN 37666, TabPFN-KpR 37666, Block RK 37666, WH 37666, Sample mean 30605, Difference estimator 30789, Zone-effect model 38317; compact: TabPFN-GP 38880, Shared-error-only 39538, TabPFN 38880, TabPFN-KpR 38880, Block RK 38880, WH 38880, Sample mean 33037, Difference estimator 33216, Zone-effect model 39538
+failed zone predictions (property zones): TabPFN-GP 0/38317, Shared-error-only 0/38317, TabPFN 0/38317, TabPFN-KpR 651/38317, Block RK 0/38317, WH 0/38317, Sample mean 184/30789, Difference estimator 0/30789, Zone-effect model 0/38317
+
+-- check 3: the sample mean's coverage of property-zone means (theory: near 0.80 under simple random sampling) --
+  property zones 0.813 [0.806, 0.821] (43 fields); compact zones 0.810 [0.801, 0.819] -> passed
+
+-- coverage of zone means: property zones | compact zones | change; reading (band [0.75, 0.85]) --
+  TabPFN-GP              0.721 [0.694, 0.746] (43; 37666 means) | 0.794 [0.784, 0.804] | -0.073 [-0.095, -0.052] -> too few
+  Shared-error-only      0.687 [0.654, 0.719] (43; 38317 means) | 0.749 [0.735, 0.763] | -0.062 [-0.087, -0.038] -> too few
+  TabPFN                 0.780 [0.734, 0.821] (43; 37666 means) | 0.829 [0.802, 0.853] | -0.049 [-0.075, -0.028] -> keeps its coverage
+  TabPFN-KpR             0.720 [0.695, 0.743] (43; 37666 means) | 0.758 [0.738, 0.776] | -0.038 [-0.056, -0.023] -> too few
+  Block RK               0.765 [0.737, 0.791] (43; 37666 means) | 0.814 [0.798, 0.828] | -0.049 [-0.070, -0.031] -> keeps its coverage
+  WH                     0.731 [0.699, 0.760] (43; 37666 means) | 0.826 [0.811, 0.843] | -0.096 [-0.125, -0.070] -> given as it is
+  Sample mean            0.813 [0.806, 0.821] (43; 30605 means) | 0.810 [0.801, 0.819] | +0.003 [-0.004, +0.010] -> keeps its coverage
+  Difference estimator   0.813 [0.807, 0.820] (43; 30789 means) | 0.821 [0.813, 0.828] | -0.008 [-0.014, -0.001] -> keeps its coverage
+  Zone-effect model      0.762 [0.746, 0.778] (43; 38317 means) | 0.781 [0.770, 0.792] | -0.019 [-0.030, -0.007] -> keeps its coverage
+
+-- by the zone's number of revealed samples: property | compact | change --
+  zones with none revealed samples
+    TabPFN-GP              0.513 [0.451, 0.578] (43; 2701 means) | 0.756 [0.722, 0.788] | -0.243 [-0.303, -0.179]
+    Shared-error-only      0.482 [0.422, 0.546] (43; 2869 means) | 0.683 [0.644, 0.720] | -0.201 [-0.261, -0.137]
+    TabPFN                 0.528 [0.457, 0.599] (43; 2701 means) | 0.671 [0.609, 0.727] | -0.143 [-0.206, -0.076]
+    TabPFN-KpR             0.363 [0.313, 0.413] (43; 2701 means) | 0.441 [0.382, 0.499] | -0.078 [-0.135, -0.017]
+    Block RK               0.476 [0.410, 0.545] (43; 2701 means) | 0.627 [0.579, 0.671] | -0.151 [-0.214, -0.085]
+    WH                     0.453 [0.394, 0.512] (43; 2701 means) | 0.672 [0.622, 0.719] | -0.218 [-0.279, -0.155]
+    Zone-effect model      0.643 [0.593, 0.699] (43; 2869 means) | 0.769 [0.737, 0.800] | -0.126 [-0.177, -0.071]
+  zones with one or two revealed samples
+    TabPFN-GP              0.669 [0.630, 0.706] (43; 9026 means) | 0.779 [0.762, 0.796] | -0.110 [-0.146, -0.076]
+    Shared-error-only      0.650 [0.611, 0.688] (43; 9424 means) | 0.734 [0.713, 0.754] | -0.084 [-0.118, -0.051]
+    TabPFN                 0.685 [0.627, 0.736] (43; 9026 means) | 0.728 [0.692, 0.761] | -0.043 [-0.077, -0.012]
+    TabPFN-KpR             0.509 [0.467, 0.547] (43; 9026 means) | 0.520 [0.487, 0.555] | -0.011 [-0.046, +0.019]
+    Block RK               0.647 [0.605, 0.688] (43; 9026 means) | 0.697 [0.670, 0.722] | -0.050 [-0.087, -0.015]
+    WH                     0.618 [0.573, 0.658] (43; 9026 means) | 0.723 [0.698, 0.748] | -0.105 [-0.144, -0.068]
+    Sample mean            0.814 [0.794, 0.835] (43; 4611 means) | 0.800 [0.783, 0.817] | +0.014 [-0.006, +0.034]
+    Difference estimator   0.815 [0.803, 0.827] (43; 4765 means) | 0.816 [0.804, 0.827] | -0.001 [-0.018, +0.016]
+    Zone-effect model      0.694 [0.663, 0.725] (43; 9424 means) | 0.752 [0.730, 0.772] | -0.058 [-0.087, -0.030]
+  zones with three or more revealed samples
+    TabPFN-GP              0.761 [0.734, 0.784] (43; 25939 means) | 0.801 [0.790, 0.812] | -0.040 [-0.061, -0.023]
+    Shared-error-only      0.723 [0.686, 0.757] (43; 26024 means) | 0.758 [0.742, 0.774] | -0.035 [-0.062, -0.012]
+    TabPFN                 0.839 [0.791, 0.881] (43; 25939 means) | 0.871 [0.843, 0.896] | -0.032 [-0.058, -0.010]
+    TabPFN-KpR             0.831 [0.803, 0.854] (43; 25939 means) | 0.854 [0.835, 0.870] | -0.023 [-0.041, -0.009]
+    Block RK               0.836 [0.808, 0.859] (43; 25939 means) | 0.863 [0.847, 0.877] | -0.027 [-0.046, -0.012]
+    WH                     0.799 [0.767, 0.826] (43; 25939 means) | 0.869 [0.856, 0.884] | -0.070 [-0.100, -0.046]
+    Sample mean            0.813 [0.806, 0.820] (43; 25994 means) | 0.812 [0.804, 0.820] | +0.001 [-0.006, +0.008]
+    Difference estimator   0.813 [0.805, 0.820] (43; 26024 means) | 0.821 [0.814, 0.829] | -0.009 [-0.016, -0.002]
+    Zone-effect model      0.800 [0.788, 0.811] (43; 26024 means) | 0.791 [0.778, 0.803] | +0.009 [-0.000, +0.017]
+
+-- by property, by how sharply the zones separate the property (thirds of the field-property pairs by the property zones' share between zones, cut at 0.183 and 0.433), by group of fields, by covariate source: property | compact | change --
+  Clay (27 field-property pairs, 27 fields)
+    TabPFN-GP              0.736 [0.708, 0.763] (27; 12931 means) | 0.797 [0.781, 0.813] | -0.061 [-0.085, -0.038]
+    Shared-error-only      0.704 [0.667, 0.739] (27; 13155 means) | 0.752 [0.732, 0.774] | -0.049 [-0.080, -0.019]
+    TabPFN                 0.809 [0.767, 0.847] (27; 12931 means) | 0.845 [0.817, 0.870] | -0.036 [-0.061, -0.015]
+    TabPFN-KpR             0.726 [0.707, 0.743] (27; 12931 means) | 0.753 [0.735, 0.769] | -0.027 [-0.041, -0.014]
+    Block RK               0.772 [0.742, 0.801] (27; 12931 means) | 0.813 [0.793, 0.832] | -0.041 [-0.064, -0.020]
+    WH                     0.753 [0.720, 0.784] (27; 12931 means) | 0.835 [0.813, 0.856] | -0.082 [-0.108, -0.057]
+    Sample mean            0.821 [0.812, 0.831] (27; 10512 means) | 0.819 [0.809, 0.828] | +0.002 [-0.009, +0.013]
+    Difference estimator   0.819 [0.811, 0.826] (27; 10577 means) | 0.826 [0.819, 0.833] | -0.007 [-0.016, +0.002]
+    Zone-effect model      0.770 [0.748, 0.791] (27; 13155 means) | 0.786 [0.770, 0.802] | -0.016 [-0.035, +0.004]
+  SOC (36 field-property pairs, 36 fields)
+    TabPFN-GP              0.721 [0.687, 0.753] (36; 16965 means) | 0.796 [0.782, 0.809] | -0.075 [-0.101, -0.049]
+    Shared-error-only      0.689 [0.649, 0.727] (36; 17263 means) | 0.757 [0.739, 0.774] | -0.068 [-0.098, -0.039]
+    TabPFN                 0.772 [0.711, 0.826] (36; 16965 means) | 0.825 [0.786, 0.858] | -0.053 [-0.079, -0.027]
+    TabPFN-KpR             0.723 [0.681, 0.757] (36; 16965 means) | 0.765 [0.737, 0.792] | -0.043 [-0.065, -0.023]
+    Block RK               0.763 [0.719, 0.800] (36; 16965 means) | 0.813 [0.788, 0.834] | -0.050 [-0.074, -0.027]
+    WH                     0.730 [0.693, 0.764] (36; 16965 means) | 0.833 [0.817, 0.848] | -0.103 [-0.136, -0.071]
+    Sample mean            0.807 [0.797, 0.817] (36; 14042 means) | 0.804 [0.788, 0.817] | +0.003 [-0.009, +0.017]
+    Difference estimator   0.810 [0.800, 0.820] (36; 14101 means) | 0.818 [0.804, 0.830] | -0.008 [-0.018, +0.003]
+    Zone-effect model      0.767 [0.748, 0.786] (36; 17263 means) | 0.784 [0.770, 0.798] | -0.018 [-0.032, -0.004]
+  pH (17 field-property pairs, 17 fields)
+    TabPFN-GP              0.695 [0.655, 0.739] (17; 7770 means) | 0.784 [0.766, 0.805] | -0.089 [-0.129, -0.050]
+    Shared-error-only      0.656 [0.602, 0.713] (17; 7899 means) | 0.725 [0.694, 0.755] | -0.069 [-0.118, -0.023]
+    TabPFN                 0.749 [0.678, 0.816] (17; 7770 means) | 0.812 [0.776, 0.846] | -0.063 [-0.113, -0.022]
+    TabPFN-KpR             0.706 [0.665, 0.742] (17; 7770 means) | 0.750 [0.713, 0.781] | -0.045 [-0.081, -0.014]
+    Block RK               0.756 [0.712, 0.802] (17; 7770 means) | 0.817 [0.793, 0.840] | -0.061 [-0.100, -0.025]
+    WH                     0.697 [0.643, 0.749] (17; 7770 means) | 0.800 [0.765, 0.832] | -0.103 [-0.155, -0.057]
+    Sample mean            0.814 [0.798, 0.829] (17; 6051 means) | 0.811 [0.795, 0.828] | +0.002 [-0.011, +0.018]
+    Difference estimator   0.809 [0.799, 0.820] (17; 6111 means) | 0.818 [0.804, 0.833] | -0.009 [-0.023, +0.005]
+    Zone-effect model      0.738 [0.708, 0.773] (17; 7899 means) | 0.765 [0.744, 0.787] | -0.027 [-0.051, -0.001]
+  least sharp third (27 field-property pairs, 22 fields)
+    TabPFN-GP              0.795 [0.775, 0.814] (22; 12320 means) | 0.811 [0.800, 0.822] | -0.016 [-0.035, +0.002]
+    Shared-error-only      0.782 [0.757, 0.805] (22; 12521 means) | 0.780 [0.765, 0.793] | +0.002 [-0.022, +0.026]
+    TabPFN                 0.872 [0.847, 0.894] (22; 12320 means) | 0.869 [0.851, 0.885] | +0.003 [-0.014, +0.020]
+    TabPFN-KpR             0.733 [0.703, 0.760] (22; 12320 means) | 0.738 [0.704, 0.768] | -0.005 [-0.016, +0.005]
+    Block RK               0.847 [0.831, 0.864] (22; 12320 means) | 0.850 [0.840, 0.860] | -0.003 [-0.018, +0.013]
+    WH                     0.809 [0.789, 0.828] (22; 12320 means) | 0.847 [0.829, 0.865] | -0.038 [-0.060, -0.016]
+    Sample mean            0.810 [0.794, 0.824] (22; 10051 means) | 0.811 [0.798, 0.822] | -0.001 [-0.012, +0.009]
+    Difference estimator   0.817 [0.808, 0.826] (22; 10082 means) | 0.822 [0.810, 0.833] | -0.005 [-0.012, +0.002]
+    Zone-effect model      0.816 [0.796, 0.835] (22; 12521 means) | 0.804 [0.791, 0.815] | +0.012 [-0.006, +0.029]
+  middle third (26 field-property pairs, 21 fields)
+    TabPFN-GP              0.703 [0.675, 0.724] (21; 12265 means) | 0.788 [0.769, 0.805] | -0.085 [-0.106, -0.066]
+    Shared-error-only      0.664 [0.633, 0.696] (21; 12435 means) | 0.738 [0.716, 0.762] | -0.073 [-0.095, -0.054]
+    TabPFN                 0.774 [0.727, 0.817] (21; 12265 means) | 0.830 [0.797, 0.860] | -0.055 [-0.076, -0.038]
+    TabPFN-KpR             0.732 [0.693, 0.762] (21; 12265 means) | 0.765 [0.731, 0.792] | -0.033 [-0.051, -0.020]
+    Block RK               0.771 [0.754, 0.788] (21; 12265 means) | 0.821 [0.807, 0.837] | -0.050 [-0.068, -0.037]
+    WH                     0.723 [0.682, 0.754] (21; 12265 means) | 0.836 [0.806, 0.862] | -0.113 [-0.143, -0.084]
+    Sample mean            0.814 [0.806, 0.824] (21; 9935 means) | 0.814 [0.807, 0.821] | +0.001 [-0.010, +0.012]
+    Difference estimator   0.815 [0.804, 0.827] (21; 9997 means) | 0.825 [0.815, 0.836] | -0.010 [-0.021, +0.002]
+    Zone-effect model      0.748 [0.737, 0.760] (21; 12435 means) | 0.776 [0.760, 0.792] | -0.027 [-0.040, -0.015]
+  sharpest third (27 field-property pairs, 20 fields)
+    TabPFN-GP              0.668 [0.632, 0.710] (20; 13081 means) | 0.783 [0.766, 0.800] | -0.115 [-0.147, -0.079]
+    Shared-error-only      0.619 [0.574, 0.669] (20; 13361 means) | 0.729 [0.708, 0.752] | -0.110 [-0.151, -0.069]
+    TabPFN                 0.699 [0.624, 0.775] (20; 13081 means) | 0.791 [0.743, 0.838] | -0.092 [-0.133, -0.054]
+    TabPFN-KpR             0.698 [0.653, 0.737] (20; 13081 means) | 0.770 [0.744, 0.797] | -0.072 [-0.104, -0.045]
+    Block RK               0.681 [0.633, 0.726] (20; 13081 means) | 0.773 [0.741, 0.803] | -0.092 [-0.125, -0.056]
+    WH                     0.664 [0.625, 0.710] (20; 13081 means) | 0.798 [0.773, 0.823] | -0.134 [-0.179, -0.088]
+    Sample mean            0.815 [0.803, 0.829] (20; 10619 means) | 0.807 [0.788, 0.825] | +0.008 [-0.005, +0.021]
+    Difference estimator   0.807 [0.798, 0.817] (20; 10710 means) | 0.815 [0.802, 0.829] | -0.008 [-0.020, +0.003]
+    Zone-effect model      0.724 [0.704, 0.748] (20; 13361 means) | 0.764 [0.747, 0.782] | -0.040 [-0.057, -0.020]
+  Uniformity trials (5 field-property pairs, 2 fields)
+    TabPFN-GP              0.573 [0.545, 0.615] (2; 3144 means) | 0.751 [0.716, 0.774] | -0.178 [-0.228, -0.101]
+    Shared-error-only      0.492 [0.463, 0.534] (2; 3200 means) | 0.671 [0.620, 0.706] | -0.180 [-0.243, -0.085]
+    TabPFN                 0.509 [0.477, 0.558] (2; 3144 means) | 0.686 [0.645, 0.713] | -0.177 [-0.235, -0.087]
+    TabPFN-KpR             0.623 [0.608, 0.645] (2; 3144 means) | 0.748 [0.699, 0.781] | -0.126 [-0.173, -0.054]
+    Block RK               0.667 [0.649, 0.694] (2; 3144 means) | 0.827 [0.793, 0.849] | -0.160 [-0.199, -0.099]
+    WH                     0.552 [0.513, 0.611] (2; 3144 means) | 0.798 [0.764, 0.820] | -0.246 [-0.307, -0.154]
+    Sample mean            0.843 [0.837, 0.848] (2; 2670 means) | 0.840 [0.827, 0.849] | +0.004 [-0.002, +0.011]
+    Difference estimator   0.790 [0.780, 0.805] (2; 2752 means) | 0.809 [0.800, 0.821] | -0.018 [-0.020, -0.016]
+    Zone-effect model      0.697 [0.684, 0.717] (2; 3200 means) | 0.733 [0.713, 0.747] | -0.036 [-0.063, +0.004]
+  SensRes (28 field-property pairs, 11 fields)
+    TabPFN-GP              0.719 [0.688, 0.752] (11; 11715 means) | 0.793 [0.776, 0.809] | -0.074 [-0.097, -0.047]
+    Shared-error-only      0.690 [0.655, 0.729] (11; 12009 means) | 0.751 [0.728, 0.775] | -0.061 [-0.082, -0.038]
+    TabPFN                 0.798 [0.745, 0.846] (11; 11715 means) | 0.840 [0.793, 0.876] | -0.041 [-0.057, -0.025]
+    TabPFN-KpR             0.707 [0.672, 0.733] (11; 11715 means) | 0.740 [0.700, 0.766] | -0.033 [-0.042, -0.021]
+    Block RK               0.746 [0.705, 0.786] (11; 11715 means) | 0.796 [0.767, 0.822] | -0.050 [-0.069, -0.028]
+    WH                     0.706 [0.670, 0.745] (11; 11715 means) | 0.788 [0.765, 0.811] | -0.082 [-0.105, -0.055]
+    Sample mean            0.807 [0.797, 0.818] (11; 9260 means) | 0.803 [0.782, 0.821] | +0.004 [-0.012, +0.022]
+    Difference estimator   0.814 [0.802, 0.826] (11; 9318 means) | 0.818 [0.801, 0.834] | -0.005 [-0.022, +0.011]
+    Zone-effect model      0.747 [0.720, 0.773] (11; 12009 means) | 0.783 [0.762, 0.803] | -0.036 [-0.053, -0.018]
+  Midwest (8 field-property pairs, 8 fields)
+    TabPFN-GP              0.733 [0.687, 0.783] (8; 4411 means) | 0.800 [0.786, 0.816] | -0.067 [-0.107, -0.020]
+    Shared-error-only      0.700 [0.641, 0.767] (8; 4479 means) | 0.763 [0.743, 0.786] | -0.064 [-0.114, -0.006]
+    TabPFN                 0.780 [0.712, 0.867] (8; 4411 means) | 0.834 [0.798, 0.875] | -0.054 [-0.093, -0.007]
+    TabPFN-KpR             0.764 [0.732, 0.806] (8; 4411 means) | 0.797 [0.747, 0.848] | -0.033 [-0.056, -0.007]
+    Block RK               0.776 [0.712, 0.842] (8; 4411 means) | 0.818 [0.780, 0.852] | -0.043 [-0.073, -0.007]
+    WH                     0.747 [0.703, 0.800] (8; 4411 means) | 0.851 [0.832, 0.867] | -0.104 [-0.152, -0.042]
+    Sample mean            0.806 [0.790, 0.825] (8; 3810 means) | 0.810 [0.799, 0.823] | -0.004 [-0.022, +0.015]
+    Difference estimator   0.821 [0.808, 0.835] (8; 3814 means) | 0.826 [0.813, 0.839] | -0.004 [-0.017, +0.011]
+    Zone-effect model      0.777 [0.745, 0.815] (8; 4479 means) | 0.791 [0.773, 0.808] | -0.014 [-0.039, +0.014]
+  New fields (19 field-property pairs, 11 fields)
+    TabPFN-GP              0.746 [0.680, 0.792] (11; 7959 means) | 0.798 [0.775, 0.819] | -0.051 [-0.102, -0.018]
+    Shared-error-only      0.727 [0.649, 0.781] (11; 8042 means) | 0.766 [0.738, 0.792] | -0.039 [-0.100, +0.000]
+    TabPFN                 0.815 [0.688, 0.886] (11; 7959 means) | 0.843 [0.769, 0.890] | -0.028 [-0.082, +0.001]
+    TabPFN-KpR             0.702 [0.609, 0.769] (11; 7959 means) | 0.737 [0.676, 0.788] | -0.035 [-0.084, -0.009]
+    Block RK               0.782 [0.680, 0.844] (11; 7959 means) | 0.816 [0.763, 0.858] | -0.035 [-0.088, -0.002]
+    WH                     0.775 [0.712, 0.816] (11; 7959 means) | 0.850 [0.819, 0.881] | -0.074 [-0.138, -0.032]
+    Sample mean            0.818 [0.801, 0.832] (11; 6233 means) | 0.814 [0.800, 0.827] | +0.005 [-0.007, +0.013]
+    Difference estimator   0.817 [0.803, 0.829] (11; 6254 means) | 0.830 [0.816, 0.844] | -0.013 [-0.021, -0.005]
+    Zone-effect model      0.782 [0.749, 0.813] (11; 8042 means) | 0.786 [0.760, 0.810] | -0.004 [-0.025, +0.014]
+  Further fields (20 field-property pairs, 11 fields)
+    TabPFN-GP              0.743 [0.724, 0.769] (11; 10437 means) | 0.802 [0.786, 0.819] | -0.059 [-0.083, -0.032]
+    Shared-error-only      0.707 [0.675, 0.748] (11; 10587 means) | 0.749 [0.731, 0.772] | -0.042 [-0.071, -0.007]
+    TabPFN                 0.815 [0.786, 0.847] (11; 10437 means) | 0.846 [0.829, 0.867] | -0.031 [-0.054, -0.004]
+    TabPFN-KpR             0.760 [0.747, 0.772] (11; 10437 means) | 0.782 [0.762, 0.799] | -0.022 [-0.035, -0.008]
+    Block RK               0.797 [0.779, 0.820] (11; 10437 means) | 0.827 [0.816, 0.840] | -0.029 [-0.047, -0.010]
+    WH                     0.772 [0.751, 0.799] (11; 10437 means) | 0.851 [0.827, 0.876] | -0.080 [-0.108, -0.050]
+    Sample mean            0.810 [0.800, 0.824] (11; 8632 means) | 0.808 [0.796, 0.818] | +0.003 [-0.007, +0.013]
+    Difference estimator   0.812 [0.804, 0.823] (11; 8651 means) | 0.818 [0.808, 0.827] | -0.005 [-0.015, +0.006]
+    Zone-effect model      0.777 [0.757, 0.803] (11; 10587 means) | 0.784 [0.768, 0.804] | -0.007 [-0.027, +0.016]
+  released covariates (37 field-property pairs, 17 fields)
+    TabPFN-GP              0.682 [0.640, 0.724] (17; 17472 means) | 0.783 [0.766, 0.799] | -0.100 [-0.136, -0.068]
+    Shared-error-only      0.642 [0.589, 0.694] (17; 17913 means) | 0.733 [0.709, 0.757] | -0.091 [-0.132, -0.056]
+    TabPFN                 0.726 [0.645, 0.804] (17; 17472 means) | 0.801 [0.753, 0.848] | -0.075 [-0.118, -0.039]
+    TabPFN-KpR             0.696 [0.658, 0.731] (17; 17472 means) | 0.757 [0.738, 0.774] | -0.060 [-0.092, -0.034]
+    Block RK               0.722 [0.675, 0.765] (17; 17472 means) | 0.799 [0.770, 0.824] | -0.077 [-0.112, -0.046]
+    WH                     0.675 [0.629, 0.721] (17; 17472 means) | 0.797 [0.778, 0.816] | -0.122 [-0.171, -0.080]
+    Sample mean            0.811 [0.799, 0.822] (17; 14053 means) | 0.810 [0.793, 0.825] | +0.001 [-0.010, +0.013]
+    Difference estimator   0.805 [0.796, 0.815] (17; 14198 means) | 0.816 [0.804, 0.828] | -0.011 [-0.023, +0.001]
+    Zone-effect model      0.736 [0.714, 0.758] (17; 17913 means) | 0.771 [0.753, 0.789] | -0.035 [-0.050, -0.020]
+  public covariates (43 field-property pairs, 26 fields)
+    TabPFN-GP              0.755 [0.735, 0.776] (26; 20194 means) | 0.804 [0.793, 0.815] | -0.049 [-0.069, -0.030]
+    Shared-error-only      0.727 [0.698, 0.758] (26; 20404 means) | 0.763 [0.748, 0.779] | -0.036 [-0.059, -0.012]
+    TabPFN                 0.827 [0.798, 0.857] (26; 20194 means) | 0.854 [0.837, 0.871] | -0.027 [-0.045, -0.008]
+    TabPFN-KpR             0.741 [0.710, 0.767] (26; 20194 means) | 0.759 [0.725, 0.788] | -0.018 [-0.027, -0.009]
+    Block RK               0.802 [0.779, 0.825] (26; 20194 means) | 0.827 [0.811, 0.842] | -0.025 [-0.040, -0.010]
+    WH                     0.779 [0.760, 0.799] (26; 20194 means) | 0.852 [0.835, 0.870] | -0.073 [-0.098, -0.050]
+    Sample mean            0.815 [0.807, 0.825] (26; 16552 means) | 0.811 [0.803, 0.818] | +0.005 [-0.003, +0.012]
+    Difference estimator   0.820 [0.812, 0.827] (26; 16591 means) | 0.825 [0.817, 0.833] | -0.005 [-0.012, +0.001]
+    Zone-effect model      0.785 [0.768, 0.804] (26; 20404 means) | 0.790 [0.777, 0.803] | -0.005 [-0.019, +0.010]
+  TabPFN-GP              by n 5: 0.713 | 0.792; 10: 0.692 | 0.786; 15: 0.703 | 0.787; 20: 0.711 | 0.794; 30: 0.740 | 0.794; 50: 0.764 | 0.811; 75: 0.741 | 0.796; 100: 0.758 | 0.802
+  Shared-error-only      by n 5: 0.708 | 0.765; 10: 0.669 | 0.738; 15: 0.680 | 0.744; 20: 0.684 | 0.747; 30: 0.681 | 0.736; 50: 0.708 | 0.762; 75: 0.684 | 0.754; 100: 0.679 | 0.748
+  TabPFN                 by n 5: 0.615 | 0.669; 10: 0.716 | 0.769; 15: 0.775 | 0.826; 20: 0.811 | 0.857; 30: 0.836 | 0.881; 50: 0.894 | 0.926; 75: 0.877 | 0.927; 100: 0.876 | 0.931
+  TabPFN-KpR             by n 5: 0.345 | 0.400; 10: 0.425 | 0.470; 15: 0.773 | 0.811; 20: 0.856 | 0.888; 30: 0.905 | 0.933; 50: 0.938 | 0.958; 75: 0.942 | 0.961; 100: 0.957 | 0.980
+  Block RK               by n 5: 0.561 | 0.615; 10: 0.688 | 0.747; 15: 0.761 | 0.816; 20: 0.799 | 0.856; 30: 0.839 | 0.876; 50: 0.889 | 0.923; 75: 0.893 | 0.922; 100: 0.896 | 0.928
+  WH                     by n 5: 0.549 | 0.659; 10: 0.654 | 0.766; 15: 0.716 | 0.821; 20: 0.756 | 0.858; 30: 0.799 | 0.876; 50: 0.854 | 0.921; 75: 0.867 | 0.938; 100: 0.870 | 0.951
+  Sample mean            by n 5: 0.807 | 0.804; 10: 0.816 | 0.797; 15: 0.814 | 0.801; 20: 0.812 | 0.812; 30: 0.807 | 0.813; 50: 0.814 | 0.820; 75: 0.827 | 0.824; 100: 0.816 | 0.829
+  Difference estimator   by n 5: 0.833 | 0.832; 10: 0.819 | 0.818; 15: 0.813 | 0.816; 20: 0.815 | 0.823; 30: 0.804 | 0.818; 50: 0.808 | 0.826; 75: 0.816 | 0.817; 100: 0.797 | 0.815
+  Zone-effect model      by n 5: 0.723 | 0.762; 10: 0.734 | 0.783; 15: 0.751 | 0.781; 20: 0.760 | 0.787; 30: 0.785 | 0.776; 50: 0.803 | 0.794; 75: 0.816 | 0.786; 100: 0.802 | 0.782
+
+-- rise in coverage D of zone means (n >= 30 minus n <= 10): property zones [90 %] [95 %] | compact zones --
+  TabPFN-GP              D = +0.055 [+0.032, +0.077] [+0.027, +0.082] (40) | +0.011 [-0.004, +0.027]
+  Shared-error-only      D = +0.008 [-0.023, +0.038] [-0.028, +0.044] (40) | -0.001 [-0.022, +0.019]
+  TabPFN                 D = +0.220 [+0.190, +0.251] [+0.183, +0.256] (40) | +0.204 [+0.182, +0.228]
+  TabPFN-KpR             D = +0.546 [+0.507, +0.584] [+0.499, +0.590] (40) | +0.516 [+0.477, +0.552]
+  Block RK               D = +0.258 [+0.233, +0.283] [+0.228, +0.287] (40) | +0.229 [+0.211, +0.248]
+  WH                     D = +0.245 [+0.221, +0.270] [+0.217, +0.275] (40) | +0.196 [+0.180, +0.214]
+  Sample mean            D = +0.005 [-0.006, +0.018] [-0.008, +0.020] (40) | +0.022 [+0.010, +0.035]
+  Difference estimator   D = -0.016 [-0.029, -0.002] [-0.031, +0.001] (40) | -0.001 [-0.014, +0.012]
+  Zone-effect model      D = +0.075 [+0.056, +0.093] [+0.052, +0.096] (40) | +0.012 [-0.008, +0.032]
+
+-- CRPS and interval-width ratio TabPFN-GP / method for zone means: property zones | compact zones --
+  crps  TabPFN-GP / Shared-error-only      0.978 [0.969, 0.986], lower on 37 of 43 fields | 0.998 [0.993, 1.002]
+  width TabPFN-GP / Shared-error-only      1.046 [1.038, 1.053], lower on 1 of 43 fields | 1.111 [1.100, 1.123]
+  crps  TabPFN-GP / TabPFN                 0.950 [0.940, 0.959], lower on 42 of 43 fields | 0.955 [0.947, 0.964]
+  width TabPFN-GP / TabPFN                 0.794 [0.754, 0.843], lower on 38 of 43 fields | 0.871 [0.816, 0.937]
+  crps  TabPFN-GP / TabPFN-KpR             0.750 [0.732, 0.768], lower on 43 of 43 fields | 0.795 [0.775, 0.814]
+  width TabPFN-GP / TabPFN-KpR             0.611 [0.583, 0.646], lower on 42 of 43 fields | 0.666 [0.632, 0.708]
+  crps  TabPFN-GP / Block RK               0.998 [0.982, 1.012], lower on 20 of 43 fields | 0.980 [0.969, 0.991]
+  width TabPFN-GP / Block RK               0.915 [0.879, 0.957], lower on 34 of 43 fields | 0.955 [0.912, 1.003]
+  crps  TabPFN-GP / WH                     0.979 [0.973, 0.986], lower on 37 of 43 fields | 0.983 [0.978, 0.988]
+  width TabPFN-GP / WH                     0.956 [0.939, 0.972], lower on 35 of 43 fields | 0.932 [0.904, 0.962]
+  crps  TabPFN-GP / Sample mean            0.943 [0.891, 1.004], lower on 29 of 43 fields | 0.797 [0.772, 0.821]
+  width TabPFN-GP / Sample mean            0.645 [0.625, 0.665], lower on 43 of 43 fields | 0.628 [0.613, 0.644]
+  crps  TabPFN-GP / Difference estimator   0.870 [0.832, 0.913], lower on 37 of 43 fields | 0.799 [0.781, 0.817]
+  width TabPFN-GP / Difference estimator   0.564 [0.551, 0.578], lower on 43 of 43 fields | 0.559 [0.547, 0.570]
+  crps  TabPFN-GP / Zone-effect model      0.989 [0.981, 1.000], lower on 36 of 43 fields | 0.989 [0.985, 0.994]
+  width TabPFN-GP / Zone-effect model      0.887 [0.871, 0.901], lower on 43 of 43 fields | 1.011 [1.002, 1.020]
+
+-- coverage by field, TabPFN-GP and the sample mean: property | compact --
+  DK_EST   TabPFN-GP 0.796 | 0.836; sample mean 0.825 | 0.783; zone means 700 | 730
+  DK_FAA   TabPFN-GP 0.737 | 0.810; sample mean 0.814 | 0.827; zone means 1045 | 1068
+  DK_JYN   TabPFN-GP 0.704 | 0.784; sample mean 0.810 | 0.795; zone means 1034 | 1042
+  DK_SIL   TabPFN-GP 0.739 | 0.747; sample mean 0.816 | 0.808; zone means 843 | 854
+  DK_VIN   TabPFN-GP 0.629 | 0.748; sample mean 0.785 | 0.732; zone means 1092 | 1248
+  DR_AUZ   TabPFN-GP 0.712 | 0.811; sample mean 0.802 | 0.812; zone means 1849 | 1836
+  DR_CAR   TabPFN-GP 0.823 | 0.854; sample mean 0.803 | 0.819; zone means 592 | 738
+  DR_CRO   TabPFN-GP 0.716 | 0.763; sample mean 0.786 | 0.769; zone means 1399 | 1398
+  DR_EPO   TabPFN-GP 0.704 | 0.834; sample mean 0.849 | 0.824; zone means 1093 | 1108
+  DR_F013  TabPFN-GP 0.790 | 0.786; sample mean 0.846 | 0.803; zone means 632 | 632
+  DR_F033  TabPFN-GP 0.731 | 0.783; sample mean 0.814 | 0.842; zone means 591 | 595
+  DR_F111  TabPFN-GP 0.830 | 0.808; sample mean 0.812 | 0.812; zone means 576 | 584
+  DR_HEN   TabPFN-GP 0.764 | 0.785; sample mean 0.798 | 0.807; zone means 1227 | 1248
+  DR_NWY   TabPFN-GP 0.717 | 0.782; sample mean 0.810 | 0.815; zone means 1033 | 1076
+  DR_PLO   TabPFN-GP 0.773 | 0.838; sample mean 0.815 | 0.812; zone means 820 | 816
+  DR_WAL   TabPFN-GP 0.730 | 0.794; sample mean 0.806 | 0.786; zone means 625 | 630
+  NI_BRA   TabPFN-GP 0.789 | 0.782; sample mean 0.826 | 0.825; zone means 835 | 912
+  NI_MAR   TabPFN-GP 0.802 | 0.829; sample mean 0.836 | 0.816; zone means 823 | 906
+  NX_CAF   TabPFN-GP 0.680 | 0.788; sample mean 0.752 | 0.777; zone means 596 | 628
+  NX_CHHB  TabPFN-GP 0.741 | 0.765; sample mean 0.859 | 0.855; zone means 895 | 888
+  NX_CHZO  TabPFN-GP 0.802 | 0.811; sample mean 0.837 | 0.821; zone means 1289 | 1299
+  NX_CZK   TabPFN-GP 0.724 | 0.796; sample mean 0.807 | 0.805; zone means 924 | 960
+  NX_CZN   TabPFN-GP 0.800 | 0.839; sample mean 0.815 | 0.798; zone means 831 | 928
+  NX_CZP   TabPFN-GP 0.834 | 0.827; sample mean 0.827 | 0.820; zone means 885 | 952
+  NX_CZU   TabPFN-GP 0.760 | 0.757; sample mean 0.824 | 0.827; zone means 937 | 936
+  NX_IT1   TabPFN-GP 0.836 | 0.813; sample mean 0.778 | 0.852; zone means 341 | 347
+  NX_IT2   TabPFN-GP 0.785 | 0.878; sample mean 0.801 | 0.786; zone means 316 | 337
+  NX_IT3   TabPFN-GP 0.738 | 0.830; sample mean 0.854 | 0.820; zone means 321 | 341
+  NX_ON    TabPFN-GP 0.455 | 0.715; sample mean 0.801 | 0.785; zone means 624 | 624
+  PO_BR    TabPFN-GP 0.789 | 0.825; sample mean 0.796 | 0.819; zone means 431 | 434
+  PO_DG    TabPFN-GP 0.805 | 0.778; sample mean 0.854 | 0.837; zone means 533 | 546
+  PO_MC    TabPFN-GP 0.781 | 0.851; sample mean 0.797 | 0.843; zone means 383 | 383
+  PO_NE    TabPFN-GP 0.674 | 0.807; sample mean 0.806 | 0.795; zone means 635 | 636
+  PO_PT    TabPFN-GP 0.831 | 0.803; sample mean 0.786 | 0.822; zone means 533 | 534
+  PO_RD    TabPFN-GP 0.723 | 0.802; sample mean 0.788 | 0.794; zone means 636 | 636
+  PO_RS    TabPFN-GP 0.707 | 0.794; sample mean 0.838 | 0.795; zone means 632 | 632
+  PO_RT    TabPFN-GP 0.618 | 0.766; sample mean 0.783 | 0.797; zone means 628 | 628
+  SOIL250  TabPFN-GP 0.545 | 0.774; sample mean 0.848 | 0.849; zone means 1896 | 1896
+  SOJA98   TabPFN-GP 0.615 | 0.716; sample mean 0.837 | 0.827; zone means 1248 | 1248
+  TR_CIH   TabPFN-GP 0.638 | 0.776; sample mean 0.782 | 0.774; zone means 1355 | 1413
+  TR_KAD   TabPFN-GP 0.754 | 0.815; sample mean 0.822 | 0.831; zone means 1311 | 1413
+  TR_KAR   TabPFN-GP 0.713 | 0.824; sample mean 0.804 | 0.829; zone means 1287 | 1404
+  TR_KAT   TabPFN-GP 0.701 | 0.780; sample mean 0.785 | 0.822; zone means 1390 | 1416

@@ -24,6 +24,9 @@ output folder. GPU analyses need the TabPFN environment; analyses that krige nee
 | E18 | Block RK's and WH's variogram settings from fewer development fields | `plan_E18.md` | `report8.txt`, `report8.csv`, `report_shapes_X2.txt`, `report_shapes_X3.txt` | `tab_further`; appendix with the details of the methods |
 | E19 | The CRPS weighted by the unrevealed share: the comparators' versions set with it, the study's versions, and the versions with the lowest weighted CRPS | `plan_E19.md` | `report9.txt`, `report9.csv`, `report9b.txt`, `report9b.csv`, `report_weighted.txt`, `report_weighted_kept.txt`, `report_weighted_lowest.txt` | "Robustness of the tests"; test 5 in the Results; abstract; fourth conclusion |
 | E20 | What is subtracted from TabPFN's variance | `plan_E20.md` | `report10.txt`, `report10.csv` | table of settings; predictive distribution; (A4) |
+| E21 | Other sampling designs, chosen among the measured locations: grid, stratified, clustered and targeted samples (GPU) | `plan_E21.md` | `report11.txt`, `report11.csv` | `tab_designs`; the exploratory section of the Results; limitations; table of estimators |
+| E22 | Zones formed from covariates (k-means of their principal components) on the study's splits (CPU and R) | `plan_E22.md` | `report12.txt`, `report12.csv` | `tab_covzones`; the exploratory section of the Results; limitations; table of estimators |
+| E23 | Zones formed from the soil property (k-means of each location's mean of the property at its four nearest other locations) on the study's splits (CPU and R) | `plan_E23.md` | `report13.txt`, `report13.csv` | `tab_covzones` (panel b); the exploratory section of the Results; Discussion; limitations; table of estimators; abstract; conclusions |
 
 ## Commands
 
@@ -77,6 +80,27 @@ SOILGP_DATA=$ST/data SOILGP_RUN=$ST/run python -m experiments.exploratory.weight
 SOILGP_DATA=$W/data SOILGP_RUN=$W/run python -m experiments.development.dev_nugget rows $STORED 8
 SOILGP_DATA=$W/data SOILGP_RUN=$W/run python -m experiments.exploratory.variance_subtraction rows OUT 8
 SOILGP_DATA=$W/data SOILGP_RUN=$W/run python -m experiments.exploratory.variance_subtraction report OUT $STORED
+
+# E21 (GPU for check and points, about 15 h as one job; splits and checks first, then TabPFN, the rows and the report)
+export SOILGP_DATA=$ST/data SOILGP_RUN=OUT/run
+python -m experiments.exploratory.designs_study splits --out OUT
+python -m experiments.exploratory.designs_study check --out OUT --study-rows $ST/rows
+python -m experiments.exploratory.designs_study points --out OUT
+python -m experiments.exploratory.designs_study rows --out OUT --workers 12
+python -m experiments.exploratory.designs_study report --out OUT --study-rows $ST/rows
+
+# E22 (CPU and R, about 30 min with 12 workers; zones and check 2, check 1, then the rows and the report, which starts with check 3)
+export SOILGP_DATA=$ST/data SOILGP_RUN=$ST/run
+python -m experiments.exploratory.covariate_zones zones --out OUT
+python -m experiments.exploratory.covariate_zones check --out OUT --study-rows $ST/rows --variants $ST/variants
+python -m experiments.exploratory.covariate_zones rows --out OUT --workers 12
+python -m experiments.exploratory.covariate_zones report --out OUT --study-rows $ST/rows --variants $ST/variants
+
+# E23 (CPU and R, about 30 min with 12 workers; zones with checks 2 and 4, check 1, then the rows and the report, which starts with check 3)
+python -m experiments.exploratory.property_zones zones --out OUT
+python -m experiments.exploratory.property_zones check --out OUT --study-rows $ST/rows --variants $ST/variants
+python -m experiments.exploratory.property_zones rows --out OUT --workers 12
+python -m experiments.exploratory.property_zones report --out OUT --study-rows $ST/rows --variants $ST/variants
 ```
 
 - `report_once.txt` and `report_once_gp1.txt` are `OUT/report_once/report.txt` and `OUT/report_once_gp1/report.txt`.
